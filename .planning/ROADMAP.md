@@ -28,7 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. User can open the app and reach the main dashboard without creating an account or signing in.
   2. User sees a brief first-run explanation that readings stay on the device and that the app is designed for local-only use.
   3. User can launch and use the app's core surfaces while the device is offline without being blocked by network requirements.
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 01-01-PLAN.md - Bootstrap the Expo Router foundation, local flag storage boundary, and test harness.
+- [ ] 01-02-PLAN.md - Implement the first-run privacy gate and durable tab routing contract.
+- [ ] 01-03-PLAN.md - Build the approved empty-state shell surfaces and final Phase 1 verification.
 **UI hint**: yes
 
 ### Phase 2: Core Logging and Interpretation
@@ -85,7 +89,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Offline Shell | 0/TBD | Not started | - |
+| 1. Foundation and Offline Shell | 0/3 | Not started | - |
 | 2. Core Logging and Interpretation | 0/TBD | Not started | - |
 | 3. History and Trends | 0/TBD | Not started | - |
 | 4. PDF Export | 0/TBD | Not started | - |
