@@ -79,33 +79,33 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | TDB | Pending |
-| CORE-02 | TDB | Pending |
-| CORE-03 | TDB | Pending |
-| LOG-01 | TDB | Pending |
-| LOG-02 | TDB | Pending |
-| LOG-03 | TDB | Pending |
-| LOG-04 | TDB | Pending |
-| HIST-01 | TDB | Pending |
-| HIST-02 | TDB | Pending |
-| HIST-03 | TDB | Pending |
-| HIST-04 | TDB | Pending |
-| INTP-01 | TDB | Pending |
-| INTP-02 | TDB | Pending |
-| INTP-03 | TDB | Pending |
-| TRND-01 | TDB | Pending |
-| TRND-02 | TDB | Pending |
-| TRND-03 | TDB | Pending |
-| EXPT-01 | TDB | Pending |
-| EXPT-02 | TDB | Pending |
-| EXPT-03 | TDB | Pending |
-| PRIV-01 | TDB | Pending |
-| PRIV-02 | TDB | Pending |
+| CORE-01 | Phase 1 | Pending |
+| CORE-02 | Phase 1 | Pending |
+| CORE-03 | Phase 1 | Pending |
+| LOG-01 | Phase 2 | Pending |
+| LOG-02 | Phase 2 | Pending |
+| LOG-03 | Phase 2 | Pending |
+| LOG-04 | Phase 2 | Pending |
+| HIST-01 | Phase 3 | Pending |
+| HIST-02 | Phase 3 | Pending |
+| HIST-03 | Phase 3 | Pending |
+| HIST-04 | Phase 2 | Pending |
+| INTP-01 | Phase 2 | Pending |
+| INTP-02 | Phase 2 | Pending |
+| INTP-03 | Phase 2 | Pending |
+| TRND-01 | Phase 3 | Pending |
+| TRND-02 | Phase 3 | Pending |
+| TRND-03 | Phase 3 | Pending |
+| EXPT-01 | Phase 4 | Pending |
+| EXPT-02 | Phase 4 | Pending |
+| EXPT-03 | Phase 4 | Pending |
+| PRIV-01 | Phase 5 | Pending |
+| PRIV-02 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 22 total
-- Mapped to phases: 0
-- Unmapped: 22 ⚠️
+- Mapped to phases: 22
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-05*
