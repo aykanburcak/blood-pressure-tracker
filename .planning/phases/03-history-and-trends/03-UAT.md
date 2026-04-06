@@ -6,15 +6,15 @@ source:
   - 03-02-SUMMARY.md
   - 03-03-SUMMARY.md
 started: "2026-04-06T21:00:00.000Z"
-updated: "2026-04-06T21:00:00.000Z"
+updated: "2026-04-06T22:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 2
-name: History list and open edit
+number: 3
+name: Edit saves and History updates
 expected: |
-  With at least two saved readings (add from Home if needed), open the History tab. Rows appear newest-first (latest measured time at top). Each row shows SBP/DBP, date/time, and a WHO-style label. Tapping a row opens "Edit reading" with fields matching that row.
+  On Edit reading, change systolic or diastolic (valid values), tap Save changes, return to History. The same row shows updated numbers (order may change if you changed measured time).
 awaiting: user response
 
 ## Tests
@@ -26,7 +26,7 @@ result: pass
 ### 2. History list and open edit
 expected: |
   History shows readings newest-first; row shows BP, time, WHO label; tap opens Edit reading with matching values.
-result: pending
+result: pass
 
 ### 3. Edit saves and History updates
 expected: |
@@ -51,9 +51,9 @@ result: pending
 ## Summary
 
 total: 6
-passed: 1
+passed: 2
 issues: 0
-pending: 5
+pending: 4
 skipped: 0
 blocked: 0
 
