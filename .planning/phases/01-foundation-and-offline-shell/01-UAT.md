@@ -6,15 +6,15 @@ source:
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:38:28Z"
+updated: "2026-04-06T09:40:16Z"
 ---
 
 ## Current Test
 
-number: 3
-name: After acknowledgement — main dashboard without sign-in
+number: 4
+name: Home empty state (dashboard shape)
 expected: |
-  After "Continue Offline", you land on the main tab shell with Home selected. You can use Home, History, and Settings without creating an account or signing in. Tab order left-to-right is Home, History, Settings.
+  On Home, you see a large "Blood Pressure" title, a prominent card with "No readings yet" and supporting copy, a second card explaining local-only behavior, and a third muted area suggesting trends appear after saved readings. The screen does not feel like a blank template.
 awaiting: user response
 
 ## Tests
@@ -31,7 +31,7 @@ result: pass
 ### 3. After acknowledgement — main dashboard without sign-in
 expected: |
   After "Continue Offline", you land on the main tab shell with Home selected. You can use Home, History, and Settings without creating an account or signing in. Tab order left-to-right is Home, History, Settings.
-result: pending
+result: pass
 
 ### 4. Home empty state (dashboard shape)
 expected: |
@@ -56,9 +56,9 @@ result: pending
 ## Summary
 
 total: 7
-passed: 2
+passed: 3
 issues: 0
-pending: 5
+pending: 4
 skipped: 0
 blocked: 0
 
