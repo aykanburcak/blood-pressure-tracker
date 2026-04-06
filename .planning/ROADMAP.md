@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation and Offline Shell** - Establish the account-free, offline-first app shell and first-run privacy framing.
 - [x] **Phase 2: Core Logging and Interpretation** - Deliver the fast manual entry loop with immediate saved-reading feedback.
-- [ ] **Phase 3: History and Trends** - Turn persisted readings into editable history and trustworthy trend review.
+- [x] **Phase 3: History and Trends** - Turn persisted readings into editable history and trustworthy trend review.
 - [ ] **Phase 4: PDF Export** - Generate and share appointment-ready PDF reports from saved readings.
 - [ ] **Phase 5: Privacy and Release Hardening** - Tighten privacy claims, local-only boundaries, and release readiness.
 
@@ -63,9 +63,9 @@ Plans:
   4. User can review recent-period trend summaries derived from persisted readings rather than transient UI state.
 **Plans**: 3 plans
 Plans:
-- [ ] 03-01-PLAN.md - Repository list/update/delete, chart range query, rolling window stats, SQL tests.
-- [ ] 03-02-PLAN.md - History FlatList, edit-reading route and screen, Zod save, Alert delete, RNTL.
-- [ ] 03-03-PLAN.md - Skia/Victory chart, trend summary strip, History header integration, Jest stability.
+- [x] 03-01-PLAN.md - Repository list/update/delete, chart range query, rolling window stats, SQL tests.
+- [x] 03-02-PLAN.md - History FlatList, edit-reading route and screen, Zod save, Alert delete, RNTL.
+- [x] 03-03-PLAN.md - Skia/Victory chart, trend summary strip, History header integration, Jest stability.
 **UI hint**: yes
 
 ### Phase 4: PDF Export
@@ -99,6 +99,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation and Offline Shell | 3/3 | Complete | 2026-04-06 |
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
-| 3. History and Trends | 0/3 | Planned | - |
+| 3. History and Trends | 3/3 | Complete | 2026-04-06 |
 | 4. PDF Export | 0/TBD | Not started | - |
 | 5. Privacy and Release Hardening | 0/TBD | Not started | - |

@@ -19,6 +19,14 @@ export default function RootLayout() {
             presentation: 'card',
           }}
         />
+        <Stack.Screen
+          name="edit-reading/[id]"
+          options={{
+            headerShown: true,
+            title: 'Edit reading',
+            presentation: 'card',
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

@@ -20,9 +20,9 @@
 
 ### History
 
-- [ ] **HIST-01**: User can view saved readings in reverse chronological order.
-- [ ] **HIST-02**: User can open a saved reading and edit its values and timestamp.
-- [ ] **HIST-03**: User can delete a saved reading from the local history.
+- [x] **HIST-01**: User can view saved readings in reverse chronological order.
+- [x] **HIST-02**: User can open a saved reading and edit its values and timestamp.
+- [x] **HIST-03**: User can delete a saved reading from the local history.
 - [x] **HIST-04**: User's saved readings remain available after closing and reopening the app.
 
 ### Interpretation
@@ -33,9 +33,9 @@
 
 ### Trends
 
-- [ ] **TRND-01**: User can view a timeline chart of saved blood pressure readings.
-- [ ] **TRND-02**: User can review trend summaries for recent periods from persisted readings.
-- [ ] **TRND-03**: User can use trend views that preserve paired systolic and diastolic information from the underlying readings.
+- [x] **TRND-01**: User can view a timeline chart of saved blood pressure readings.
+- [x] **TRND-02**: User can review trend summaries for recent periods from persisted readings.
+- [x] **TRND-03**: User can use trend views that preserve paired systolic and diastolic information from the underlying readings.
 
 ### Export
 
@@ -81,21 +81,21 @@
 |-------------|-------|--------|
 | CORE-01 | Phase 1 | Complete |
 | CORE-02 | Phase 1 | Complete |
-| CORE-03 | Phase 1 | Partial (shell offline; full v1 offline when history/trends/export ship) |
+| CORE-03 | Phase 1 | Partial (offline through history/trends; export in Phase 4) |
 | LOG-01 | Phase 2 | Complete |
 | LOG-02 | Phase 2 | Complete |
 | LOG-03 | Phase 2 | Complete |
 | LOG-04 | Phase 2 | Complete |
-| HIST-01 | Phase 3 | Pending |
-| HIST-02 | Phase 3 | Pending |
-| HIST-03 | Phase 3 | Pending |
+| HIST-01 | Phase 3 | Complete |
+| HIST-02 | Phase 3 | Complete |
+| HIST-03 | Phase 3 | Complete |
 | HIST-04 | Phase 2 | Complete |
 | INTP-01 | Phase 2 | Complete |
 | INTP-02 | Phase 2 | Complete |
 | INTP-03 | Phase 2 | Complete |
-| TRND-01 | Phase 3 | Pending |
-| TRND-02 | Phase 3 | Pending |
-| TRND-03 | Phase 3 | Pending |
+| TRND-01 | Phase 3 | Complete |
+| TRND-02 | Phase 3 | Complete |
+| TRND-03 | Phase 3 | Complete |
 | EXPT-01 | Phase 4 | Pending |
 | EXPT-02 | Phase 4 | Pending |
 | EXPT-03 | Phase 4 | Pending |
@@ -109,4 +109,4 @@
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-06 — Phase 2 UAT complete (LOG-*, HIST-04, INTP-*)*
+*Last updated: 2026-04-06 — Phase 3 implemented (HIST-01–03, TRND-01–03); UAT pending*

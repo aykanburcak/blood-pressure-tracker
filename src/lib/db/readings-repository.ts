@@ -1,9 +1,21 @@
 import { openDatabaseSync } from 'expo-sqlite';
-import { desc } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/expo-sqlite';
 
 import { readings, type ReadingRow } from './schema';
 import { runReadingsMigrations } from './migrate';
+import {
+  deleteReadingFromDb,
+  getLatestReadingFromDb,
+  getReadingByIdFromDb,
+  getTrendWindowStatsFromDb,
+  listReadingsForChartFromDb,
+  listReadingsFromDb,
+  updateReadingInDb,
+  type TrendWindowStats,
+} from './readings-queries';
+
+export type { TrendWindowStats };
+export type { TrendWindowBucket } from './readings-queries';
 
 export const READINGS_DB_FILE = 'readings.db';
 
@@ -52,10 +64,48 @@ export async function getLatestReading(
   databaseName: string = READINGS_DB_FILE,
 ): Promise<ReadingRow | null> {
   const db = await getReadingsDb(databaseName);
-  const row = db
-    .select()
-    .from(readings)
-    .orderBy(desc(readings.measuredAt), desc(readings.createdAt))
-    .get();
-  return row ?? null;
+  return getLatestReadingFromDb(db);
+}
+
+export async function listReadings(databaseName: string = READINGS_DB_FILE): Promise<ReadingRow[]> {
+  const db = await getReadingsDb(databaseName);
+  return listReadingsFromDb(db);
+}
+
+export async function getReadingById(
+  id: string,
+  databaseName: string = READINGS_DB_FILE,
+): Promise<ReadingRow | null> {
+  const db = await getReadingsDb(databaseName);
+  return getReadingByIdFromDb(db, id);
+}
+
+export async function updateReading(
+  id: string,
+  values: InsertReadingValues,
+  databaseName: string = READINGS_DB_FILE,
+): Promise<void> {
+  const db = await getReadingsDb(databaseName);
+  updateReadingInDb(db, id, values);
+}
+
+export async function deleteReading(id: string, databaseName: string = READINGS_DB_FILE): Promise<void> {
+  const db = await getReadingsDb(databaseName);
+  deleteReadingFromDb(db, id);
+}
+
+export async function listReadingsForChart(
+  databaseName: string = READINGS_DB_FILE,
+  options?: { startMs?: number },
+): Promise<ReadingRow[]> {
+  const db = await getReadingsDb(databaseName);
+  return listReadingsForChartFromDb(db, options);
+}
+
+export async function getTrendWindowStats(
+  nowMs: number,
+  databaseName: string = READINGS_DB_FILE,
+): Promise<TrendWindowStats> {
+  const db = await getReadingsDb(databaseName);
+  return getTrendWindowStatsFromDb(db, nowMs);
 }
