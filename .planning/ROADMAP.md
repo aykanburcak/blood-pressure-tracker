@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Core Logging and Interpretation** - Deliver the fast manual entry loop with immediate saved-reading feedback.
 - [x] **Phase 3: History and Trends** - Turn persisted readings into editable history and trustworthy trend review.
 - [x] **Phase 4: PDF Export** - Generate and share appointment-ready PDF reports from saved readings.
-- [ ] **Phase 5: Privacy and Release Hardening** - Tighten privacy claims, local-only boundaries, and release readiness.
+- [x] **Phase 5: Privacy and Release Hardening** - Tighten privacy claims, local-only boundaries, and release readiness.
 
 ## Phase Details
 
@@ -93,9 +93,9 @@ Plans:
   3. The shipped app behavior matches its privacy framing, so users are not prompted toward any network-backed storage or onboarding flows.
 **Plans**: 3 plans
 Plans:
-- [ ] 05-02-PLAN.md - Android `allowBackup: false` via `app.json` (Expo CNG).
-- [ ] 05-01-PLAN.md - Long-form Privacy & data screen, Settings link, copy module, RNTL (depends on 05-02).
-- [ ] 05-03-PLAN.md - `.planning/RELEASE-CHECKLIST.md`, REQUIREMENTS PRIV-01/02 traceability (depends on 05-01, 05-02).
+- [x] 05-02-PLAN.md - Android `allowBackup: false` via `app.json` (Expo CNG).
+- [x] 05-01-PLAN.md - Long-form Privacy & data screen, Settings link, copy module, RNTL (depends on 05-02).
+- [x] 05-03-PLAN.md - `.planning/RELEASE-CHECKLIST.md`, REQUIREMENTS PRIV-01/02 traceability (depends on 05-01, 05-02).
 **UI hint**: yes
 
 ## Progress
@@ -109,4 +109,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
 | 3. History and Trends | 3/3 | Complete | 2026-04-06 |
 | 4. PDF Export | 3/3 | Complete | 2026-04-06 |
-| 5. Privacy and Release Hardening | 0/3 | Planned | - |
+| 5. Privacy and Release Hardening | 3/3 | Complete | 2026-04-06 |

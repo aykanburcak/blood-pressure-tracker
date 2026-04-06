@@ -25,7 +25,14 @@ export default function SettingsTab() {
           <View style={styles.divider} />
           <InfoRow title={copy.settingsLocalLabel} detail={copy.settingsLocalDetail} />
           <View style={styles.divider} />
-          <InfoRow title={copy.settingsAboutLabel} showChevron />
+          <InfoRow
+            accessibilityLabel={copy.settingsPrivacyLabel}
+            detail={copy.settingsPrivacyDetail}
+            showChevron
+            testID="settings-privacy"
+            title={copy.settingsPrivacyLabel}
+            onPress={() => router.push('/privacy-info')}
+          />
         </SurfaceCard>
         <Text style={styles.footnote}>{copy.settingsExportFootnote}</Text>
       </View>

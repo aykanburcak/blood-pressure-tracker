@@ -1,4 +1,5 @@
 import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
+import { PRIVACY_DETAIL_SCREEN_TITLE } from '@/features/privacy/privacy-detail-copy';
 
 /** Phase 1 tokens — aligned to `.planning/.../01-UI-SPEC.md` */
 
@@ -74,7 +75,8 @@ export const copy = {
   historyEmptyBody: 'Saved readings will appear here in reverse chronological order.',
   settingsLocalLabel: 'Local storage only',
   settingsLocalDetail: 'Your data stays on this device unless you choose to export a PDF later.',
-  settingsAboutLabel: 'About this app',
+  settingsPrivacyLabel: PRIVACY_DETAIL_SCREEN_TITLE,
+  settingsPrivacyDetail: 'How your readings are stored, exported, and backed up',
   /** Settings footnote — optional PDF only when the user chooses (UI-SPEC). */
   settingsExportFootnote:
     'You can export readings as a PDF only when you choose to in the app. Nothing is sent automatically.',

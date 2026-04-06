@@ -3,6 +3,8 @@ import { Stack } from 'expo-router';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 
+import { PRIVACY_DETAIL_SCREEN_TITLE } from '@/features/privacy/privacy-detail-copy';
+
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   return (
@@ -32,6 +34,14 @@ export default function RootLayout() {
           options={{
             headerShown: true,
             title: 'Export report',
+            presentation: 'card',
+          }}
+        />
+        <Stack.Screen
+          name="privacy-info"
+          options={{
+            headerShown: true,
+            title: PRIVACY_DETAIL_SCREEN_TITLE,
             presentation: 'card',
           }}
         />

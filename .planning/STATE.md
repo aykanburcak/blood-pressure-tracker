@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready for `/gsd-discuss-phase 5` or `/gsd-plan-phase 5`
-stopped_at: Phase 5 planned — execute 05-02 then 05-01 then 05-03
-last_updated: "2026-04-06T12:57:28.827Z"
-last_activity: 2026-04-06 -- Phase 4 UAT 6/6 pass (custom range count + Generate)
+status: ready
+stopped_at: Phase 5 executed — `/gsd-verify-work` Phase 5 or `/gsd-complete-milestone`
+last_updated: "2026-04-06T20:00:00.000Z"
+last_activity: 2026-04-06 -- Phase 5 execute complete (PRIV-01/02, 16 Jest suites, 45 tests)
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 5
   total_plans: 15
-  completed_plans: 6
-  percent: 40
+  completed_plans: 15
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: `.planning/PROJECT.md` (updated 2026-04-07)
 
 **Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
-**Current focus:** Phase 5 — Privacy and Release Hardening (discuss → plan → execute)
+**Current focus:** v1 milestone code complete — device smoke + Play checklist before ship; `/gsd-complete-milestone` when ready
 
 ## Current Position
 
-Phase: 4 complete — PDF export UAT passed  
-Plan: Start Phase 5 (privacy copy, release boundaries)  
-Status: Ready for `/gsd-discuss-phase 5` or `/gsd-plan-phase 5`  
-Last activity: 2026-04-06 -- Phase 4 UAT 6/6 pass (custom range count + Generate)
+Phase: **5 complete** — Privacy & data screen, `allowBackup: false`, release checklist, REQUIREMENTS PRIV-01/PRIV-02 marked done  
+Plan: Optional Phase 5 UAT; run `.planning/RELEASE-CHECKLIST.md` before Play upload  
+Status: All roadmap phases implemented on branch  
+Last activity: 2026-04-06 -- Executed 05-02 → 05-01 → 05-03
 
-Progress: 12/12 plans done; Phase 4 device UAT complete.
+Progress: **15/15** plans done; latest automated run: **16** suites, **45** tests green.
 
 ## Performance Metrics
 
@@ -63,15 +63,14 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Phase 5: plan privacy/release hardening (PRIV-01, PRIV-02).
+- Walk `.planning/RELEASE-CHECKLIST.md` on a release candidate build; complete Play Data safety form to match in-app copy.
 
 ### Blockers/Concerns
 
-- Typed routes: `.expo/types/router.d.ts` is tracked (see `.gitignore` exception); regenerate after adding routes (`npx expo start` once).
-- Phase 5 planning should verify Android backup policy and store-facing privacy alignment before release.
+- Typed routes: `.expo/types/router.d.ts` updated for `/privacy-info`; `npx expo start` may refresh generated types if routes change again.
 
 ## Session Continuity
 
-Last session: 2026-04-06T12:57:28.822Z
-Stopped at: Phase 5 planned — execute 05-02 then 05-01 then 05-03
-Resume file: .planning/phases/05-privacy-and-release-hardening/05-02-PLAN.md
+Last session: 2026-04-06T20:00:00.000Z
+Stopped at: Phase 5 execution complete — milestone verification or archive
+Resume file: `.planning/RELEASE-CHECKLIST.md`

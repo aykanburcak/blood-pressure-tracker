@@ -46,7 +46,8 @@ describe('Phase 1 tab shell', () => {
     expect(within(settingsRoot).getByText('Settings')).toBeTruthy();
     expect(within(settingsRoot).getByText(copy.settingsLocalLabel)).toBeTruthy();
     expect(within(settingsRoot).getByText(copy.settingsLocalDetail)).toBeTruthy();
-    expect(within(settingsRoot).getByText(copy.settingsAboutLabel)).toBeTruthy();
+    expect(within(settingsRoot).getByText(copy.settingsPrivacyLabel)).toBeTruthy();
+    expect(within(settingsRoot).getByText(copy.settingsPrivacyDetail)).toBeTruthy();
     expect(within(settingsRoot).getByText(copy.settingsExportFootnote)).toBeTruthy();
     expect(within(settingsRoot).queryByText(/coming soon/i)).toBeNull();
   });

@@ -45,8 +45,8 @@
 
 ### Privacy
 
-- [ ] **PRIV-01**: User can use the app without ads, account creation, or cloud-sync setup in v1.
-- [ ] **PRIV-02**: User can view in-app privacy copy that explains the local-only storage model and export boundary.
+- [x] **PRIV-01**: User can use the app without ads, account creation, or cloud-sync setup in v1.
+- [x] **PRIV-02**: User can view in-app privacy copy that explains the local-only storage model and export boundary.
 
 ## v2 Requirements
 
@@ -99,8 +99,8 @@
 | EXPT-01 | Phase 4 | Implemented (UAT recommended) |
 | EXPT-02 | Phase 4 | Implemented (UAT recommended) |
 | EXPT-03 | Phase 4 | Implemented (UAT recommended) |
-| PRIV-01 | Phase 5 | Pending |
-| PRIV-02 | Phase 5 | Pending |
+| PRIV-01 | Phase 5 | Complete |
+| PRIV-02 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 22 total
@@ -109,4 +109,4 @@
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-07 — Phase 4 implemented (EXPT-01–03); device PDF UAT recommended*
+*Last updated: 2026-04-06 — Phase 5 implemented (PRIV-01, PRIV-02); run `.planning/RELEASE-CHECKLIST.md` before Play upload*
