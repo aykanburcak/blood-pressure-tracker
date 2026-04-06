@@ -5,7 +5,7 @@ milestone_name: next
 status: ready
 stopped_at: v1.0 shipped — `/gsd-new-milestone` to plan v1.1+
 last_updated: "2026-04-06T22:00:00.000Z"
-last_activity: 2026-04-06 -- Milestone v1.0 complete; roadmap/requirements reset
+last_activity: 2026-04-06 -- Tab bar bottom safe area fix (gsd-quick)
 progress:
   total_phases: 0
   completed_phases: 0
@@ -29,6 +29,12 @@ See: `.planning/PROJECT.md` (updated 2026-04-06)
 **Next:** Define v1.1 (or next) scope; `.planning/ROADMAP.md` and `REQUIREMENTS.md` are reset for forward planning.
 
 ## Accumulated Context
+
+### Quick fixes (post–v1.0)
+
+| Date | Change |
+|------|--------|
+| 2026-04-06 | Tab bar: `useSafeAreaInsets` + `SafeAreaProvider` root — bottom inset above Android gesture bar |
 
 ### Decisions
 
