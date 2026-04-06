@@ -1,15 +1,6 @@
-import DateTimePicker from '@react-native-community/datetimepicker';
 import { router } from 'expo-router';
 import React, { useCallback, useState } from 'react';
-import {
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { ScreenContainer } from '@/components/ui/ScreenContainer';
@@ -17,26 +8,18 @@ import { readingInputSchema } from '@/lib/bp/reading-schema';
 import { insertReading } from '@/lib/db/readings-repository';
 import { colors, spacing, typography } from '@/lib/theme';
 
+import { useBpDateTimePicker } from './useBpDateTimePicker';
+
 export function AddReadingScreen() {
   const [systolic, setSystolic] = useState('');
   const [diastolic, setDiastolic] = useState('');
   const [pulse, setPulse] = useState('');
   const [measuredAt, setMeasuredAt] = useState(() => new Date());
-  const [showPicker, setShowPicker] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
 
-  const openPicker = useCallback(() => setShowPicker(true), []);
-
-  const onPickerChange = useCallback((_event: unknown, date?: Date) => {
-    if (Platform.OS === 'android') {
-      setShowPicker(false);
-    }
-    if (date) {
-      setMeasuredAt(date);
-    }
-  }, []);
+  const { openPicker, picker } = useBpDateTimePicker(measuredAt, setMeasuredAt);
 
   const save = useCallback(async () => {
     setFormError(null);
@@ -146,14 +129,7 @@ export function AddReadingScreen() {
           {fieldErrors.measuredAt ? <Text style={styles.error}>{fieldErrors.measuredAt}</Text> : null}
         </View>
 
-        {showPicker ? (
-          <DateTimePicker
-            display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-            mode="datetime"
-            onChange={onPickerChange}
-            value={measuredAt}
-          />
-        ) : null}
+        {picker}
 
         {formError ? <Text style={styles.error}>{formError}</Text> : null}
 
