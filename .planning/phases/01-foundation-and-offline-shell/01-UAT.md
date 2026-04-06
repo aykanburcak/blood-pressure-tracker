@@ -1,21 +1,17 @@
 ---
-status: testing
+status: complete
 phase: 01-foundation-and-offline-shell
 source:
   - 01-01-SUMMARY.md
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:43:20Z"
+updated: "2026-04-06T09:45:24Z"
 ---
 
 ## Current Test
 
-number: 7
-name: Offline / no network blocking
-expected: |
-  With mobile data and Wi‑Fi off (airplane mode), you can still open the app, complete or pass the privacy gate (if applicable), and browse Home, History, and Settings without errors or forced online prompts.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
@@ -51,17 +47,17 @@ result: pass
 ### 7. Offline / no network blocking
 expected: |
   With mobile data and Wi‑Fi off (airplane mode), you can still open the app, complete or pass the privacy gate (if applicable), and browse Home, History, and Settings without errors or forced online prompts.
-result: pending
+result: pass
 
 ## Summary
 
 total: 7
-passed: 6
+passed: 7
 issues: 0
-pending: 1
+pending: 0
 skipped: 0
 blocked: 0
 
 ## Gaps
 
-[none yet]
+[none]

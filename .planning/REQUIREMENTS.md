@@ -7,8 +7,8 @@
 
 ### Core Experience
 
-- [ ] **CORE-01**: User can open the app and reach the main dashboard without creating an account or signing in.
-- [ ] **CORE-02**: User sees a brief first-run privacy explanation that states readings are stored locally on the device.
+- [x] **CORE-01**: User can open the app and reach the main dashboard without creating an account or signing in.
+- [x] **CORE-02**: User sees a brief first-run privacy explanation that states readings are stored locally on the device.
 - [ ] **CORE-03**: User can use the app's core logging, history, trends, and export features without requiring network access.
 
 ### Logging
