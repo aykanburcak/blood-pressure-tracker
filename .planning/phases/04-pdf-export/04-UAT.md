@@ -5,15 +5,15 @@ source:
   - ROADMAP.md Phase 4 success criteria
   - EXPT-01, EXPT-02, EXPT-03 (no phase SUMMARY.md in repo)
 started: "2026-04-07T16:00:00.000Z"
-updated: "2026-04-07T19:00:00.000Z"
+updated: "2026-04-07T20:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 4
-name: Android share sheet
+number: 5
+name: Empty range — Generate disabled
 expected: |
-  After a PDF is generated, tap "Share". The system share sheet opens and lets you pick a target (e.g. Drive, Files, email). The shared item is a PDF (not plain text or HTML).
+  Pick a time range that includes no readings (e.g. Custom dates in the future, or a window before your oldest reading). The summary shows zero readings in range and "Generate PDF" stays disabled (greyed).
 awaiting: user response
 
 ## Tests
@@ -36,7 +36,7 @@ note: "User: 3 readings in range, Generate PDF enabled (post migrate execAsync +
 ### 4. Android share sheet
 expected: |
   After a PDF is generated, tap "Share". The system share sheet opens and lets you pick a target (e.g. Drive, Files, email). The shared item is a PDF (not plain text or HTML).
-result: pending
+result: pass
 
 ### 5. Empty range — Generate disabled
 expected: |
@@ -51,9 +51,9 @@ result: pending
 ## Summary
 
 total: 6
-passed: 3
+passed: 4
 issues: 0
-pending: 3
+pending: 2
 skipped: 0
 blocked: 0
 
