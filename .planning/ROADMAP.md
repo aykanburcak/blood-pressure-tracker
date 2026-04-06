@@ -61,7 +61,11 @@ Plans:
   2. User can edit or delete a saved reading from local history and see history reflect the change accurately.
   3. User can view a timeline chart of saved readings that preserves systolic and diastolic pairing from the underlying records.
   4. User can review recent-period trend summaries derived from persisted readings rather than transient UI state.
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 03-01-PLAN.md - Repository list/update/delete, chart range query, rolling window stats, SQL tests.
+- [ ] 03-02-PLAN.md - History FlatList, edit-reading route and screen, Zod save, Alert delete, RNTL.
+- [ ] 03-03-PLAN.md - Skia/Victory chart, trend summary strip, History header integration, Jest stability.
 **UI hint**: yes
 
 ### Phase 4: PDF Export
@@ -93,8 +97,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Offline Shell | 0/3 | Not started | - |
-| 2. Core Logging and Interpretation | 0/TBD | Not started | - |
-| 3. History and Trends | 0/TBD | Not started | - |
+| 1. Foundation and Offline Shell | 3/3 | Complete | 2026-04-06 |
+| 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
+| 3. History and Trends | 0/3 | Planned | - |
 | 4. PDF Export | 0/TBD | Not started | - |
 | 5. Privacy and Release Hardening | 0/TBD | Not started | - |
