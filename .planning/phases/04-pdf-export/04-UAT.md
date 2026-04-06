@@ -5,15 +5,15 @@ source:
   - ROADMAP.md Phase 4 success criteria
   - EXPT-01, EXPT-02, EXPT-03 (no phase SUMMARY.md in repo)
 started: "2026-04-07T16:00:00.000Z"
-updated: "2026-04-07T18:30:00.000Z"
+updated: "2026-04-07T19:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 3
-name: Generate PDF with readings in range
+number: 4
+name: Android share sheet
 expected: |
-  With at least one saved reading whose date falls in the selected preset window (e.g. Last 30 days), tap "Generate PDF". The app does not show a hard error; after a short wait you can tap "Share" (Generate may show "Generating…" while working). Optional — open the produced PDF from a share target and confirm it shows "Blood pressure report", your range, a table with Date / Systolic / Diastolic / Pulse / Status, and the same disclaimer text as in-app.
+  After a PDF is generated, tap "Share". The system share sheet opens and lets you pick a target (e.g. Drive, Files, email). The shared item is a PDF (not plain text or HTML).
 awaiting: user response
 
 ## Tests
@@ -30,7 +30,8 @@ result: pass
 ### 3. Generate PDF with readings in range
 expected: |
   With at least one saved reading whose date falls in the selected preset window (e.g. Last 30 days), tap "Generate PDF". The app does not show a hard error; after a short wait you can tap "Share" (Generate may show "Generating…" while working). Optional — open the produced PDF from a share target and confirm it shows "Blood pressure report", your range, a table with Date / Systolic / Diastolic / Pulse / Status, and the same disclaimer text as in-app.
-result: pending
+result: pass
+note: "User: 3 readings in range, Generate PDF enabled (post migrate execAsync + DB singleton fix)."
 
 ### 4. Android share sheet
 expected: |
@@ -50,9 +51,9 @@ result: pending
 ## Summary
 
 total: 6
-passed: 2
+passed: 3
 issues: 0
-pending: 4
+pending: 3
 skipped: 0
 blocked: 0
 
@@ -65,3 +66,4 @@ blocked: 0
   test: 3
   root_cause: "Pre-migrate DDL used sqlite.execSync; Android threw NPE. Each getReadingsDb also opened/migrated a new connection, increasing race risk."
   fix: "Use execAsync for journal DDL; pass SQLiteDatabase from openDatabaseSync; cache one open+migrate Promise per database filename (readings-repository)."
+  fix_verified: "2026-04-07 — user confirmed correct count (3) and Generate PDF enabled on Export screen."
