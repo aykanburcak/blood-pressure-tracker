@@ -1,25 +1,88 @@
-import React from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import { router } from 'expo-router';
+import React, { useCallback, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { EmptyStatePanel } from '@/components/ui/EmptyStatePanel';
+import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { ScreenContainer } from '@/components/ui/ScreenContainer';
 import { ScreenTitle } from '@/components/ui/ScreenTitle';
 import { SurfaceCard } from '@/components/ui/SurfaceCard';
+import { classifyBloodPressure } from '@/lib/bp/who-classification';
+import { getInterpretationColor } from '@/lib/bp/interpretation-style';
+import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
+import { getLatestReading } from '@/lib/db/readings-repository';
+import type { ReadingRow } from '@/lib/db/schema';
 import { copy, colors, radius, spacing, typography } from '@/lib/theme';
 
 export default function HomeTab() {
+  const [latest, setLatest] = useState<ReadingRow | null>(null);
+
+  const refresh = useCallback(() => {
+    void getLatestReading().then(setLatest);
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      refresh();
+    }, [refresh]),
+  );
+
+  const interpretation = latest
+    ? classifyBloodPressure(latest.systolic, latest.diastolic)
+    : null;
+  const chipColor = interpretation ? getInterpretationColor(interpretation.category) : colors.accent;
+
   return (
     <ScreenContainer>
       <View testID="screen-home">
         <ScreenTitle>Blood Pressure</ScreenTitle>
 
         <SurfaceCard padded="lg" style={styles.hero}>
-          <EmptyStatePanel title={copy.emptyStateHeading} body={copy.emptyStateBody} />
-          <View style={styles.slots}>
-            <View style={styles.slot} accessibilityLabel="Systolic placeholder" />
-            <View style={styles.slot} accessibilityLabel="Diastolic placeholder" />
-          </View>
+          {latest ? (
+            <View>
+              <Text style={styles.bpDisplay} testID="home-bp-display">
+                {latest.systolic} / {latest.diastolic}
+              </Text>
+              <Text style={styles.mmhg}>mmHg</Text>
+              {latest.pulse != null ? (
+                <Text style={styles.pulseLine}>Pulse {latest.pulse}</Text>
+              ) : null}
+              <Text style={styles.measuredAt}>
+                {new Date(latest.measuredAt).toLocaleString(undefined, {
+                  dateStyle: 'medium',
+                  timeStyle: 'short',
+                })}
+              </Text>
+              {interpretation ? (
+                <View
+                  accessibilityLabel={`Status ${interpretation.label}`}
+                  style={[styles.chip, { backgroundColor: `${chipColor}22` }]}>
+                  <Text style={[styles.chipText, { color: colors.textPrimary }]}>
+                    {interpretation.label}
+                  </Text>
+                </View>
+              ) : null}
+              <Text style={styles.disclaimer}>{INTERPRETATION_DISCLAIMER}</Text>
+            </View>
+          ) : (
+            <>
+              <EmptyStatePanel title={copy.emptyStateHeading} body={copy.emptyStateBody} />
+              <View style={styles.slots}>
+                <View style={styles.slot} accessibilityLabel="Systolic placeholder" />
+                <View style={styles.slot} accessibilityLabel="Diastolic placeholder" />
+              </View>
+            </>
+          )}
         </SurfaceCard>
+
+        <View style={styles.ctaWrap}>
+          <PrimaryButton
+            accessibilityLabel={copy.logReadingCta}
+            label={copy.logReadingCta}
+            onPress={() => router.push('/add-reading')}
+          />
+        </View>
 
         <SurfaceCard style={styles.gap}>
           <Text style={styles.cardBody}>{copy.homeLocalCardBody}</Text>
@@ -53,6 +116,9 @@ const styles = StyleSheet.create({
     borderRadius: radius.sm,
     backgroundColor: colors.placeholderTint,
   },
+  ctaWrap: {
+    marginBottom: spacing.lg,
+  },
   gap: {
     marginBottom: spacing.lg,
   },
@@ -76,5 +142,39 @@ const styles = StyleSheet.create({
   trendCopy: {
     ...typography.body,
     color: colors.textSecondary,
+  },
+  bpDisplay: {
+    ...typography.display,
+    color: colors.textPrimary,
+  },
+  mmhg: {
+    ...typography.label,
+    color: colors.textSecondary,
+    marginTop: spacing.xs,
+  },
+  pulseLine: {
+    ...typography.body,
+    color: colors.textPrimary,
+    marginTop: spacing.md,
+  },
+  measuredAt: {
+    ...typography.body,
+    color: colors.textSecondary,
+    marginTop: spacing.sm,
+  },
+  chip: {
+    alignSelf: 'flex-start',
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    borderRadius: radius.md,
+    marginTop: spacing.md,
+  },
+  chipText: {
+    ...typography.label,
+  },
+  disclaimer: {
+    ...typography.body,
+    color: colors.textSecondary,
+    marginTop: spacing.md,
   },
 });

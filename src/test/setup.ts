@@ -20,6 +20,12 @@ jest.mock('expo-sqlite', () => ({
   })),
 }));
 
+jest.mock('@/lib/db/readings-repository', () => ({
+  READINGS_DB_FILE: 'readings.db',
+  getLatestReading: jest.fn().mockResolvedValue(null),
+  insertReading: jest.fn().mockResolvedValue('mock-reading-id'),
+}));
+
 beforeEach(() => {
   mockPrivacyValue.current = undefined;
 });

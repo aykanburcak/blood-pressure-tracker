@@ -47,9 +47,9 @@ Plans:
   5. User's saved readings remain available after closing and reopening the app.
 **Plans**: 3 plans
 Plans:
-- [ ] 02-01-PLAN.md - Drizzle readings schema, migrations, and repository with tests.
-- [ ] 02-02-PLAN.md - Zod validation, WHO classification, disclaimer, interpretation tokens.
-- [ ] 02-03-PLAN.md - Add-reading route and Home latest-reading UI with RNTL coverage.
+- [x] 02-01-PLAN.md - Drizzle readings schema, migrations, and repository with tests.
+- [x] 02-02-PLAN.md - Zod validation, WHO classification, disclaimer, interpretation tokens.
+- [x] 02-03-PLAN.md - Add-reading route and Home latest-reading UI with RNTL coverage.
 **UI hint**: yes
 
 ### Phase 3: History and Trends

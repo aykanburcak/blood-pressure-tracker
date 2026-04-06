@@ -11,6 +11,14 @@ export default function RootLayout() {
         <Stack.Screen name="index" />
         <Stack.Screen name="privacy" />
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen
+          name="add-reading"
+          options={{
+            headerShown: true,
+            title: 'New reading',
+            presentation: 'card',
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

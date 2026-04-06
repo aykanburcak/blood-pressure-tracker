@@ -26,6 +26,11 @@ export const colors = {
   textSecondary: '#6B7280',
   divider: '#E5E7EB',
   placeholderTint: '#EEF2F7',
+  interpretNormal: '#22C55E',
+  interpretElevated: '#EAB308',
+  interpretStage1: '#F97316',
+  interpretStage2: '#EA580C',
+  interpretCrisis: '#B91C1C',
 } as const;
 
 export const radius = {
@@ -75,4 +80,5 @@ export const copy = {
     'Your readings stay on this device. No sign-in is required to keep using the tracker.',
   trendPreviewHint:
     'After you save readings, you will see trends here. Charts stay on this device.',
+  logReadingCta: 'Add reading',
 } as const;
