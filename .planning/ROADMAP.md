@@ -91,7 +91,11 @@ Plans:
   1. User can use the released app without encountering ads, account creation, or cloud-sync setup in v1.
   2. User can find in-app privacy copy that clearly explains local-only storage and the PDF export boundary.
   3. The shipped app behavior matches its privacy framing, so users are not prompted toward any network-backed storage or onboarding flows.
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 05-02-PLAN.md - Android `allowBackup: false` via `app.json` (Expo CNG).
+- [ ] 05-01-PLAN.md - Long-form Privacy & data screen, Settings link, copy module, RNTL (depends on 05-02).
+- [ ] 05-03-PLAN.md - `.planning/RELEASE-CHECKLIST.md`, REQUIREMENTS PRIV-01/02 traceability (depends on 05-01, 05-02).
 **UI hint**: yes
 
 ## Progress
@@ -105,4 +109,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
 | 3. History and Trends | 3/3 | Complete | 2026-04-06 |
 | 4. PDF Export | 3/3 | Complete | 2026-04-06 |
-| 5. Privacy and Release Hardening | 0/TBD | Not started | - |
+| 5. Privacy and Release Hardening | 0/3 | Planned | - |
