@@ -6,15 +6,15 @@ source:
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:42:13Z"
+updated: "2026-04-06T09:43:20Z"
 ---
 
 ## Current Test
 
-number: 6
-name: Settings — local-only and export boundary
+number: 7
+name: Offline / no network blocking
 expected: |
-  On Settings, you see "Local storage only" with detail about the device and optional PDF later, an "About this app" row, and a muted footnote that export is only when you choose it—nothing implies automatic upload or cloud sync.
+  With mobile data and Wi‑Fi off (airplane mode), you can still open the app, complete or pass the privacy gate (if applicable), and browse Home, History, and Settings without errors or forced online prompts.
 awaiting: user response
 
 ## Tests
@@ -46,7 +46,7 @@ result: pass
 ### 6. Settings — local-only and export boundary
 expected: |
   On Settings, you see "Local storage only" with detail about the device and optional PDF later, an "About this app" row, and a muted footnote that export is only when you choose it—nothing implies automatic upload or cloud sync.
-result: pending
+result: pass
 
 ### 7. Offline / no network blocking
 expected: |
@@ -56,9 +56,9 @@ result: pending
 ## Summary
 
 total: 7
-passed: 5
+passed: 6
 issues: 0
-pending: 2
+pending: 1
 skipped: 0
 blocked: 0
 
