@@ -1,5 +1,5 @@
-import { openDatabaseSync } from 'expo-sqlite';
 import { drizzle } from 'drizzle-orm/expo-sqlite';
+import { openDatabaseSync } from 'expo-sqlite';
 
 import { readings, type ReadingRow } from './schema';
 import { runReadingsMigrations } from './migrate';
@@ -20,11 +20,26 @@ export type { TrendWindowBucket } from './readings-queries';
 
 export const READINGS_DB_FILE = 'readings.db';
 
-export async function getReadingsDb(databaseName: string = READINGS_DB_FILE) {
+async function openAndMigrateReadingsDb(databaseName: string) {
   const expoDb = openDatabaseSync(databaseName);
   const db = drizzle(expoDb, { schema: { readings } });
-  await runReadingsMigrations(db);
+  await runReadingsMigrations(expoDb, db);
   return db;
+}
+
+/** One Drizzle handle per DB file — avoids overlapping open/migrate on Android. */
+const readingsDbByName = new Map<string, ReturnType<typeof openAndMigrateReadingsDb>>();
+
+export async function getReadingsDb(databaseName: string = READINGS_DB_FILE) {
+  let pending = readingsDbByName.get(databaseName);
+  if (!pending) {
+    pending = openAndMigrateReadingsDb(databaseName).catch((err) => {
+      readingsDbByName.delete(databaseName);
+      throw err;
+    });
+    readingsDbByName.set(databaseName, pending);
+  }
+  return pending;
 }
 
 export type InsertReadingValues = {
