@@ -6,15 +6,15 @@ source:
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:40:16Z"
+updated: "2026-04-06T09:41:24Z"
 ---
 
 ## Current Test
 
-number: 4
-name: Home empty state (dashboard shape)
+number: 5
+name: History empty list
 expected: |
-  On Home, you see a large "Blood Pressure" title, a prominent card with "No readings yet" and supporting copy, a second card explaining local-only behavior, and a third muted area suggesting trends appear after saved readings. The screen does not feel like a blank template.
+  On History, you see the "History" title, a short line about reverse chronological order, and a card-shaped list area containing "No history yet" and the approved empty copy. No "coming soon" or sample readings.
 awaiting: user response
 
 ## Tests
@@ -36,7 +36,7 @@ result: pass
 ### 4. Home empty state (dashboard shape)
 expected: |
   On Home, you see a large "Blood Pressure" title, a prominent card with "No readings yet" and supporting copy, a second card explaining local-only behavior, and a third muted area suggesting trends appear after saved readings. The screen does not feel like a blank template.
-result: pending
+result: pass
 
 ### 5. History empty list
 expected: |
@@ -56,9 +56,9 @@ result: pending
 ## Summary
 
 total: 7
-passed: 3
+passed: 4
 issues: 0
-pending: 4
+pending: 3
 skipped: 0
 blocked: 0
 
