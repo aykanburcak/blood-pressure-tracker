@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: next
 status: ready
-stopped_at: `/gsd-ship` — PR draft at `.planning/SHIP-PR-DRAFT.md`; add remote + `gh` to open PR
+stopped_at: `/gsd-ship` — no `origin` remote and `gh` not on PATH; use branch `fix/home-trend-dynamic-chart` + `.planning/PR-body-fix-home-trend.md` after `git remote add` + `gh auth login`
 last_updated: "2026-04-06T22:00:00.000Z"
-last_activity: 2026-04-06 -- gsd-ship prep: Android datetime fix committed; local branch `release/v1.0-android`
+last_activity: 2026-04-06 -- gsd-ship attempted; feature branch + PR body prepared locally
 progress:
   total_phases: 0
   completed_phases: 0
