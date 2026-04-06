@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: ready
-stopped_at: Phase 5 executed — `/gsd-verify-work` Phase 5 or `/gsd-complete-milestone`
+stopped_at: Phase 5 UAT complete — `/gsd-complete-milestone` or Play checklist before ship
 last_updated: "2026-04-06T20:00:00.000Z"
 last_activity: 2026-04-06 -- Phase 5 execute complete (PRIV-01/02, 16 Jest suites, 45 tests)
 progress:
@@ -26,9 +26,9 @@ See: `.planning/PROJECT.md` (updated 2026-04-07)
 ## Current Position
 
 Phase: **5 complete** — Privacy & data screen, `allowBackup: false`, release checklist, REQUIREMENTS PRIV-01/PRIV-02 marked done  
-Plan: Optional Phase 5 UAT; run `.planning/RELEASE-CHECKLIST.md` before Play upload  
-Status: All roadmap phases implemented on branch  
-Last activity: 2026-04-06 -- Executed 05-02 → 05-01 → 05-03
+Plan: Run `.planning/RELEASE-CHECKLIST.md` before Play upload; milestone close when ready  
+Status: Phase 5 UAT 6/6 pass  
+Last activity: 2026-04-06 -- Phase 5 device UAT complete (privacy + PRIV-02)
 
 Progress: **15/15** plans done; latest automated run: **16** suites, **45** tests green.
 
