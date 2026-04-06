@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation and Offline Shell | 3/3 | Complete | 2026-04-06 |
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
 | 3. History and Trends | 3/3 | Complete | 2026-04-06 |
-| 4. PDF Export | 3/3 | Complete (pending UAT) | 2026-04-07 |
+| 4. PDF Export | 3/3 | Complete | 2026-04-06 |
 | 5. Privacy and Release Hardening | 0/TBD | Not started | - |

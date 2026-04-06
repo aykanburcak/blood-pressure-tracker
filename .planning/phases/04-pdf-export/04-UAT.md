@@ -1,20 +1,16 @@
 ---
-status: testing
+status: complete
 phase: 04-pdf-export
 source:
   - ROADMAP.md Phase 4 success criteria
   - EXPT-01, EXPT-02, EXPT-03 (no phase SUMMARY.md in repo)
 started: "2026-04-07T16:00:00.000Z"
-updated: "2026-04-07T21:00:00.000Z"
+updated: "2026-04-06T18:30:00.000Z"
 ---
 
 ## Current Test
 
-number: 6
-name: Custom range reloads count
-expected: |
-  Choose Custom, set start and end dates that bracket at least one reading, confirm the reading count updates to a positive number and Generate becomes enabled if count &gt; 0.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
@@ -46,14 +42,14 @@ result: pass
 ### 6. Custom range reloads count
 expected: |
   Choose Custom, set start and end dates that bracket at least one reading, confirm the reading count updates to a positive number and Generate becomes enabled if count &gt; 0.
-result: pending
+result: pass
 
 ## Summary
 
 total: 6
-passed: 5
+passed: 6
 issues: 0
-pending: 1
+pending: 0
 skipped: 0
 blocked: 0
 

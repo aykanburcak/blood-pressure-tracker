@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: ready
-stopped_at: Phase 4 implemented — device PDF UAT or `/gsd-plan-phase 5`
-last_updated: "2026-04-07T15:10:00.000Z"
-last_activity: 2026-04-07 -- Phase 4 execute complete (15 Jest suites, 44 tests)
+stopped_at: Phase 4 UAT complete — `/gsd-discuss-phase 5` or `/gsd-plan-phase 5`
+last_updated: "2026-04-06T18:30:00.000Z"
+last_activity: 2026-04-06 -- Phase 4 UAT complete (6/6 passed)
 progress:
   total_phases: 5
   completed_phases: 4
@@ -21,16 +21,16 @@ progress:
 See: `.planning/PROJECT.md` (updated 2026-04-07)
 
 **Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
-**Current focus:** Phase 4 UAT on device, then Phase 5 — Privacy and Release Hardening
+**Current focus:** Phase 5 — Privacy and Release Hardening (discuss → plan → execute)
 
 ## Current Position
 
-Phase: 4 executed — PDF export (Settings → Export report)  
-Plan: Manual verify PDF + share on Android; then plan/execute Phase 5  
-Status: Ready for UAT / Phase 5  
-Last activity: 2026-04-07 -- Implemented `listReadingsInRange`, HTML report, expo-print/share, export screen
+Phase: 4 complete — PDF export UAT passed  
+Plan: Start Phase 5 (privacy copy, release boundaries)  
+Status: Ready for `/gsd-discuss-phase 5` or `/gsd-plan-phase 5`  
+Last activity: 2026-04-06 -- Phase 4 UAT 6/6 pass (custom range count + Generate)
 
-Progress: 12/12 plans done; latest automated run: 15 suites, 44 tests green.
+Progress: 12/12 plans done; Phase 4 device UAT complete.
 
 ## Performance Metrics
 
@@ -63,7 +63,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Smoke-test PDF generation and Android share sheet on emulator or device.
+- Phase 5: plan privacy/release hardening (PRIV-01, PRIV-02).
 
 ### Blockers/Concerns
 
@@ -72,6 +72,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-07T15:10:00.000Z
-Stopped at: Phase 4 code complete — `/gsd-verify-work` or Phase 5 when ready
+Last session: 2026-04-06T18:30:00.000Z
+Stopped at: Phase 4 UAT complete — begin Phase 5 planning
 Resume file: `.planning/ROADMAP.md` (Phase 5)
