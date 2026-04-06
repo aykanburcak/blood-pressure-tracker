@@ -6,15 +6,15 @@ source:
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:27:32Z"
+updated: "2026-04-06T09:38:28Z"
 ---
 
 ## Current Test
 
-number: 2
-name: First launch — privacy before dashboard
+number: 3
+name: After acknowledgement — main dashboard without sign-in
 expected: |
-  From a clean install (or after clearing app data), opening the app shows a full-screen privacy experience first (title "Private by default", body about readings staying on device, support line about non-diagnosis). You do not see the tab bar until you tap "Continue Offline". No sign-in, account, or cloud-sync prompts appear.
+  After "Continue Offline", you land on the main tab shell with Home selected. You can use Home, History, and Settings without creating an account or signing in. Tab order left-to-right is Home, History, Settings.
 awaiting: user response
 
 ## Tests
@@ -26,7 +26,7 @@ result: pass
 ### 2. First launch — privacy before dashboard
 expected: |
   From a clean install (or after clearing app data), opening the app shows a full-screen privacy experience first (title "Private by default", body about readings staying on device, support line about non-diagnosis). You do not see the tab bar until you tap "Continue Offline". No sign-in, account, or cloud-sync prompts appear.
-result: pending
+result: pass
 
 ### 3. After acknowledgement — main dashboard without sign-in
 expected: |
@@ -56,9 +56,9 @@ result: pending
 ## Summary
 
 total: 7
-passed: 1
+passed: 2
 issues: 0
-pending: 6
+pending: 5
 skipped: 0
 blocked: 0
 
