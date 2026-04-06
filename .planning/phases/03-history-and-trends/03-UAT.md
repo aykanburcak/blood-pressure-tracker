@@ -6,15 +6,15 @@ source:
   - 03-02-SUMMARY.md
   - 03-03-SUMMARY.md
 started: "2026-04-06T21:00:00.000Z"
-updated: "2026-04-06T23:00:00.000Z"
+updated: "2026-04-06T23:30:00.000Z"
 ---
 
 ## Current Test
 
-number: 4
-name: Delete — cancel vs confirm
+number: 5
+name: Trend summaries (7d / 30d)
 expected: |
-  Open a reading, tap Delete reading, tap Cancel — stay on edit with data intact. Open again, Delete, confirm Delete — returns to History and that row is gone.
+  History header shows "Recent averages", Last 7 days and Last 30 days with mmHg and reading counts. Counts match how many readings fall in each rolling window (rough sanity: not obviously wrong vs your data).
 awaiting: user response
 
 ## Tests
@@ -36,7 +36,7 @@ result: pass
 ### 4. Delete — cancel vs confirm
 expected: |
   Open a reading, tap Delete reading, tap Cancel — stay on edit with data intact. Open again, Delete, confirm Delete — returns to History and that row is gone.
-result: pending
+result: pass
 
 ### 5. Trend summaries (7d / 30d)
 expected: |
@@ -51,9 +51,9 @@ result: pending
 ## Summary
 
 total: 6
-passed: 3
+passed: 4
 issues: 0
-pending: 3
+pending: 2
 skipped: 0
 blocked: 0
 
