@@ -10,6 +10,7 @@ import {
   getTrendWindowStatsFromDb,
   listReadingsForChartFromDb,
   listReadingsFromDb,
+  listReadingsInRangeFromDb,
   updateReadingInDb,
   type TrendWindowStats,
 } from './readings-queries';
@@ -108,4 +109,13 @@ export async function getTrendWindowStats(
 ): Promise<TrendWindowStats> {
   const db = await getReadingsDb(databaseName);
   return getTrendWindowStatsFromDb(db, nowMs);
+}
+
+export async function listReadingsInRange(
+  startMs: number,
+  endMs: number,
+  databaseName: string = READINGS_DB_FILE,
+): Promise<ReadingRow[]> {
+  const db = await getReadingsDb(databaseName);
+  return listReadingsInRangeFromDb(db, { startMs, endMs });
 }

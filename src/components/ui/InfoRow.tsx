@@ -10,9 +10,10 @@ type Props = {
   showChevron?: boolean;
   onPress?: () => void;
   accessibilityLabel?: string;
+  testID?: string;
 };
 
-export function InfoRow({ title, detail, showChevron, onPress, accessibilityLabel }: Props) {
+export function InfoRow({ title, detail, showChevron, onPress, accessibilityLabel, testID }: Props) {
   const content: ReactNode = (
     <View style={styles.inner}>
       <View style={styles.textCol}>
@@ -31,6 +32,7 @@ export function InfoRow({ title, detail, showChevron, onPress, accessibilityLabe
         accessibilityLabel={accessibilityLabel ?? title}
         accessibilityRole="button"
         onPress={onPress}
+        testID={testID}
         style={({ pressed }) => [styles.row, pressed && styles.pressed]}>
         {content}
       </Pressable>

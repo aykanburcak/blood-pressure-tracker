@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -13,6 +14,15 @@ export default function SettingsTab() {
       <View testID="screen-settings">
         <ScreenTitle>Settings</ScreenTitle>
         <SurfaceCard padded="lg" style={styles.card}>
+          <InfoRow
+            accessibilityLabel={copy.settingsExportPdfTitle}
+            detail={copy.settingsExportPdfDetail}
+            showChevron
+            testID="settings-export-pdf"
+            title={copy.settingsExportPdfTitle}
+            onPress={() => router.push('/export-report')}
+          />
+          <View style={styles.divider} />
           <InfoRow title={copy.settingsLocalLabel} detail={copy.settingsLocalDetail} />
           <View style={styles.divider} />
           <InfoRow title={copy.settingsAboutLabel} showChevron />

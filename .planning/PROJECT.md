@@ -20,7 +20,7 @@ Logging and understanding a blood pressure reading should feel instant, private,
 - [x] Users can log blood pressure readings manually in seconds with minimal friction.
 - [x] Users can immediately understand each reading through clean visual context and WHO-based status indicators.
 - [x] Users can review their history and trends in polished, minimalist charts.
-- [ ] Users can export their blood pressure history as a PDF for medical appointments.
+- [x] Users can export their blood pressure history as a PDF for medical appointments.
 
 ### Out of Scope
 

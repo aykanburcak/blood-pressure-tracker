@@ -27,6 +27,14 @@ export default function RootLayout() {
             presentation: 'card',
           }}
         />
+        <Stack.Screen
+          name="export-report"
+          options={{
+            headerShown: true,
+            title: 'Export report',
+            presentation: 'card',
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

@@ -9,7 +9,7 @@
 
 - [x] **CORE-01**: User can open the app and reach the main dashboard without creating an account or signing in.
 - [x] **CORE-02**: User sees a brief first-run privacy explanation that states readings are stored locally on the device.
-- [ ] **CORE-03**: User can use the app's core logging, history, trends, and export features without requiring network access.
+- [x] **CORE-03**: User can use the app's core logging, history, trends, and export features without requiring network access.
 
 ### Logging
 
@@ -39,9 +39,9 @@
 
 ### Export
 
-- [ ] **EXPT-01**: User can generate a PDF report of saved readings for a selected time range.
-- [ ] **EXPT-02**: User can share or save the generated PDF through standard Android sharing flows.
-- [ ] **EXPT-03**: User's PDF export includes readable blood pressure history and summary context suitable for a medical appointment.
+- [x] **EXPT-01**: User can generate a PDF report of saved readings for a selected time range.
+- [x] **EXPT-02**: User can share or save the generated PDF through standard Android sharing flows.
+- [x] **EXPT-03**: User's PDF export includes readable blood pressure history and summary context suitable for a medical appointment.
 
 ### Privacy
 
@@ -81,7 +81,7 @@
 |-------------|-------|--------|
 | CORE-01 | Phase 1 | Complete |
 | CORE-02 | Phase 1 | Complete |
-| CORE-03 | Phase 1 | Partial (offline through history/trends; export in Phase 4) |
+| CORE-03 | Phase 1 | Complete |
 | LOG-01 | Phase 2 | Complete |
 | LOG-02 | Phase 2 | Complete |
 | LOG-03 | Phase 2 | Complete |
@@ -96,9 +96,9 @@
 | TRND-01 | Phase 3 | Complete |
 | TRND-02 | Phase 3 | Complete |
 | TRND-03 | Phase 3 | Complete |
-| EXPT-01 | Phase 4 | Pending |
-| EXPT-02 | Phase 4 | Pending |
-| EXPT-03 | Phase 4 | Pending |
+| EXPT-01 | Phase 4 | Implemented (UAT recommended) |
+| EXPT-02 | Phase 4 | Implemented (UAT recommended) |
+| EXPT-03 | Phase 4 | Implemented (UAT recommended) |
 | PRIV-01 | Phase 5 | Pending |
 | PRIV-02 | Phase 5 | Pending |
 
@@ -109,4 +109,4 @@
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-07 — Phase 3 UAT complete (HIST-01–03, TRND-01–03)*
+*Last updated: 2026-04-07 — Phase 4 implemented (EXPT-01–03); device PDF UAT recommended*

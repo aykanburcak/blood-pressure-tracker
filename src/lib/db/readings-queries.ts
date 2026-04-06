@@ -1,4 +1,4 @@
-import { asc, avg, count, desc, eq, gte } from 'drizzle-orm';
+import { and, asc, avg, count, desc, eq, gte, lte } from 'drizzle-orm';
 import type { BaseSQLiteDatabase } from 'drizzle-orm/sqlite-core';
 
 import { readings, type ReadingRow } from './schema';
@@ -68,6 +68,19 @@ export function listReadingsForChartFromDb(
     .select()
     .from(readings)
     .where(gte(readings.measuredAt, startMs))
+    .orderBy(asc(readings.measuredAt), asc(readings.createdAt))
+    .all();
+}
+
+export function listReadingsInRangeFromDb(
+  db: ReadingsDb,
+  range: { startMs: number; endMs: number },
+): ReadingRow[] {
+  const { startMs, endMs } = range;
+  return db
+    .select()
+    .from(readings)
+    .where(and(gte(readings.measuredAt, startMs), lte(readings.measuredAt, endMs)))
     .orderBy(asc(readings.measuredAt), asc(readings.createdAt))
     .all();
 }

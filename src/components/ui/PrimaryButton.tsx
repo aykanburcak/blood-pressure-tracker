@@ -8,14 +8,16 @@ type Props = {
   onPress: () => void | Promise<void>;
   disabled?: boolean;
   accessibilityLabel?: string;
+  testID?: string;
 };
 
-export function PrimaryButton({ label, onPress, disabled, accessibilityLabel }: Props) {
+export function PrimaryButton({ label, onPress, disabled, accessibilityLabel, testID }: Props) {
   return (
     <Pressable
       accessibilityLabel={accessibilityLabel ?? label}
       accessibilityRole="button"
       disabled={disabled}
+      testID={testID}
       onPress={() => void onPress()}
       style={({ pressed }) => [
         styles.btn,

@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation and Offline Shell** - Establish the account-free, offline-first app shell and first-run privacy framing.
 - [x] **Phase 2: Core Logging and Interpretation** - Deliver the fast manual entry loop with immediate saved-reading feedback.
 - [x] **Phase 3: History and Trends** - Turn persisted readings into editable history and trustworthy trend review.
-- [ ] **Phase 4: PDF Export** - Generate and share appointment-ready PDF reports from saved readings.
+- [x] **Phase 4: PDF Export** - Generate and share appointment-ready PDF reports from saved readings.
 - [ ] **Phase 5: Privacy and Release Hardening** - Tighten privacy claims, local-only boundaries, and release readiness.
 
 ## Phase Details
@@ -78,9 +78,9 @@ Plans:
   3. The exported PDF presents readable blood pressure history and summary context that is suitable to bring to a medical appointment.
 **Plans**: 3 plans
 Plans:
-- [ ] 04-01-PLAN.md - Range query, export window helpers, HTML report builder, Jest.
-- [ ] 04-02-PLAN.md - expo-print / sharing / filesystem install and PDF generation wrapper.
-- [ ] 04-03-PLAN.md - Settings entry, export-report screen, share flow, RNTL mocks.
+- [x] 04-01-PLAN.md - Range query, export window helpers, HTML report builder, Jest.
+- [x] 04-02-PLAN.md - expo-print / sharing / filesystem install and PDF generation wrapper.
+- [x] 04-03-PLAN.md - Settings entry, export-report screen, share flow, RNTL mocks.
 **UI hint**: yes
 
 ### Phase 5: Privacy and Release Hardening
@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation and Offline Shell | 3/3 | Complete | 2026-04-06 |
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
 | 3. History and Trends | 3/3 | Complete | 2026-04-06 |
-| 4. PDF Export | 0/3 planned | Planned | - |
+| 4. PDF Export | 3/3 | Complete (pending UAT) | 2026-04-07 |
 | 5. Privacy and Release Hardening | 0/TBD | Not started | - |

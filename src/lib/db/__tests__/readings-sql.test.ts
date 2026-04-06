@@ -12,6 +12,7 @@ import {
   getTrendWindowStatsFromDb,
   listReadingsForChartFromDb,
   listReadingsFromDb,
+  listReadingsInRangeFromDb,
   updateReadingInDb,
 } from '../readings-queries';
 
@@ -214,5 +215,54 @@ describe('readings SQL (better-sqlite3)', () => {
     expect(stats.last30.count).toBe(3);
     expect(stats.last30.avgSystolic).toBe(Math.round((120 + 140 + 100) / 3));
     expect(stats.last30.avgDiastolic).toBe(Math.round((80 + 90 + 65) / 3));
+  });
+
+  it('listReadingsInRangeFromDb is inclusive on startMs and endMs, ascending order', () => {
+    const startMs = 1000;
+    const endMs = 2000;
+
+    db.insert(readings).values({
+      id: 'below',
+      systolic: 100,
+      diastolic: 60,
+      pulse: null,
+      measuredAt: 999,
+      createdAt: 999,
+    }).run();
+    db.insert(readings).values({
+      id: 'at-start',
+      systolic: 110,
+      diastolic: 70,
+      pulse: null,
+      measuredAt: startMs,
+      createdAt: startMs,
+    }).run();
+    db.insert(readings).values({
+      id: 'mid',
+      systolic: 120,
+      diastolic: 80,
+      pulse: null,
+      measuredAt: 1500,
+      createdAt: 1500,
+    }).run();
+    db.insert(readings).values({
+      id: 'at-end',
+      systolic: 130,
+      diastolic: 85,
+      pulse: null,
+      measuredAt: endMs,
+      createdAt: endMs,
+    }).run();
+    db.insert(readings).values({
+      id: 'above',
+      systolic: 140,
+      diastolic: 90,
+      pulse: null,
+      measuredAt: 2001,
+      createdAt: 2001,
+    }).run();
+
+    const inRange = listReadingsInRangeFromDb(db, { startMs, endMs });
+    expect(inRange.map((r) => r.id)).toEqual(['at-start', 'mid', 'at-end']);
   });
 });

@@ -1,3 +1,5 @@
+import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
+
 /** Phase 1 tokens — aligned to `.planning/.../01-UI-SPEC.md` */
 
 export const spacing = {
@@ -81,4 +83,18 @@ export const copy = {
   trendPreviewHint:
     'After you save readings, you will see trends here. Charts stay on this device.',
   logReadingCta: 'Add reading',
+  settingsExportPdfTitle: 'Export PDF',
+  settingsExportPdfDetail: 'Create a report for your doctor',
+  exportReportScreenTitle: 'Export report',
+  exportGeneratePdfLabel: 'Generate PDF',
+  exportShareLabel: 'Share',
+  exportNoReadingsInRange: 'No readings in this range',
+  exportGeneratingLabel: 'Generating…',
+  exportRangeLast7: 'Last 7 days',
+  exportRangeLast30: 'Last 30 days',
+  exportRangeLast90: 'Last 90 days',
+  exportRangeCustom: 'Custom',
+  exportReadingsInRange: (n: number) =>
+    `${n} reading${n === 1 ? '' : 's'} in this range`,
+  exportDisclaimerShort: INTERPRETATION_DISCLAIMER,
 } as const;
