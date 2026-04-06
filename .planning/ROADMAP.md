@@ -30,7 +30,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can launch and use the app's core surfaces while the device is offline without being blocked by network requirements.
 **Plans**: 3 plans
 Plans:
-- [ ] 01-01-PLAN.md - Bootstrap the Expo Router foundation, local flag storage boundary, and test harness.
+- [x] 01-01-PLAN.md - Bootstrap the Expo Router foundation, local flag storage boundary, and test harness.
 - [ ] 01-02-PLAN.md - Implement the first-run privacy gate and durable tab routing contract.
 - [ ] 01-03-PLAN.md - Build the approved empty-state shell surfaces and final Phase 1 verification.
 **UI hint**: yes
