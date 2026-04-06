@@ -6,15 +6,15 @@ source:
   - 03-02-SUMMARY.md
   - 03-03-SUMMARY.md
 started: "2026-04-06T21:00:00.000Z"
-updated: "2026-04-06T22:00:00.000Z"
+updated: "2026-04-06T23:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 3
-name: Edit saves and History updates
+number: 4
+name: Delete — cancel vs confirm
 expected: |
-  On Edit reading, change systolic or diastolic (valid values), tap Save changes, return to History. The same row shows updated numbers (order may change if you changed measured time).
+  Open a reading, tap Delete reading, tap Cancel — stay on edit with data intact. Open again, Delete, confirm Delete — returns to History and that row is gone.
 awaiting: user response
 
 ## Tests
@@ -31,7 +31,7 @@ result: pass
 ### 3. Edit saves and History updates
 expected: |
   On Edit reading, change systolic or diastolic (valid values), tap Save changes, return to History. The same row shows updated numbers (order may change if you changed measured time).
-result: pending
+result: pass
 
 ### 4. Delete — cancel vs confirm
 expected: |
@@ -51,9 +51,9 @@ result: pending
 ## Summary
 
 total: 6
-passed: 2
+passed: 3
 issues: 0
-pending: 4
+pending: 3
 skipped: 0
 blocked: 0
 
