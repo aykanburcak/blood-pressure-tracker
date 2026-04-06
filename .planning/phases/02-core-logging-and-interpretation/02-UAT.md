@@ -4,15 +4,15 @@ phase: 02-core-logging-and-interpretation
 source:
   - Phase 2 plan execution (02-01 / 02-02 / 02-03); no SUMMARY.md artifacts yet
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T15:30:00.000Z"
+updated: "2026-04-06T16:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 4
-name: Interpretation — label, chip, disclaimer
+number: 5
+name: Persistence after app restart (HIST-04)
 expected: |
-  On Home with at least one saved reading, the hero shows a status label on the chip (e.g. Normal, Elevated, High blood pressure stages, Hypertensive crisis as appropriate), a soft tinted chip background, and the full sentence: "This is not a medical diagnosis. Talk to a clinician about your readings."
+  With at least one reading saved, force-close the app completely (remove from Android recents / swipe away). Open the app again. Home should still show the same latest BP numbers, time, chip label, and disclaimer — not the empty "No readings yet" state.
 awaiting: user response
 
 ## Tests
@@ -34,7 +34,7 @@ result: pass
 ### 4. Interpretation — label, chip, disclaimer
 expected: |
   For a saved reading, the Home hero shows a WHO-style status label on the chip, tint consistent with category, and the full non-diagnostic disclaimer line under the chip.
-result: pending
+result: pass
 
 ### 5. Persistence after app restart (HIST-04)
 expected: |
@@ -44,9 +44,9 @@ result: pending
 ## Summary
 
 total: 5
-passed: 3
+passed: 4
 issues: 0
-pending: 2
+pending: 1
 skipped: 0
 blocked: 0
 
