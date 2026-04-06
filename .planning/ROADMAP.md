@@ -76,7 +76,11 @@ Plans:
   1. User can generate a PDF report for a selected time range from saved readings.
   2. User can share or save the generated PDF through standard Android sharing flows.
   3. The exported PDF presents readable blood pressure history and summary context that is suitable to bring to a medical appointment.
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 04-01-PLAN.md - Range query, export window helpers, HTML report builder, Jest.
+- [ ] 04-02-PLAN.md - expo-print / sharing / filesystem install and PDF generation wrapper.
+- [ ] 04-03-PLAN.md - Settings entry, export-report screen, share flow, RNTL mocks.
 **UI hint**: yes
 
 ### Phase 5: Privacy and Release Hardening
@@ -100,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Foundation and Offline Shell | 3/3 | Complete | 2026-04-06 |
 | 2. Core Logging and Interpretation | 3/3 | Complete | 2026-04-06 |
 | 3. History and Trends | 3/3 | Complete | 2026-04-06 |
-| 4. PDF Export | 0/TBD | Not started | - |
+| 4. PDF Export | 0/3 planned | Planned | - |
 | 5. Privacy and Release Hardening | 0/TBD | Not started | - |
