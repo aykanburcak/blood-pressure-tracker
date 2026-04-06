@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: next
 status: ready
-stopped_at: v1.0 shipped — `/gsd-new-milestone` to plan v1.1+
+stopped_at: `/gsd-ship` — PR draft at `.planning/SHIP-PR-DRAFT.md`; add remote + `gh` to open PR
 last_updated: "2026-04-06T22:00:00.000Z"
-last_activity: 2026-04-06 -- Tab bar bottom safe area fix (gsd-quick)
+last_activity: 2026-04-06 -- gsd-ship prep: Android datetime fix committed; local branch `release/v1.0-android`
 progress:
   total_phases: 0
   completed_phases: 0
