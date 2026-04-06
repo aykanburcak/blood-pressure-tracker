@@ -13,6 +13,7 @@ Logging and understanding a blood pressure reading should feel instant, private,
 ### Validated
 
 - **Phase 2 (2026-04-06):** Manual logging loop, SQLite persistence, WHO-based latest-reading context on Home, non-diagnostic framing — see `02-UAT.md` and `02-VERIFICATION.md` under `.planning/phases/02-core-logging-and-interpretation/`.
+- **Phase 3 (2026-04-07):** History list, edit/delete, rolling-window summaries, paired BP trend chart (Skia/Victory), Expo-safe Drizzle journal migration — see `03-UAT.md` and `03-VERIFICATION.md` under `.planning/phases/03-history-and-trends/`.
 
 ### Active
 

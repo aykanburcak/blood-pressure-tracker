@@ -1,21 +1,17 @@
 ---
-status: testing
+status: complete
 phase: 03-history-and-trends
 source:
   - 03-01-SUMMARY.md
   - 03-02-SUMMARY.md
   - 03-03-SUMMARY.md
 started: "2026-04-06T21:00:00.000Z"
-updated: "2026-04-07T00:00:00.000Z"
+updated: "2026-04-07T00:15:00.000Z"
 ---
 
 ## Current Test
 
-number: 6
-name: Chart — paired trend or placeholder
-expected: |
-  With 0–1 readings in the chart window, you see placeholder copy about adding more readings. With 2+ readings in the last 90 days, you see a chart area with two distinct lines (systolic vs diastolic), not a single series only. Use a development build if Expo Go does not render Skia.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
@@ -46,17 +42,17 @@ result: pass
 ### 6. Chart — paired trend or placeholder
 expected: |
   With 0–1 readings in the chart window, you see placeholder copy about adding more readings. With 2+ readings in the last 90 days, you see a chart area with two distinct lines (systolic vs diastolic), not a single series only. Use a development build if Expo Go does not render Skia.
-result: pending
+result: pass
 
 ## Summary
 
 total: 6
-passed: 5
+passed: 6
 issues: 0
-pending: 1
+pending: 0
 skipped: 0
 blocked: 0
 
 ## Gaps
 
-(none yet)
+None — 0 issues during UAT. Drizzle `__drizzle_migrations` SERIAL/SQLite issue fixed in-app (`migrate.ts`) before edit flow passed.
