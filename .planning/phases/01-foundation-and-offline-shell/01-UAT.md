@@ -6,15 +6,15 @@ source:
   - 01-02-SUMMARY.md
   - 01-03-SUMMARY.md
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T09:41:24Z"
+updated: "2026-04-06T09:42:13Z"
 ---
 
 ## Current Test
 
-number: 5
-name: History empty list
+number: 6
+name: Settings — local-only and export boundary
 expected: |
-  On History, you see the "History" title, a short line about reverse chronological order, and a card-shaped list area containing "No history yet" and the approved empty copy. No "coming soon" or sample readings.
+  On Settings, you see "Local storage only" with detail about the device and optional PDF later, an "About this app" row, and a muted footnote that export is only when you choose it—nothing implies automatic upload or cloud sync.
 awaiting: user response
 
 ## Tests
@@ -41,7 +41,7 @@ result: pass
 ### 5. History empty list
 expected: |
   On History, you see the "History" title, a short line about reverse chronological order, and a card-shaped list area containing "No history yet" and the approved empty copy. No "coming soon" or sample readings.
-result: pending
+result: pass
 
 ### 6. Settings — local-only and export boundary
 expected: |
@@ -56,9 +56,9 @@ result: pending
 ## Summary
 
 total: 7
-passed: 4
+passed: 5
 issues: 0
-pending: 3
+pending: 2
 skipped: 0
 blocked: 0
 
