@@ -8,24 +8,36 @@ import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { ScreenContainer } from '@/components/ui/ScreenContainer';
 import { ScreenTitle } from '@/components/ui/ScreenTitle';
 import { SurfaceCard } from '@/components/ui/SurfaceCard';
+import { buildBpChartSeries, type BpChartSeries } from '@/features/trends/bp-chart-data';
+import { BpTrendChart } from '@/features/trends/BpTrendChart';
 import { classifyBloodPressure } from '@/lib/bp/who-classification';
 import { getInterpretationColor } from '@/lib/bp/interpretation-style';
 import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
-import { getLatestReading } from '@/lib/db/readings-repository';
+import { getLatestReading, listReadingsForChart } from '@/lib/db/readings-repository';
 import type { ReadingRow } from '@/lib/db/schema';
 import { copy, colors, radius, spacing, typography } from '@/lib/theme';
 
 export default function HomeTab() {
   const [latest, setLatest] = useState<ReadingRow | null>(null);
-
-  const refresh = useCallback(() => {
-    void getLatestReading().then(setLatest);
-  }, []);
+  const [chartSeries, setChartSeries] = useState<BpChartSeries>({ kind: 'sparse' });
 
   useFocusEffect(
     useCallback(() => {
-      refresh();
-    }, [refresh]),
+      let cancelled = false;
+      void (async () => {
+        const [latestRow, chartRows] = await Promise.all([
+          getLatestReading(),
+          listReadingsForChart(),
+        ]);
+        if (!cancelled) {
+          setLatest(latestRow);
+          setChartSeries(buildBpChartSeries(chartRows));
+        }
+      })();
+      return () => {
+        cancelled = true;
+      };
+    }, []),
   );
 
   const interpretation = latest
@@ -88,13 +100,22 @@ export default function HomeTab() {
           <Text style={styles.cardBody}>{copy.homeLocalCardBody}</Text>
         </SurfaceCard>
 
-        <SurfaceCard style={styles.gap}>
-          <View style={styles.trendLines}>
-            <View style={styles.trendLine} />
-            <View style={[styles.trendLine, styles.trendLineShort]} />
-            <View style={styles.trendLine} />
-          </View>
-          <Text style={styles.trendCopy}>{copy.trendPreviewHint}</Text>
+        <SurfaceCard style={styles.trendCardOuter} padded="lg">
+          {chartSeries.kind === 'sparse' ? (
+            <>
+              <View style={styles.trendLines} testID="home-trend-skeleton">
+                <View style={styles.trendLine} />
+                <View style={[styles.trendLine, styles.trendLineShort]} />
+                <View style={styles.trendLine} />
+              </View>
+              <Text style={styles.trendCopy}>{copy.trendPreviewHint}</Text>
+            </>
+          ) : (
+            <>
+              <Text style={styles.trendCardTitle}>Blood pressure over time</Text>
+              <BpTrendChart series={chartSeries} compact />
+            </>
+          )}
         </SurfaceCard>
       </View>
     </ScreenContainer>
@@ -121,6 +142,15 @@ const styles = StyleSheet.create({
   },
   gap: {
     marginBottom: spacing.lg,
+  },
+  trendCardOuter: {
+    marginBottom: spacing.lg,
+    overflow: 'hidden',
+  },
+  trendCardTitle: {
+    ...typography.label,
+    color: colors.textPrimary,
+    marginBottom: spacing.sm,
   },
   cardBody: {
     ...typography.body,

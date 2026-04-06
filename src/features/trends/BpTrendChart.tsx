@@ -10,19 +10,24 @@ const DIASTOLIC_COLOR = '#2563EB';
 
 type Props = {
   series: BpChartSeries;
+  /** Shorter chart for dashboard-style previews (e.g. Home tab). */
+  compact?: boolean;
 };
 
-export function BpTrendChart({ series }: Props) {
+export function BpTrendChart({ series, compact }: Props) {
+  const chartHeight = compact ? 160 : 220;
+  const placeholderMinHeight = compact ? 120 : 160;
+
   if (series.kind === 'sparse') {
     return (
-      <View style={styles.placeholder}>
+      <View style={[styles.placeholder, { minHeight: placeholderMinHeight }]}>
         <Text style={styles.placeholderText}>Add a few more readings to see your trend.</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.chartHost}>
+    <View style={[styles.chartHost, { height: chartHeight }]} testID="bp-trend-chart">
       <CartesianChart
         data={series.data}
         domainPadding={{ left: 16, right: 12, top: 20, bottom: 12 }}
@@ -41,11 +46,9 @@ export function BpTrendChart({ series }: Props) {
 
 const styles = StyleSheet.create({
   chartHost: {
-    height: 220,
     width: '100%',
   },
   placeholder: {
-    minHeight: 160,
     justifyContent: 'center',
     paddingVertical: spacing.lg,
     paddingHorizontal: spacing.md,

@@ -35,6 +35,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-06)
 | Date | Change |
 |------|--------|
 | 2026-04-06 | Tab bar: `useSafeAreaInsets` + `SafeAreaProvider` root — bottom inset above Android gesture bar |
+| 2026-04-06 | Home trend card: `listReadingsForChart` + `BpTrendChart` when ≥2 readings; skeleton + `trendPreviewHint` when sparse |
 
 ### Decisions
 
