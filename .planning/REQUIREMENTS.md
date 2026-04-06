@@ -1,112 +1,37 @@
 # Requirements: Blood Pressure Tracker
 
-**Defined:** 2026-04-05
-**Core Value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
+**Post–v1.0 planning**  
+**Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
 
-## v1 Requirements
+## Shipped baseline
 
-### Core Experience
+All **v1** requirements (CORE, LOG, HIST, INTP, TRND, EXPT, PRIV) were satisfied in milestone **v1.0 Android v1**. Archived copy with traceability:
 
-- [x] **CORE-01**: User can open the app and reach the main dashboard without creating an account or signing in.
-- [x] **CORE-02**: User sees a brief first-run privacy explanation that states readings are stored locally on the device.
-- [x] **CORE-03**: User can use the app's core logging, history, trends, and export features without requiring network access.
+- [`.planning/milestones/v1.0-REQUIREMENTS.md`](milestones/v1.0-REQUIREMENTS.md)
 
-### Logging
+## Next milestone
 
-- [x] **LOG-01**: User can manually enter systolic, diastolic, and pulse values in a dedicated add-reading flow.
-- [x] **LOG-02**: User can review and change the reading date and time, with the default set to the current moment.
-- [x] **LOG-03**: User cannot save a reading when required values are missing or outside supported validation ranges.
-- [x] **LOG-04**: User can save a valid reading with a single primary action and receives immediate confirmation that it was recorded.
+Use **`/gsd-new-milestone`** to name the next version (e.g. v1.1) and promote items below into **Active** with new REQ IDs as needed.
 
-### History
+### Candidate backlog (not committed scope)
 
-- [x] **HIST-01**: User can view saved readings in reverse chronological order.
-- [x] **HIST-02**: User can open a saved reading and edit its values and timestamp.
-- [x] **HIST-03**: User can delete a saved reading from the local history.
-- [x] **HIST-04**: User's saved readings remain available after closing and reopening the app.
+**Engagement**
 
-### Interpretation
+- Reminders for future BP checks  
+- Optional free-form notes on a reading  
 
-- [x] **INTP-01**: User can see a WHO-based status classification for each saved reading.
-- [x] **INTP-02**: User can see color-supported reading context without the app presenting the result as medical diagnosis or treatment advice.
-- [x] **INTP-03**: User can view the latest reading summary from the main dashboard immediately after saving a reading.
+**Ecosystem**
 
-### Trends
-
-- [x] **TRND-01**: User can view a timeline chart of saved blood pressure readings.
-- [x] **TRND-02**: User can review trend summaries for recent periods from persisted readings.
-- [x] **TRND-03**: User can use trend views that preserve paired systolic and diastolic information from the underlying readings.
-
-### Export
-
-- [x] **EXPT-01**: User can generate a PDF report of saved readings for a selected time range.
-- [x] **EXPT-02**: User can share or save the generated PDF through standard Android sharing flows.
-- [x] **EXPT-03**: User's PDF export includes readable blood pressure history and summary context suitable for a medical appointment.
-
-### Privacy
-
-- [x] **PRIV-01**: User can use the app without ads, account creation, or cloud-sync setup in v1.
-- [x] **PRIV-02**: User can view in-app privacy copy that explains the local-only storage model and export boundary.
-
-## v2 Requirements
-
-### Engagement
-
-- **ENG-01**: User can schedule reminders for future blood pressure checks.
-- **ENG-02**: User can optionally attach free-form notes to a reading.
-
-### Ecosystem
-
-- **ECOS-01**: User can sync blood pressure records with Android Health Connect.
-- **ECOS-02**: User can protect the app with biometric app lock.
-- **ECOS-03**: User can back up or sync data across devices with an optional account-based flow.
-
-## Out of Scope
-
-| Feature | Reason |
-|---------|--------|
-| iOS release | The first product release is intentionally Android-only |
-| Cloud sync in v1 | Conflicts with the offline-first, zero-friction privacy strategy |
-| Mandatory accounts or sign-in | Adds onboarding friction and undermines the local-only positioning |
-| Bluetooth cuff integrations | Hardware breadth would dominate v1 complexity without validating the core product loop |
-| Health Connect integration in v1 | Valuable later, but not required to validate the first release |
-| Medication tracking, weight tracking, or broader health dashboards | Dilutes the single-purpose blood pressure product |
-| AI diagnosis, treatment recommendations, or risk scoring | Exceeds the product's non-diagnostic medical boundary |
-| CSV export | PDF covers the primary appointment-sharing use case for v1 |
-| Social features or gamification | Wrong fit for the calm, private utility positioning |
+- Android Health Connect sync  
+- Optional biometric app lock  
+- Optional account / cross-device sync  
 
 ## Traceability
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| CORE-01 | Phase 1 | Complete |
-| CORE-02 | Phase 1 | Complete |
-| CORE-03 | Phase 1 | Complete |
-| LOG-01 | Phase 2 | Complete |
-| LOG-02 | Phase 2 | Complete |
-| LOG-03 | Phase 2 | Complete |
-| LOG-04 | Phase 2 | Complete |
-| HIST-01 | Phase 3 | Complete |
-| HIST-02 | Phase 3 | Complete |
-| HIST-03 | Phase 3 | Complete |
-| HIST-04 | Phase 2 | Complete |
-| INTP-01 | Phase 2 | Complete |
-| INTP-02 | Phase 2 | Complete |
-| INTP-03 | Phase 2 | Complete |
-| TRND-01 | Phase 3 | Complete |
-| TRND-02 | Phase 3 | Complete |
-| TRND-03 | Phase 3 | Complete |
-| EXPT-01 | Phase 4 | Implemented (UAT recommended) |
-| EXPT-02 | Phase 4 | Implemented (UAT recommended) |
-| EXPT-03 | Phase 4 | Implemented (UAT recommended) |
-| PRIV-01 | Phase 5 | Complete |
-| PRIV-02 | Phase 5 | Complete |
-
-**Coverage:**
-- v1 requirements: 22 total
-- Mapped to phases: 22
-- Unmapped: 0
+| Requirement | Milestone | Status |
+|-------------|-----------|--------|
+| — | Next TBD | Planning |
 
 ---
-*Requirements defined: 2026-04-05*
-*Last updated: 2026-04-06 — Phase 5 implemented (PRIV-01, PRIV-02); run `.planning/RELEASE-CHECKLIST.md` before Play upload*
+
+*Reset: 2026-04-06 after v1.0 milestone complete.*

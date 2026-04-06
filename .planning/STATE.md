@@ -1,76 +1,49 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
+milestone: v1.1
+milestone_name: next
 status: ready
-stopped_at: Phase 5 UAT complete — `/gsd-complete-milestone` or Play checklist before ship
-last_updated: "2026-04-06T20:00:00.000Z"
-last_activity: 2026-04-06 -- Phase 5 execute complete (PRIV-01/02, 16 Jest suites, 45 tests)
+stopped_at: v1.0 shipped — `/gsd-new-milestone` to plan v1.1+
+last_updated: "2026-04-06T22:00:00.000Z"
+last_activity: 2026-04-06 -- Milestone v1.0 complete; roadmap/requirements reset
 progress:
-  total_phases: 5
-  completed_phases: 5
-  total_plans: 15
-  completed_plans: 15
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: `.planning/PROJECT.md` (updated 2026-04-07)
+See: `.planning/PROJECT.md` (updated 2026-04-06)
 
-**Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
-**Current focus:** v1 milestone code complete — device smoke + Play checklist before ship; `/gsd-complete-milestone` when ready
+**Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.  
+**Current focus:** **v1.0 shipped** — plan **v1.1+** with `/gsd-new-milestone`; run `.planning/RELEASE-CHECKLIST.md` before Play production upload.
 
 ## Current Position
 
-Phase: **5 complete** — Privacy & data screen, `allowBackup: false`, release checklist, REQUIREMENTS PRIV-01/PRIV-02 marked done  
-Plan: Run `.planning/RELEASE-CHECKLIST.md` before Play upload; milestone close when ready  
-Status: Phase 5 UAT 6/6 pass  
-Last activity: 2026-04-06 -- Phase 5 device UAT complete (privacy + PRIV-02)
-
-Progress: **15/15** plans done; latest automated run: **16** suites, **45** tests green.
-
-## Performance Metrics
-
-**Velocity:**
-
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0.0 hours
-
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| - | - | - | - |
-
-**Recent Trend:**
-
-- Last 5 plans: none
-- Trend: Stable
+**Milestone:** v1.0 Android v1 **complete** (archived under `.planning/milestones/v1.0-*`).  
+**Next:** Define v1.1 (or next) scope; `.planning/ROADMAP.md` and `REQUIREMENTS.md` are reset for forward planning.
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in `PROJECT.md` Key Decisions table.
-Recent decisions affecting current work:
+Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 
-- Phase 1: Keep the roadmap aligned to `foundation -> logging -> history/trends -> export -> privacy/release hardening`.
-- Phase 1: Map each v1 requirement to exactly one phase with no duplicate ownership.
+### Pending todos
 
-### Pending Todos
+- Play upload: execute `.planning/RELEASE-CHECKLIST.md` on release candidate builds.
+- Optional: `/gsd-cleanup` to archive phase trees into `milestones/v1.0-phases/` if you want a slimmer `.planning/phases/`.
 
-- Walk `.planning/RELEASE-CHECKLIST.md` on a release candidate build; complete Play Data safety form to match in-app copy.
+### Blockers
 
-### Blockers/Concerns
+- None for planning. Regenerate `.expo/types/router.d.ts` when adding routes if types drift.
 
-- Typed routes: `.expo/types/router.d.ts` updated for `/privacy-info`; `npx expo start` may refresh generated types if routes change again.
+## Session continuity
 
-## Session Continuity
-
-Last session: 2026-04-06T20:00:00.000Z
-Stopped at: Phase 5 execution complete — milestone verification or archive
-Resume file: `.planning/RELEASE-CHECKLIST.md`
+Last session: 2026-04-06 — `gsd-complete-milestone` v1.0  
+Resume: `.planning/REQUIREMENTS.md` + `/gsd-new-milestone`

@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Blood Pressure Tracker is an Android app built with React Native for people who want a calm, private, low-friction way to log and understand their blood pressure readings. It is designed as a minimalist, design-first utility inspired by Apple Health, with the interface getting out of the way so users can record a reading, see immediate context, and review trends without noise or account friction.
+Blood Pressure Tracker is an Android app built with React Native (Expo) for people who want a calm, private, low-friction way to log and understand their blood pressure readings. It is a minimalist, design-first utility inspired by Apple Health: record a reading, see immediate WHO-based context, review trends, and export a PDF for clinicians—without accounts or cloud sync in v1.
 
 ## Core Value
 
@@ -10,75 +10,57 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 ## Requirements
 
-### Validated
+### Validated (v1.0 — shipped 2026-04-06)
 
-- **Phase 2 (2026-04-06):** Manual logging loop, SQLite persistence, WHO-based latest-reading context on Home, non-diagnostic framing — see `02-UAT.md` and `02-VERIFICATION.md` under `.planning/phases/02-core-logging-and-interpretation/`.
-- **Phase 3 (2026-04-07):** History list, edit/delete, rolling-window summaries, paired BP trend chart (Skia/Victory), Expo-safe Drizzle journal migration — see `03-UAT.md` and `03-VERIFICATION.md` under `.planning/phases/03-history-and-trends/`.
+- **v1.0:** Full Android v1 scope: offline shell (CORE-01–03), manual logging (LOG-01–04), persisted history (HIST-01–04), WHO interpretation (INTP-01–03), trend chart + summaries (TRND-01–03), PDF export + share (EXPT-01–03), privacy copy + no ads/account/sync + backup posture (PRIV-01–02). Evidence: `.planning/milestones/v1.0-REQUIREMENTS.md`, phase UAT/VERIFICATION under `.planning/phases/`.
 
 ### Active
 
-- [x] Users can log blood pressure readings manually in seconds with minimal friction.
-- [x] Users can immediately understand each reading through clean visual context and WHO-based status indicators.
-- [x] Users can review their history and trends in polished, minimalist charts.
-- [x] Users can export their blood pressure history as a PDF for medical appointments.
+- Next milestone scope **not** defined here — use `/gsd-new-milestone` and `.planning/REQUIREMENTS.md` backlog.
 
 ### Out of Scope
 
-- Account creation, login, and cloud sync — v1 prioritizes privacy, speed to ship, and zero onboarding friction.
-- iOS release — the initial product is intentionally Android-only.
-- Medication tracking, weight logs, and broader health tracking — the product is a single-purpose blood pressure tracker, not a general health suite.
-- Notes and reminders — deferred to a later iteration to keep v1 focused on core logging, trends, and export.
-- Raw CSV export — PDF alone covers the primary doctor-sharing use case for v1.
-- Medical diagnosis or treatment recommendations — the app may show WHO-based interpretation only and must remain clearly non-diagnostic.
+- Account creation, login, and cloud sync in v1 — shipped without them; still out of scope for the v1 product line unless a future milestone explicitly adds optional sync.
+- iOS release — Android-first; Apple Health dominates iOS reference space.
+- Medication tracking, weight logs, and broader health dashboards — single-purpose BP tracker.
+- Notes and reminders — deferred past v1 (candidates for v1.1+).
+- Raw CSV export in v1 — PDF covers doctor visit handoff.
+- Medical diagnosis or treatment recommendations — WHO-style labels only, explicit non-diagnostic copy.
 
 ## Context
 
-The target audience is a broad Google Play Store audience rather than a single personal-use scenario. The desired product experience is inspired by Apple Health: minimalist, calm, high-fidelity, and immediately useful. The first two minutes of use matter heavily:
+Shipped **v1.0** as a local-only Expo SDK 55 app: SQLite readings, Skia/Victory trends, expo-print PDF, Settings **Privacy & data**, `allowBackup: false` for Android. Target remains Google Play with high polish and calm visuals.
 
-- The app should open directly into a clean dashboard without account setup.
-- A brief privacy-first message should make local-only storage explicit.
-- The primary action should be obvious and centered on adding a reading.
-- Data entry should feel fast with large, easy-to-use input controls, current date/time defaults, and one-tap save.
-- Saving a reading should immediately unlock value through visual feedback, color-coded interpretation, and a living trend chart.
-
-The product strategy is design-first. The app does not need feature breadth to compete; it needs a level of polish and clarity that makes users prefer it over noisier alternatives. The hardest UX challenge is chart and interaction polish rather than basic typography and spacing. V1 data storage is local-only, both to strengthen trust for sensitive health data and to avoid backend and account complexity early.
+Next product bets (when planned): reminders, notes, Health Connect, app lock — see `.planning/REQUIREMENTS.md` candidates.
 
 ## Constraints
 
-- **Platform**: Android only — Apple Health already occupies the iOS reference space, so the release target is Google Play.
-- **Tech stack**: React Native — implementation must suit a production-quality Android app in this ecosystem.
-- **Privacy**: Fully offline and local-first — no backend, account system, or cloud sync in v1.
-- **Scope**: Single-purpose product — avoid adjacent health features that dilute the core blood pressure use case.
-- **UX bar**: High-fidelity, minimalist polish — design quality is a core differentiator, not a nice-to-have.
-- **Medical boundary**: WHO-based status guidance only — the app must clearly avoid implying medical advice or diagnosis.
-- **Export**: PDF only — enough for doctor visits without expanding scope into broader data portability formats.
+- **Platform:** Android for v1 release; iOS optional later.
+- **Tech stack:** React Native / Expo, New Architecture–friendly toolchain per `AGENTS.md`.
+- **Privacy:** Local-first; no backend in v1.
+- **Scope:** Single-purpose BP logging and review.
+- **UX:** Design-led, minimal chrome.
+- **Medical boundary:** WHO-based guidance only; not a diagnostic tool.
+- **Export:** PDF for v1.
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Ship Android first | The market opportunity is Google Play, while Apple already offers a strong default on iOS | — Pending |
-| Keep v1 fully offline and private | Removes onboarding and backend complexity while increasing trust for sensitive data | — Pending |
-| Focus v1 on manual logging, trends, and PDF export | Covers the core utility loop without feature bloat | — Pending |
-| Compete on polish rather than breadth | The product advantage is a calm, beautiful, single-purpose experience | — Pending |
-| Use WHO-based interpretation with explicit non-medical-advice limits | Users need immediate context, but the app must avoid crossing into diagnosis | — Pending |
+| Ship Android first | Play opportunity; iOS crowded | ✓ Shipped v1.0 Android |
+| v1 fully offline and private | Trust + speed to ship | ✓ No account/sync/ads |
+| v1 = logging, trends, PDF | Core loop without bloat | ✓ Delivered |
+| Polish over breadth | Differentiator | ✓ Ongoing bar |
+| WHO interpretation + non-diagnostic framing | User context without diagnosis | ✓ In-app + PDF |
+| PDF-only export | Doctor handoff without scope creep | ✓ expo-print + share |
+| `allowBackup: false` | Align manifest with privacy story | ✓ Phase 5 |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
 
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? -> Move to Out of Scope with reason
-2. Requirements validated? -> Move to Validated with phase reference
-3. New requirements emerged? -> Add to Active
-4. Decisions to log? -> Add to Key Decisions
-5. "What This Is" still accurate? -> Update if drifted
-
-**After each milestone** (via `/gsd-complete-milestone`):
-1. Full review of all sections
-2. Core Value check -> still the right priority?
-3. Audit Out of Scope -> reasons still valid?
-4. Update Context with current state
+**After each milestone** (`/gsd-complete-milestone`): full review of sections; move shipped work to Validated; refresh Active for the next milestone.
 
 ---
-*Last updated: 2026-04-05 after initialization*
+
+*Last updated: 2026-04-06 after v1.0 milestone complete*
