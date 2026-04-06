@@ -13,23 +13,23 @@
 
 ### Logging
 
-- [ ] **LOG-01**: User can manually enter systolic, diastolic, and pulse values in a dedicated add-reading flow.
-- [ ] **LOG-02**: User can review and change the reading date and time, with the default set to the current moment.
-- [ ] **LOG-03**: User cannot save a reading when required values are missing or outside supported validation ranges.
-- [ ] **LOG-04**: User can save a valid reading with a single primary action and receives immediate confirmation that it was recorded.
+- [x] **LOG-01**: User can manually enter systolic, diastolic, and pulse values in a dedicated add-reading flow.
+- [x] **LOG-02**: User can review and change the reading date and time, with the default set to the current moment.
+- [x] **LOG-03**: User cannot save a reading when required values are missing or outside supported validation ranges.
+- [x] **LOG-04**: User can save a valid reading with a single primary action and receives immediate confirmation that it was recorded.
 
 ### History
 
 - [ ] **HIST-01**: User can view saved readings in reverse chronological order.
 - [ ] **HIST-02**: User can open a saved reading and edit its values and timestamp.
 - [ ] **HIST-03**: User can delete a saved reading from the local history.
-- [ ] **HIST-04**: User's saved readings remain available after closing and reopening the app.
+- [x] **HIST-04**: User's saved readings remain available after closing and reopening the app.
 
 ### Interpretation
 
-- [ ] **INTP-01**: User can see a WHO-based status classification for each saved reading.
-- [ ] **INTP-02**: User can see color-supported reading context without the app presenting the result as medical diagnosis or treatment advice.
-- [ ] **INTP-03**: User can view the latest reading summary from the main dashboard immediately after saving a reading.
+- [x] **INTP-01**: User can see a WHO-based status classification for each saved reading.
+- [x] **INTP-02**: User can see color-supported reading context without the app presenting the result as medical diagnosis or treatment advice.
+- [x] **INTP-03**: User can view the latest reading summary from the main dashboard immediately after saving a reading.
 
 ### Trends
 
@@ -79,20 +79,20 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | Phase 1 | Pending |
-| CORE-02 | Phase 1 | Pending |
-| CORE-03 | Phase 1 | Pending |
-| LOG-01 | Phase 2 | Pending |
-| LOG-02 | Phase 2 | Pending |
-| LOG-03 | Phase 2 | Pending |
-| LOG-04 | Phase 2 | Pending |
+| CORE-01 | Phase 1 | Complete |
+| CORE-02 | Phase 1 | Complete |
+| CORE-03 | Phase 1 | Partial (shell offline; full v1 offline when history/trends/export ship) |
+| LOG-01 | Phase 2 | Complete |
+| LOG-02 | Phase 2 | Complete |
+| LOG-03 | Phase 2 | Complete |
+| LOG-04 | Phase 2 | Complete |
 | HIST-01 | Phase 3 | Pending |
 | HIST-02 | Phase 3 | Pending |
 | HIST-03 | Phase 3 | Pending |
-| HIST-04 | Phase 2 | Pending |
-| INTP-01 | Phase 2 | Pending |
-| INTP-02 | Phase 2 | Pending |
-| INTP-03 | Phase 2 | Pending |
+| HIST-04 | Phase 2 | Complete |
+| INTP-01 | Phase 2 | Complete |
+| INTP-02 | Phase 2 | Complete |
+| INTP-03 | Phase 2 | Complete |
 | TRND-01 | Phase 3 | Pending |
 | TRND-02 | Phase 3 | Pending |
 | TRND-03 | Phase 3 | Pending |
@@ -109,4 +109,4 @@
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-05 after initialization*
+*Last updated: 2026-04-06 — Phase 2 UAT complete (LOG-*, HIST-04, INTP-*)*

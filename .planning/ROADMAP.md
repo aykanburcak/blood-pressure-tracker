@@ -12,8 +12,8 @@ This roadmap follows the trust-critical dependency chain for a private blood pre
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation and Offline Shell** - Establish the account-free, offline-first app shell and first-run privacy framing.
-- [ ] **Phase 2: Core Logging and Interpretation** - Deliver the fast manual entry loop with immediate saved-reading feedback.
+- [x] **Phase 1: Foundation and Offline Shell** - Establish the account-free, offline-first app shell and first-run privacy framing.
+- [x] **Phase 2: Core Logging and Interpretation** - Deliver the fast manual entry loop with immediate saved-reading feedback.
 - [ ] **Phase 3: History and Trends** - Turn persisted readings into editable history and trustworthy trend review.
 - [ ] **Phase 4: PDF Export** - Generate and share appointment-ready PDF reports from saved readings.
 - [ ] **Phase 5: Privacy and Release Hardening** - Tighten privacy claims, local-only boundaries, and release readiness.

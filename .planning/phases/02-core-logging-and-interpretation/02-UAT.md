@@ -1,19 +1,15 @@
 ---
-status: testing
+status: complete
 phase: 02-core-logging-and-interpretation
 source:
   - Phase 2 plan execution (02-01 / 02-02 / 02-03); no SUMMARY.md artifacts yet
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T16:00:00.000Z"
+updated: "2026-04-06T17:00:00.000Z"
 ---
 
 ## Current Test
 
-number: 5
-name: Persistence after app restart (HIST-04)
-expected: |
-  With at least one reading saved, force-close the app completely (remove from Android recents / swipe away). Open the app again. Home should still show the same latest BP numbers, time, chip label, and disclaimer — not the empty "No readings yet" state.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
@@ -39,17 +35,17 @@ result: pass
 ### 5. Persistence after app restart (HIST-04)
 expected: |
   After saving at least one reading, force-close the app (swipe away from recents). Relaunch. Home still shows the same latest reading values and interpretation (no empty state unless data was cleared).
-result: pending
+result: pass
 
 ## Summary
 
 total: 5
-passed: 4
+passed: 5
 issues: 0
-pending: 1
+pending: 0
 skipped: 0
 blocked: 0
 
 ## Gaps
 
-<!-- Populated when issues are reported -->
+None — 0 issues reported during UAT.

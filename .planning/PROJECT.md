@@ -12,12 +12,12 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 ### Validated
 
-(None yet — ship to validate)
+- **Phase 2 (2026-04-06):** Manual logging loop, SQLite persistence, WHO-based latest-reading context on Home, non-diagnostic framing — see `02-UAT.md` and `02-VERIFICATION.md` under `.planning/phases/02-core-logging-and-interpretation/`.
 
 ### Active
 
-- [ ] Users can log blood pressure readings manually in seconds with minimal friction.
-- [ ] Users can immediately understand each reading through clean visual context and WHO-based status indicators.
+- [x] Users can log blood pressure readings manually in seconds with minimal friction.
+- [x] Users can immediately understand each reading through clean visual context and WHO-based status indicators.
 - [ ] Users can review their history and trends in polished, minimalist charts.
 - [ ] Users can export their blood pressure history as a PDF for medical appointments.
 
