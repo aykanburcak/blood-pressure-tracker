@@ -1,37 +1,79 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { colors, spacing, typography } from '@/lib/theme';
+import { EmptyStatePanel } from '@/components/ui/EmptyStatePanel';
+import { ScreenContainer } from '@/components/ui/ScreenContainer';
+import { ScreenTitle } from '@/components/ui/ScreenTitle';
+import { SurfaceCard } from '@/components/ui/SurfaceCard';
+import { copy, colors, radius, spacing, typography } from '@/lib/theme';
 
-/** Structural shell — empty-state layout completed in plan 01-03 */
 export default function HomeTab() {
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.inner} testID="screen-home">
-        <Text style={styles.title}>Blood Pressure</Text>
-        <Text style={styles.caption}>Home</Text>
+    <ScreenContainer>
+      <View testID="screen-home">
+        <ScreenTitle>Blood Pressure</ScreenTitle>
+
+        <SurfaceCard padded="lg" style={styles.hero}>
+          <EmptyStatePanel title={copy.emptyStateHeading} body={copy.emptyStateBody} />
+          <View style={styles.slots}>
+            <View style={styles.slot} accessibilityLabel="Systolic placeholder" />
+            <View style={styles.slot} accessibilityLabel="Diastolic placeholder" />
+          </View>
+        </SurfaceCard>
+
+        <SurfaceCard style={styles.gap}>
+          <Text style={styles.cardBody}>{copy.homeLocalCardBody}</Text>
+        </SurfaceCard>
+
+        <SurfaceCard style={styles.gap}>
+          <View style={styles.trendLines}>
+            <View style={styles.trendLine} />
+            <View style={[styles.trendLine, styles.trendLineShort]} />
+            <View style={styles.trendLine} />
+          </View>
+          <Text style={styles.trendCopy}>{copy.trendPreviewHint}</Text>
+        </SurfaceCard>
       </View>
-    </SafeAreaView>
+    </ScreenContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: colors.dominant,
+  hero: {
+    marginBottom: spacing.lg,
   },
-  inner: {
-    flex: 1,
-    paddingHorizontal: spacing.xl,
-    paddingTop: spacing['3xl'],
+  slots: {
+    flexDirection: 'row',
+    marginTop: spacing.md,
+    gap: spacing.sm,
   },
-  title: {
-    ...typography.display,
+  slot: {
+    flex: 1,
+    height: 44,
+    borderRadius: radius.sm,
+    backgroundColor: colors.placeholderTint,
+  },
+  gap: {
+    marginBottom: spacing.lg,
+  },
+  cardBody: {
+    ...typography.body,
     color: colors.textPrimary,
   },
-  caption: {
-    marginTop: spacing.sm,
+  trendLines: {
+    marginBottom: spacing.md,
+  },
+  trendLine: {
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: colors.placeholderTint,
+    marginBottom: spacing.sm,
+    width: '100%',
+  },
+  trendLineShort: {
+    width: '72%',
+  },
+  trendCopy: {
     ...typography.body,
     color: colors.textSecondary,
   },

@@ -67,4 +67,12 @@ export const copy = {
   historyEmptyBody: 'Saved readings will appear here in reverse chronological order.',
   settingsLocalLabel: 'Local storage only',
   settingsLocalDetail: 'Your data stays on this device unless you choose to export a PDF later.',
+  settingsAboutLabel: 'About this app',
+  /** Settings footnote — optional PDF only when the user chooses (UI-SPEC). */
+  settingsExportFootnote:
+    'You can export readings as a PDF only when you choose to in the app. Nothing is sent automatically.',
+  homeLocalCardBody:
+    'Your readings stay on this device. No sign-in is required to keep using the tracker.',
+  trendPreviewHint:
+    'After you save readings, you will see trends here. Charts stay on this device.',
 } as const;

@@ -1,38 +1,42 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { colors, spacing, typography } from '@/lib/theme';
+import { InfoRow } from '@/components/ui/InfoRow';
+import { ScreenContainer } from '@/components/ui/ScreenContainer';
+import { ScreenTitle } from '@/components/ui/ScreenTitle';
+import { SurfaceCard } from '@/components/ui/SurfaceCard';
+import { copy, colors, spacing, typography } from '@/lib/theme';
 
-/** Structural shell — rows and footnote completed in plan 01-03 */
 export default function SettingsTab() {
   return (
-    <SafeAreaView style={styles.safe} edges={['top']}>
-      <View style={styles.inner} testID="screen-settings">
-        <Text style={styles.title}>Settings</Text>
-        <Text style={styles.caption}>Privacy and about entries will appear here.</Text>
+    <ScreenContainer>
+      <View testID="screen-settings">
+        <ScreenTitle>Settings</ScreenTitle>
+        <SurfaceCard padded="lg" style={styles.card}>
+          <InfoRow title={copy.settingsLocalLabel} detail={copy.settingsLocalDetail} />
+          <View style={styles.divider} />
+          <InfoRow title={copy.settingsAboutLabel} showChevron />
+        </SurfaceCard>
+        <Text style={styles.footnote}>{copy.settingsExportFootnote}</Text>
       </View>
-    </SafeAreaView>
+    </ScreenContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: colors.dominant,
+  card: {
+    marginBottom: spacing.md,
   },
-  inner: {
-    flex: 1,
-    paddingHorizontal: spacing.xl,
-    paddingTop: spacing['3xl'],
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: colors.divider,
+    marginVertical: spacing.xs,
   },
-  title: {
-    ...typography.display,
-    color: colors.textPrimary,
-  },
-  caption: {
-    marginTop: spacing.sm,
+  footnote: {
     ...typography.body,
+    fontSize: 14,
+    lineHeight: 14 * 1.35,
     color: colors.textSecondary,
+    marginTop: spacing.sm,
   },
 });

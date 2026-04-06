@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 
+import { TabIcon } from '@/components/navigation/TabIcon';
 import { colors } from '@/lib/theme';
 
 export default function TabsLayout() {
@@ -23,9 +23,7 @@ export default function TabsLayout() {
           title: 'Home',
           tabBarAccessibilityLabel: 'Home',
           tabBarButtonTestID: 'tab-home',
-          tabBarIcon: ({ color, size, focused }) => (
-            <Ionicons name={focused ? 'home' : 'home-outline'} size={size} color={color} />
-          ),
+          tabBarIcon: (props) => <TabIcon name="home" {...props} />,
         }}
       />
       <Tabs.Screen
@@ -34,9 +32,7 @@ export default function TabsLayout() {
           title: 'History',
           tabBarAccessibilityLabel: 'History',
           tabBarButtonTestID: 'tab-history',
-          tabBarIcon: ({ color, size, focused }) => (
-            <Ionicons name={focused ? 'time' : 'time-outline'} size={size} color={color} />
-          ),
+          tabBarIcon: (props) => <TabIcon name="history" {...props} />,
         }}
       />
       <Tabs.Screen
@@ -45,9 +41,7 @@ export default function TabsLayout() {
           title: 'Settings',
           tabBarAccessibilityLabel: 'Settings',
           tabBarButtonTestID: 'tab-settings',
-          tabBarIcon: ({ color, size, focused }) => (
-            <Ionicons name={focused ? 'settings' : 'settings-outline'} size={size} color={color} />
-          ),
+          tabBarIcon: (props) => <TabIcon name="settings" {...props} />,
         }}
       />
     </Tabs>
