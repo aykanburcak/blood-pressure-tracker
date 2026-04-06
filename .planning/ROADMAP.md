@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md - Bootstrap the Expo Router foundation, local flag storage boundary, and test harness.
 - [x] 01-02-PLAN.md - Implement the first-run privacy gate and durable tab routing contract.
-- [ ] 01-03-PLAN.md - Build the approved empty-state shell surfaces and final Phase 1 verification.
+- [x] 01-03-PLAN.md - Build the approved empty-state shell surfaces and final Phase 1 verification.
 **UI hint**: yes
 
 ### Phase 2: Core Logging and Interpretation
