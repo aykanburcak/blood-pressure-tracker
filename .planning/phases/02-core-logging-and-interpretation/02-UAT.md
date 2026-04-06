@@ -4,15 +4,15 @@ phase: 02-core-logging-and-interpretation
 source:
   - Phase 2 plan execution (02-01 / 02-02 / 02-03); no SUMMARY.md artifacts yet
 started: "2026-04-06T12:00:00.000Z"
-updated: "2026-04-06T14:00:00.000Z"
+updated: "2026-04-06T15:30:00.000Z"
 ---
 
 ## Current Test
 
-number: 3
-name: Validation — cannot save invalid readings
+number: 4
+name: Interpretation — label, chip, disclaimer
 expected: |
-  On Add reading, enter systolic below 70 or above 250, or diastolic greater than or equal to systolic, or optional pulse out of range (e.g. 10). Tap "Save reading". You stay on the add-reading screen; red/field errors appear. After fixing values and saving, you reach Home with the new reading (optional sanity check).
+  On Home with at least one saved reading, the hero shows a status label on the chip (e.g. Normal, Elevated, High blood pressure stages, Hypertensive crisis as appropriate), a soft tinted chip background, and the full sentence: "This is not a medical diagnosis. Talk to a clinician about your readings."
 awaiting: user response
 
 ## Tests
@@ -29,7 +29,7 @@ result: pass
 ### 3. Validation — cannot save invalid readings
 expected: |
   Enter systolic below 70 or above 250, or diastolic ≥ systolic, or optional pulse out of range. "Save reading" does not navigate away; field-level or form errors appear; no new row appears on Home after dismissing errors with valid data (optional recheck).
-result: pending
+result: pass
 
 ### 4. Interpretation — label, chip, disclaimer
 expected: |
@@ -44,9 +44,9 @@ result: pending
 ## Summary
 
 total: 5
-passed: 2
+passed: 3
 issues: 0
-pending: 3
+pending: 2
 skipped: 0
 blocked: 0
 
