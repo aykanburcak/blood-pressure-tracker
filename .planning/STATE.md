@@ -2,10 +2,10 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: stitch-design-alignment
-status: defining_requirements_complete
-stopped_at: Milestone initialized — run `/gsd-discuss-phase 6` or `/gsd-plan-phase 6`
+status: phase_6_discussed
+stopped_at: Phase 6 discussed — run `/gsd-plan-phase 6`
 last_updated: "2026-04-07T00:00:00.000Z"
-last_activity: 2026-04-07 — /gsd-new-milestone v1.1 Stitch design alignment; ROADMAP phases 6–8
+last_activity: 2026-04-07 — /gsd-discuss-phase 6; 06-CONTEXT.md + 06-DISCUSSION-LOG.md
 progress:
   total_phases: 3
   completed_phases: 0
@@ -25,8 +25,8 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 
 ## Current Position
 
-**Milestone:** v1.1 Stitch design alignment — **requirements + roadmap defined**; execution not started.  
-**Phase:** Not started → **Phase 6** (tokens & typography) next.  
+**Milestone:** v1.1 Stitch design alignment — Phase **6** discussed, not planned yet.  
+**Phase:** **6** — tokens & typography (`06-CONTEXT.md` ready).  
 **Plan:** —  
 **Status:** Ready for `/gsd-plan-phase 6`
 
@@ -59,4 +59,4 @@ Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 ## Session continuity
 
 Last session: 2026-04-07 — `gsd-new-milestone` v1.1  
-Resume: `/gsd-discuss-phase 6` or `/gsd-plan-phase 6`
+Resume: `/gsd-plan-phase 6`

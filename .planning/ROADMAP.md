@@ -17,7 +17,8 @@
 ### Phase 6 — Tokens & typography
 
 - **Depends on:** —  
-- **Delivers:** Updated `src/lib/theme` (and related) per DS-01–03; font loading in root layout if required.
+- **Delivers:** Updated `src/lib/theme` (and related) per DS-01–03; font loading in root layout if required.  
+- **Discussion:** [`.planning/phases/06-tokens-and-typography/06-CONTEXT.md`](phases/06-tokens-and-typography/06-CONTEXT.md)
 
 ### Phase 7 — Core components
 
