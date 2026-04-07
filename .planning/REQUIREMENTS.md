@@ -13,9 +13,9 @@ v1.0 requirements (CORE, LOG, HIST, INTP, TRND, EXPT, PRIV) — [`.planning/mile
 
 ### Design tokens & typography (DS)
 
-- [ ] **DS-01:** App theme exposes Stitch-aligned semantic colors (surface, surface containers, primary / primary emphasis, on-surface, outline variants) and replaces or maps legacy Phase 1 hex values so screens read as the cool white / blue system.
-- [ ] **DS-02:** Typography roles use headline vs body/label scale matching Stitch intent: load **Manrope** for display/headings and **Inter** for body/labels (with documented system fallback if fonts fail to load).
-- [ ] **DS-03:** Radius and shadow tokens match the “soft elevation” direction (card radius lg/xl, shadow tinted and low opacity per Stitch notes).
+- [x] **DS-01:** App theme exposes Stitch-aligned semantic colors (surface, surface containers, primary / primary emphasis, on-surface, outline variants) and replaces or maps legacy Phase 1 hex values so screens read as the cool white / blue system.
+- [x] **DS-02:** Typography roles use headline vs body/label scale matching Stitch intent: load **Manrope** for display/headings and **Inter** for body/labels (with documented system fallback if fonts fail to load).
+- [x] **DS-03:** Radius and shadow tokens match the “soft elevation” direction (card radius lg/xl, shadow tinted and low opacity per Stitch notes).
 
 ### Components
 
@@ -51,7 +51,7 @@ Same as prior backlog — reminders, notes, Health Connect, app lock, sync — s
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DS-01 – DS-03 | 6 | [Plan 06-01](phases/06-tokens-and-typography/06-01-PLAN.md) — ready to execute |
+| DS-01 – DS-03 | 6 | Shipped 2026-04-07 (`06-01-PLAN` executed) |
 | DS-04 – DS-07 | 7 | Planned |
 | DS-08 – DS-10 | 8 | Planned |
 

@@ -1,5 +1,18 @@
 const mockPrivacyValue: { current?: string } = {};
 
+jest.mock('expo-font', () => {
+  const actual = jest.requireActual<typeof import('expo-font')>('expo-font');
+  return {
+    ...actual,
+    useFonts: () => [true, null] as const,
+  };
+});
+
+jest.mock('expo-splash-screen', () => ({
+  preventAutoHideAsync: jest.fn(() => Promise.resolve(true)),
+  hideAsync: jest.fn(() => Promise.resolve(true)),
+}));
+
 jest.mock('victory-native', () => {
   const React = require('react');
   const { View } = require('react-native');

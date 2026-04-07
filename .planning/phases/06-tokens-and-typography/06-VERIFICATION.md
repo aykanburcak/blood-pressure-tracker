@@ -4,8 +4,8 @@
 
 ## Automated
 
-- [ ] `npx tsc --noEmit` — exit 0
-- [ ] `npm test -- --runInBand --watchAll=false` — all green
+- [x] `npx tsc --noEmit` — exit 0
+- [x] `npm test -- --runInBand --watchAll=false` — all green (2026-04-07)
 
 ## Human / device
 
@@ -17,4 +17,4 @@
 
 ## Status
 
-`status: pending` — update to `passed` after `/gsd-execute-phase 6` + checks above.
+Automated verification **passed** on 2026-04-07. Device smoke still recommended before Play.

@@ -1,7 +1,30 @@
 import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
 import { PRIVACY_DETAIL_SCREEN_TITLE } from '@/features/privacy/privacy-detail-copy';
 
-/** Phase 1 tokens — aligned to `.planning/.../01-UI-SPEC.md` */
+/**
+ * Stitch-aligned semantic palette (v1.1 Phase 6). See `.planning/research/STITCH-SOURCE.md`.
+ * `colors` merges these with legacy aliases (`dominant`, `accent`, …) for existing screens.
+ */
+const semantic = {
+  surface: '#F9F9FE',
+  surfaceContainerLow: '#F3F3F8',
+  surfaceContainerHigh: '#E8E8ED',
+  surfaceContainerLowest: '#FFFFFF',
+  onSurface: '#1A1C1F',
+  onSurfaceVariant: '#414755',
+  outline: '#717786',
+  outlineVariant: '#C1C6D7',
+  primary: '#0058BC',
+  primaryContainer: '#0070EB',
+} as const;
+
+/** Must match `useFonts` keys in `src/app/_layout.tsx`. */
+const fontFamily = {
+  display: 'Manrope_700Bold',
+  heading: 'Manrope_600SemiBold',
+  body: 'Inter_400Regular',
+  label: 'Inter_600SemiBold',
+} as const;
 
 export const spacing = {
   xs: 4,
@@ -14,25 +37,52 @@ export const spacing = {
 } as const;
 
 export const typography = {
-  body: { fontSize: 16, fontWeight: '400' as const, lineHeight: 16 * 1.5 },
-  label: { fontSize: 14, fontWeight: '600' as const, lineHeight: 14 * 1.35 },
-  heading: { fontSize: 20, fontWeight: '600' as const, lineHeight: 20 * 1.2 },
-  display: { fontSize: 28, fontWeight: '600' as const, lineHeight: 28 * 1.15 },
+  body: {
+    fontFamily: fontFamily.body,
+    fontSize: 16,
+    fontWeight: '400' as const,
+    lineHeight: 16 * 1.5,
+  },
+  label: {
+    fontFamily: fontFamily.label,
+    fontSize: 14,
+    fontWeight: '600' as const,
+    lineHeight: 14 * 1.35,
+  },
+  heading: {
+    fontFamily: fontFamily.heading,
+    fontSize: 20,
+    fontWeight: '600' as const,
+    lineHeight: 20 * 1.2,
+  },
+  display: {
+    fontFamily: fontFamily.display,
+    fontSize: 28,
+    fontWeight: '700' as const,
+    lineHeight: 28 * 1.15,
+    letterSpacing: -0.5,
+  },
 } as const;
 
 export const colors = {
-  dominant: '#F5F6F2',
-  secondary: '#FFFFFF',
-  accent: '#4A7CFF',
-  destructive: '#D65252',
-  textPrimary: '#111827',
-  textSecondary: '#6B7280',
-  divider: '#E5E7EB',
-  placeholderTint: '#EEF2F7',
-  interpretNormal: '#22C55E',
-  interpretElevated: '#EAB308',
-  interpretStage1: '#F97316',
-  interpretStage2: '#EA580C',
+  ...semantic,
+  /** @deprecated Prefer `surface` — legacy Phase 1 name */
+  dominant: semantic.surface,
+  /** @deprecated Prefer `surfaceContainerLowest` */
+  secondary: semantic.surfaceContainerLowest,
+  /** @deprecated Prefer `primary` */
+  accent: semantic.primary,
+  /** @deprecated Prefer `onSurface` */
+  textPrimary: semantic.onSurface,
+  /** @deprecated Prefer `onSurfaceVariant` */
+  textSecondary: semantic.onSurfaceVariant,
+  divider: semantic.outlineVariant,
+  placeholderTint: semantic.surfaceContainerLow,
+  destructive: '#BA1A1A',
+  interpretNormal: '#16A34A',
+  interpretElevated: '#CA8A04',
+  interpretStage1: '#EA580C',
+  interpretStage2: '#C2410C',
   interpretCrisis: '#B91C1C',
 } as const;
 
@@ -40,15 +90,17 @@ export const radius = {
   sm: 12,
   md: 16,
   lg: 24,
+  /** Full pill for primary CTAs (Phase 7). */
+  pill: 9999,
 } as const;
 
-/** Single shadow style for Phase 1 — `#111827` at ~6% depth */
+/** Tinted ambient shadow (on-surface hue) — Stitch “soft elevation”, not harsh black. */
 export const shadow = {
   card: {
-    shadowColor: '#111827',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
+    shadowColor: '#1A1C1F',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.07,
+    shadowRadius: 28,
     elevation: 3,
   },
 } as const;

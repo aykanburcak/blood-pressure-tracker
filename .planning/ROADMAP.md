@@ -34,7 +34,7 @@
 
 ## Next action
 
-`/gsd-execute-phase 6` to implement Phase 6 ([`06-01-PLAN.md`](phases/06-tokens-and-typography/06-01-PLAN.md)).
+Phase **6** done. Plan **Phase 7** (`/gsd-discuss-phase 7` or `/gsd-plan-phase 7`) for buttons, cards, chips (DS-04–DS-07).
 
 ---
 
