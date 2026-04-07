@@ -1,13 +1,13 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.1
-milestone_name: next
-status: ready
-stopped_at: `/gsd-ship` — PR draft at `.planning/SHIP-PR-DRAFT.md`; add remote + `gh` to open PR
-last_updated: "2026-04-06T22:00:00.000Z"
-last_activity: 2026-04-06 -- gsd-ship prep: Android datetime fix committed; local branch `release/v1.0-android`
+milestone_name: stitch-design-alignment
+status: defining_requirements_complete
+stopped_at: Milestone initialized — run `/gsd-discuss-phase 6` or `/gsd-plan-phase 6`
+last_updated: "2026-04-07T00:00:00.000Z"
+last_activity: 2026-04-07 — /gsd-new-milestone v1.1 Stitch design alignment; ROADMAP phases 6–8
 progress:
-  total_phases: 0
+  total_phases: 3
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -18,15 +18,17 @@ progress:
 
 ## Project Reference
 
-See: `.planning/PROJECT.md` (updated 2026-04-06)
+See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 
 **Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.  
-**Current focus:** **v1.0 shipped** — plan **v1.1+** with `/gsd-new-milestone`; run `.planning/RELEASE-CHECKLIST.md` before Play production upload.
+**Current focus:** **v1.1** — design system + components aligned to Stitch **Apple Health BP Tracker**.
 
 ## Current Position
 
-**Milestone:** v1.0 Android v1 **complete** (archived under `.planning/milestones/v1.0-*`).  
-**Next:** Define v1.1 (or next) scope; `.planning/ROADMAP.md` and `REQUIREMENTS.md` are reset for forward planning.
+**Milestone:** v1.1 Stitch design alignment — **requirements + roadmap defined**; execution not started.  
+**Phase:** Not started → **Phase 6** (tokens & typography) next.  
+**Plan:** —  
+**Status:** Ready for `/gsd-plan-phase 6`
 
 ## Accumulated Context
 
@@ -37,20 +39,24 @@ See: `.planning/PROJECT.md` (updated 2026-04-06)
 | 2026-04-06 | Tab bar: `useSafeAreaInsets` + `SafeAreaProvider` root — bottom inset above Android gesture bar |
 | 2026-04-06 | Home trend card: `listReadingsForChart` + `BpTrendChart` when ≥2 readings; skeleton + `trendPreviewHint` when sparse |
 
+### Design reference
+
+- Stitch MCP + `.planning/research/STITCH-SOURCE.md` for v1.1 implementation checks.
+
 ### Decisions
 
 Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 
 ### Pending todos
 
-- Play upload: execute `.planning/RELEASE-CHECKLIST.md` on release candidate builds.
-- Optional: `/gsd-cleanup` to archive phase trees into `milestones/v1.0-phases/` if you want a slimmer `.planning/phases/`.
+- Execute Phase 6 → 8 per `.planning/ROADMAP.md`.
+- Play upload: `.planning/RELEASE-CHECKLIST.md` when shipping builds.
 
 ### Blockers
 
-- None for planning. Regenerate `.expo/types/router.d.ts` when adding routes if types drift.
+- None for planning.
 
 ## Session continuity
 
-Last session: 2026-04-06 — `gsd-complete-milestone` v1.0  
-Resume: `.planning/REQUIREMENTS.md` + `/gsd-new-milestone`
+Last session: 2026-04-07 — `gsd-new-milestone` v1.1  
+Resume: `/gsd-discuss-phase 6` or `/gsd-plan-phase 6`

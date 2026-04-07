@@ -2,28 +2,39 @@
 
 ## Milestones
 
-- ✅ **v1.0 Android v1** — Phases 1–5 (shipped **2026-04-06**). Full plan: [`.planning/milestones/v1.0-ROADMAP.md`](milestones/v1.0-ROADMAP.md).
-- 📋 **v1.1+** — Not started. Define scope with `/gsd-new-milestone`; candidate ideas live in `.planning/REQUIREMENTS.md`.
+- ✅ **v1.0 Android v1** — Phases 1–5 (shipped **2026-04-06**). [`.planning/milestones/v1.0-ROADMAP.md`](milestones/v1.0-ROADMAP.md).
+- 🔄 **v1.1 Stitch design alignment** — Phases **6–8** (this milestone). v1.0 phase folders remain under `.planning/phases/01-*`…`05-*` as archive; **new work** uses `06-*`, `07-*`, `08-*`.
+- 📋 **Later** — Engagement / ecosystem backlog in `.planning/REQUIREMENTS.md`.
 
-## Shipped in v1.0 (summary)
+## v1.1 — Active roadmap
 
-<details>
-<summary>Phases 1–5 (archived detail in <code>milestones/v1.0-ROADMAP.md</code>)</summary>
+| Phase | Name | Goal | Requirements | Success criteria (summary) |
+|-------|------|------|--------------|----------------------------|
+| **6** | Tokens & typography | Stitch-aligned color system, radii, shadows; Manrope + Inter | DS-01, DS-02, DS-03 | Dominant screen bg and semantic colors match STITCH-SOURCE; fonts load on cold start with fallback documented; tsc + tests green |
+| **7** | Core components | Buttons, cards, chips match Stitch | DS-04, DS-05, DS-06, DS-07 | Primary/secondary buttons and cards match spec in light mode; chips readable; snapshot or RNTL where valuable |
+| **8** | Shell & screen polish | Tabs, key flows, PDF | DS-08, DS-09, DS-10 | Tab bar acceptable on Android; Home/History/Settings/add/edit pass visual checklist; PDF still legible |
 
-1. **Foundation** — Expo Router shell, first-run privacy gate, Home / History / Settings tabs, empty states.  
-2. **Logging** — SQLite + Drizzle, Zod + WHO interpretation, add reading, latest on Home.  
-3. **History & trends** — List, edit/delete, Skia/Victory chart, rolling summaries.  
-4. **PDF export** — Range query, HTML report, expo-print + share.  
-5. **Privacy & release** — Privacy & data screen, `android.allowBackup: false`, `.planning/RELEASE-CHECKLIST.md`.
+### Phase 6 — Tokens & typography
 
-</details>
+- **Depends on:** —  
+- **Delivers:** Updated `src/lib/theme` (and related) per DS-01–03; font loading in root layout if required.
 
-## Next milestone
+### Phase 7 — Core components
 
-| Phase | Milestone | Plans | Status |
-|-------|-----------|-------|--------|
-| TBD | v1.1+ | TBD | Not started |
+- **Depends on:** Phase 6  
+- **Delivers:** `PrimaryButton`, `SurfaceCard`, interpretation chip styles, any shared input chrome touched by DS-04–07.
+
+### Phase 8 — Shell & screen polish
+
+- **Depends on:** Phase 7  
+- **Delivers:** `(tabs)/_layout` and screen-level spacing/dividers; PDF HTML/CSS token alignment.
 
 ---
 
-*Active roadmap reset after v1.0 milestone completion.*
+## Next action
+
+`/gsd-discuss-phase 6` or `/gsd-plan-phase 6` to start Phase 6.
+
+---
+
+*Updated: 2026-04-07 — milestone v1.1 roadmap (phases 6–8).*

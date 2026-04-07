@@ -1,5 +1,11 @@
 # Milestones
 
+## v1.1 — Stitch design alignment (in progress, started 2026-04-07)
+
+**Scope:** Phases 6–8 — align tokens, components, and shell with [Stitch reference](https://stitch.withgoogle.com/projects/7766087000680671419). See `.planning/REQUIREMENTS.md` (DS-01–DS-10), `.planning/research/STITCH-SOURCE.md`, `.planning/ROADMAP.md`.
+
+---
+
 ## v1.0 — Android v1 (shipped 2026-04-06)
 
 **Scope:** Phases 1–5 (15 plans) — offline-first blood pressure tracker for Android with logging, history, trends, PDF export, and privacy/release alignment.

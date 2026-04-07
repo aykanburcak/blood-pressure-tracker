@@ -14,9 +14,9 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 - **v1.0:** Full Android v1 scope: offline shell (CORE-01–03), manual logging (LOG-01–04), persisted history (HIST-01–04), WHO interpretation (INTP-01–03), trend chart + summaries (TRND-01–03), PDF export + share (EXPT-01–03), privacy copy + no ads/account/sync + backup posture (PRIV-01–02). Evidence: `.planning/milestones/v1.0-REQUIREMENTS.md`, phase UAT/VERIFICATION under `.planning/phases/`.
 
-### Active
+### Active (v1.1 — in progress)
 
-- Next milestone scope **not** defined here — use `/gsd-new-milestone` and `.planning/REQUIREMENTS.md` backlog.
+- **v1.1:** Align app visual system and shared components with Stitch reference **Apple Health BP Tracker** ([Stitch project](https://stitch.withgoogle.com/projects/7766087000680671419)): tokens (color, type, radius, shadow), primary/secondary buttons, cards/surfaces, tab chrome, interpretation chips. See `.planning/REQUIREMENTS.md` (DS-*) and `.planning/research/STITCH-SOURCE.md`.
 
 ### Out of Scope
 
@@ -31,7 +31,7 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 Shipped **v1.0** as a local-only Expo SDK 55 app: SQLite readings, Skia/Victory trends, expo-print PDF, Settings **Privacy & data**, `allowBackup: false` for Android. Target remains Google Play with high polish and calm visuals.
 
-Next product bets (when planned): reminders, notes, Health Connect, app lock — see `.planning/REQUIREMENTS.md` candidates.
+**v1.1 in flight:** Stitch-aligned design system (see Current Milestone below). **After v1.1:** promote engagement/ecosystem items from `.planning/REQUIREMENTS.md` backlog (reminders, notes, Health Connect, app lock, etc.).
 
 ## Constraints
 
@@ -63,4 +63,17 @@ This document evolves at phase transitions and milestone boundaries.
 
 ---
 
-*Last updated: 2026-04-06 after v1.0 milestone complete*
+## Current Milestone: v1.1 Stitch design alignment
+
+**Goal:** Refresh the design system and core UI components so the app visually matches the approved Stitch reference (Apple Health–style BP tracker) without changing product scope or medical framing.
+
+**Target features:**
+
+- Theme tokens and typography roles aligned to Stitch (cool surfaces, primary blues, Manrope/Inter).
+- Component pass: primary CTA, secondary actions, `SurfaceCard` / screen backgrounds, WHO chips.
+- Tab shell and key screens (Home, History, Settings, add/edit reading) reviewed for spacing, dividers, and elevation per Stitch guidelines.
+- Optional: glass-style tab bar using `expo-glass-effect` only if it meets Android polish bar.
+
+---
+
+*Last updated: 2026-04-07 — milestone v1.1 started (`/gsd-new-milestone`)*
