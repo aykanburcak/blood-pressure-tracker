@@ -24,7 +24,8 @@
 
 - **Depends on:** Phase 6  
 - **Delivers:** `PrimaryButton`, `SurfaceCard`, interpretation chip styles, any shared input chrome touched by DS-04–07.  
-- **Discussion:** [`.planning/phases/07-core-components/07-CONTEXT.md`](phases/07-core-components/07-CONTEXT.md)
+- **Discussion:** [`.planning/phases/07-core-components/07-CONTEXT.md`](phases/07-core-components/07-CONTEXT.md)  
+- **Plan:** [`.planning/phases/07-core-components/07-01-PLAN.md`](phases/07-core-components/07-01-PLAN.md)
 
 ### Phase 8 — Shell & screen polish
 
@@ -35,7 +36,7 @@
 
 ## Next action
 
-Phase **6** done; Phase **7** discussed. Run **`/gsd-plan-phase 7`** for buttons, cards, chips (DS-04–DS-07).
+Phase **6** done; Phase **7** planned. Run **`/gsd-execute-phase 7`** for buttons, cards, chips (DS-04–DS-07).
 
 ---
 

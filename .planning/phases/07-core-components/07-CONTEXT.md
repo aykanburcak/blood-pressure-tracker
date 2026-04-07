@@ -1,7 +1,7 @@
 # Phase 7: Core components — Context
 
 **Gathered:** 2026-04-07  
-**Status:** Ready for planning
+**Status:** Planned — see `07-01-PLAN.md`
 
 <domain>
 ## Phase Boundary

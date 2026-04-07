@@ -52,7 +52,7 @@ Same as prior backlog — reminders, notes, Health Connect, app lock, sync — s
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DS-01 – DS-03 | 6 | Shipped 2026-04-07 (`06-01-PLAN` executed) |
-| DS-04 – DS-07 | 7 | Planned |
+| DS-04 – DS-07 | 7 | [Plan 07-01](phases/07-core-components/07-01-PLAN.md) — ready to execute |
 | DS-08 – DS-10 | 8 | Planned |
 
 ---
