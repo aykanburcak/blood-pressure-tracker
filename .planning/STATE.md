@@ -4,8 +4,8 @@ milestone: v1.1
 milestone_name: stitch-design-alignment
 status: phase_8_executed
 stopped_at: Phase 8 code complete — `/gsd-verify-work` or `/gsd-complete-milestone` v1.1
-last_updated: "2026-04-07T18:30:00.000Z"
-last_activity: 2026-04-07 — /gsd-quick: stack header safe area (Android)
+last_updated: "2026-04-07T20:00:00.000Z"
+last_activity: 2026-04-07 — /gsd-ship: pushed feat/v1.1-stitch-design-alignment (gh CLI missing — open PR via GitHub URL)
 progress:
   total_phases: 3
   completed_phases: 3
@@ -28,7 +28,7 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 **Milestone:** v1.1 Stitch design alignment — Phases **6–8** shipped (pending UAT / milestone close).  
 **Phase:** **8** — shell & screen polish + PDF — **executed**.  
 **Plan:** [08-01-PLAN.md](phases/08-shell-and-screen-polish/08-01-PLAN.md)  
-**Status:** Run **`/gsd-verify-work`** then **`/gsd-complete-milestone`** when satisfied
+**Status:** Branch **`feat/v1.1-stitch-design-alignment`** pushed — open PR (body: `.planning/PR-BODY-v1.1-stitch.md`). Install **`gh`** for CLI `gh pr create`. Then **`/gsd-verify-work`** / merge / **`/gsd-complete-milestone`** when satisfied.
 
 ## Accumulated Context
 
