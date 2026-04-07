@@ -4,8 +4,8 @@ milestone: v1.1
 milestone_name: stitch-design-alignment
 status: phase_8_executed
 stopped_at: Phase 8 code complete — `/gsd-verify-work` or `/gsd-complete-milestone` v1.1
-last_updated: "2026-04-07T14:00:00.000Z"
-last_activity: 2026-04-07 — execute Phase 8 (DS-08–DS-10)
+last_updated: "2026-04-07T18:30:00.000Z"
+last_activity: 2026-04-07 — /gsd-quick: stack header safe area (Android)
 progress:
   total_phases: 3
   completed_phases: 3
@@ -36,6 +36,7 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 
 | Date | Change |
 |------|--------|
+| 2026-04-07 | Stack modals: `RootNavigation` under `SafeAreaProvider` + Android `headerStyle.paddingTop` from `useSafeAreaInsets` — New reading / Export / Privacy headers clear status bar |
 | 2026-04-06 | Tab bar: `useSafeAreaInsets` + `SafeAreaProvider` root — bottom inset above Android gesture bar |
 | 2026-04-06 | Home trend card: `listReadingsForChart` + `BpTrendChart` when ≥2 readings; skeleton + `trendPreviewHint` when sparse |
 
