@@ -12,14 +12,18 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useEffect, useMemo } from 'react';
-import { Platform, StatusBar, useColorScheme } from 'react-native';
+import { useColorScheme } from 'react-native';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { PRIVACY_DETAIL_SCREEN_TITLE } from '@/features/privacy/privacy-detail-copy';
 import { colors, spacing } from '@/lib/theme';
 
-/** Extra space below the status bar so titles/back controls are not cramped (Android / edge-to-edge). */
-const ANDROID_STACK_HEADER_TOP_EXTRA = spacing.md;
+/**
+ * Native stack uses @react-navigation/elements `Header`, which ignores `headerStyle.paddingTop`
+ * (only backgroundColor etc. apply). It also sets status bar inset to 0 when a parent header is
+ * “shown” in context — so modal screens can end up under the notch/status bar unless we set this.
+ */
+const STACK_HEADER_STATUS_BAR_EXTRA = spacing.sm;
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -44,43 +48,25 @@ function RootNavigation() {
     [colorScheme],
   );
   const stackScreenOptions = useMemo((): NativeStackNavigationOptions => {
-    const base: NativeStackNavigationOptions = {headerShown: false};
-    const statusBarH = StatusBar.currentHeight ?? 0;
-    const androidTopBase =
-      Platform.OS === 'android'
-        ? Math.max(insets.top, statusBarH)
-        : 0;
-    const androidHeaderPad =
-      Platform.OS === 'android'
-        ? (androidTopBase > 0 ? androidTopBase : 28) +
-          ANDROID_STACK_HEADER_TOP_EXTRA
-        : 0;
-    const headerTopStyle =
-      Platform.OS === 'android' && androidHeaderPad > 0
-        ? {paddingTop: androidHeaderPad}
-        : undefined;
+    const statusBarH = insets.top + STACK_HEADER_STATUS_BAR_EXTRA;
+    const base = {
+      headerShown: false,
+      /** Passed through to @react-navigation/elements Header (not in NativeStackNavigationOptions typings). */
+      headerStatusBarHeight: statusBarH,
+    } as NativeStackNavigationOptions;
     if (colorScheme === 'dark') {
-      if (!headerTopStyle) {
-        return base;
-      }
-      return {
-        ...base,
-        headerStyle: headerTopStyle as NativeStackNavigationOptions['headerStyle'],
-      };
+      return base;
     }
     return {
       ...base,
-      headerStyle: {
-        backgroundColor: colors.surface,
-        ...headerTopStyle,
-      } as NativeStackNavigationOptions['headerStyle'],
+      headerStyle: {backgroundColor: colors.surface},
       headerTintColor: colors.primary,
       headerTitleStyle: {
         color: colors.onSurface,
         fontWeight: '600' as const,
       },
       headerShadowVisible: false,
-    };
+    } as NativeStackNavigationOptions;
   }, [colorScheme, insets.top]);
   return (
     <ThemeProvider value={navigationTheme}>
