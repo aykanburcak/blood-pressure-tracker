@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
   row: {
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.sm,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.divider,
+    marginBottom: spacing.sm,
   },
   rowPressed: {
     opacity: 0.85,

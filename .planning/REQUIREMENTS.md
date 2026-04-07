@@ -26,12 +26,12 @@ v1.0 requirements (CORE, LOG, HIST, INTP, TRND, EXPT, PRIV) — [`.planning/mile
 
 ### Shell & screens
 
-- [ ] **DS-08:** Tab bar and header chrome are updated to match Stitch (including optional `expo-glass-effect` only if Android behavior is acceptable; otherwise solid tonal bar with same spacing/icon treatment).
-- [ ] **DS-09:** Home, History, Settings, add-reading, and edit-reading flows are visually reviewed: remove or replace divider-heavy patterns with spacing/surface shifts where feasible; no change to medical strings or WHO logic.
+- [x] **DS-08:** Tab bar and header chrome are updated to match Stitch (including optional `expo-glass-effect` only if Android behavior is acceptable; otherwise solid tonal bar with same spacing/icon treatment).
+- [x] **DS-09:** Home, History, Settings, add-reading, and edit-reading flows are visually reviewed: remove or replace divider-heavy patterns with spacing/surface shifts where feasible; no change to medical strings or WHO logic.
 
 ### Export & consistency
 
-- [ ] **DS-10:** Generated PDF report remains readable and professional after token changes (adjust HTML template styles if needed).
+- [x] **DS-10:** Generated PDF report remains readable and professional after token changes (adjust HTML template styles if needed).
 
 ## Deferred (not v1.1)
 
@@ -53,7 +53,7 @@ Same as prior backlog — reminders, notes, Health Connect, app lock, sync — s
 |-------------|-------|--------|
 | DS-01 – DS-03 | 6 | Shipped 2026-04-07 (`06-01-PLAN` executed) |
 | DS-04 – DS-07 | 7 | Shipped 2026-04-07 (`07-01-PLAN` executed) |
-| DS-08 – DS-10 | 8 | Planned |
+| DS-08 – DS-10 | 8 | Shipped 2026-04-07 (`08-01-PLAN` executed) |
 
 ---
 

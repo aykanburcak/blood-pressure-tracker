@@ -27,5 +27,9 @@ describe('buildBpReportHtml', () => {
     expect(html).toContain('Pulse');
     expect(html).toContain('Status');
     expect(html).toContain('122');
+    expect(html).toContain('#1A1C1F');
+    expect(html).toContain('#F3F3F8');
+    expect(html).not.toContain('#111827');
+    expect(html).not.toContain('#F9FAFB');
   });
 });

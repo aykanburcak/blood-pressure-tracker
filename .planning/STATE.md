@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: stitch-design-alignment
-status: phase_8_discussed
-stopped_at: Phase 8 discussed — next `/gsd-plan-phase 8`
-last_updated: "2026-04-07T12:00:00.000Z"
-last_activity: 2026-04-07 — /gsd-next → discuss Phase 8 (shell & screen polish)
+status: phase_8_executed
+stopped_at: Phase 8 code complete — `/gsd-verify-work` or `/gsd-complete-milestone` v1.1
+last_updated: "2026-04-07T14:00:00.000Z"
+last_activity: 2026-04-07 — execute Phase 8 (DS-08–DS-10)
 progress:
   total_phases: 3
-  completed_phases: 2
-  total_plans: 2
-  completed_plans: 2
-  percent: 67
+  completed_phases: 3
+  total_plans: 3
+  completed_plans: 3
+  percent: 100
 ---
 
 # Project State
@@ -25,10 +25,10 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 
 ## Current Position
 
-**Milestone:** v1.1 Stitch design alignment — Phases **6–7** shipped (automated verification).  
-**Phase:** **8** — shell & screen polish + PDF.  
-**Plan:** — (next: plan)  
-**Status:** Discussed — run **`/gsd-plan-phase 8`**
+**Milestone:** v1.1 Stitch design alignment — Phases **6–8** shipped (pending UAT / milestone close).  
+**Phase:** **8** — shell & screen polish + PDF — **executed**.  
+**Plan:** [08-01-PLAN.md](phases/08-shell-and-screen-polish/08-01-PLAN.md)  
+**Status:** Run **`/gsd-verify-work`** then **`/gsd-complete-milestone`** when satisfied
 
 ## Accumulated Context
 
@@ -59,4 +59,4 @@ Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 ## Session continuity
 
 Last session: 2026-04-07 — `gsd-new-milestone` v1.1  
-Resume: `/gsd-plan-phase 8` → `/gsd-execute-phase 8`
+Resume: `/gsd-verify-work` → `/gsd-complete-milestone` (v1.1)

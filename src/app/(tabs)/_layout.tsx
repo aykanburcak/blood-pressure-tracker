@@ -14,10 +14,10 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: colors.accent,
+        tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.textSecondary,
         tabBarStyle: {
-          backgroundColor: colors.secondary,
+          backgroundColor: colors.surface,
           height: tabBarHeight,
           paddingTop: 8,
           paddingBottom: bottomInset,

@@ -27,13 +27,14 @@ export function buildBpReportHtml(input: BpReportHtmlInput): string {
 <head>
 <meta charset="utf-8"/>
 <style>
-  body { font-family: sans-serif; color: #111827; padding: 16px; }
+  /* Hex values align with src/lib/theme/tokens.ts semantic palette (Stitch v1.1). */
+  body { font-family: system-ui, sans-serif; color: #1A1C1F; padding: 16px; }
   h1 { font-size: 20px; }
   table { border-collapse: collapse; width: 100%; margin-top: 12px; }
-  th, td { border: 1px solid #E5E7EB; padding: 8px; text-align: left; font-size: 13px; }
-  th { background: #F9FAFB; }
-  .muted { color: #6B7280; font-size: 13px; margin: 8px 0; }
-  .disclaimer { font-size: 12px; color: #374151; margin: 12px 0; max-width: 40em; }
+  th, td { border: 1px solid #C1C6D7; padding: 8px; text-align: left; font-size: 13px; }
+  th { background: #F3F3F8; }
+  .muted { color: #414755; font-size: 13px; margin: 8px 0; }
+  .disclaimer { font-size: 12px; color: #414755; margin: 12px 0; max-width: 40em; }
 </style>
 </head>
 <body>
