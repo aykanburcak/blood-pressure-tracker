@@ -31,12 +31,13 @@
 
 - **Depends on:** Phase 7  
 - **Delivers:** `(tabs)/_layout` and screen-level spacing/dividers; PDF HTML/CSS token alignment.
+- **Discussion:** [`.planning/phases/08-shell-and-screen-polish/08-CONTEXT.md`](phases/08-shell-and-screen-polish/08-CONTEXT.md)
 
 ---
 
 ## Next action
 
-Phases **6–7** done. Plan **Phase 8** (`/gsd-discuss-phase 8` or `/gsd-plan-phase 8`) for tabs, screen polish, PDF (DS-08–DS-10).
+Phase 8 **discussed**. Next: **`/gsd-plan-phase 8`** (then `/gsd-execute-phase 8`) for DS-08–DS-10.
 
 ---
 
