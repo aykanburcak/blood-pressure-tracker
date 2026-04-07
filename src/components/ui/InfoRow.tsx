@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
     minHeight: 48,
     justifyContent: 'center',
-    backgroundColor: colors.surfaceContainerHigh,
+    /* Same as card fill — tappable rows read as white pills on the white SurfaceCard (Settings). */
+    backgroundColor: colors.surfaceContainerLowest,
     borderRadius: radius.md,
   },
   pressed: {
