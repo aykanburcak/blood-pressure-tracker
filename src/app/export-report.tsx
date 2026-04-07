@@ -11,7 +11,7 @@ import { localDayBoundsRange, rollingPresetRange } from '@/features/export/expor
 import { deletePdfFile, generateBpPdfFromHtml } from '@/features/export/generate-bp-pdf';
 import type { ReadingRow } from '@/lib/db/schema';
 import { listReadingsInRange } from '@/lib/db/readings-repository';
-import { colors, copy, spacing, typography } from '@/lib/theme';
+import { colors, copy, radius, spacing, typography } from '@/lib/theme';
 
 type ExportPreset = '7d' | '30d' | '90d' | 'custom';
 
@@ -264,14 +264,11 @@ const styles = StyleSheet.create({
   presetChip: {
     paddingVertical: spacing.sm,
     paddingHorizontal: spacing.md,
-    borderRadius: 12,
-    backgroundColor: colors.secondary,
-    borderWidth: 1,
-    borderColor: colors.divider,
+    borderRadius: radius.md,
+    backgroundColor: colors.surfaceContainerHigh,
   },
   presetChipSelected: {
-    borderColor: colors.accent,
-    backgroundColor: colors.placeholderTint,
+    backgroundColor: colors.primarySelectionFill,
   },
   presetChipText: {
     ...typography.label,
@@ -279,7 +276,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   presetChipTextSelected: {
-    color: colors.accent,
+    color: colors.primary,
   },
   customBlock: {
     marginTop: spacing.sm,
@@ -292,8 +289,8 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
   },
   dateRow: {
-    backgroundColor: colors.secondary,
-    borderRadius: 12,
+    backgroundColor: colors.surfaceContainerHigh,
+    borderRadius: radius.md,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
     minHeight: 48,

@@ -10,8 +10,8 @@ import { ScreenTitle } from '@/components/ui/ScreenTitle';
 import { SurfaceCard } from '@/components/ui/SurfaceCard';
 import { buildBpChartSeries, type BpChartSeries } from '@/features/trends/bp-chart-data';
 import { BpTrendChart } from '@/features/trends/BpTrendChart';
+import { getInterpretationChipBackground } from '@/lib/bp/interpretation-chip';
 import { classifyBloodPressure } from '@/lib/bp/who-classification';
-import { getInterpretationColor } from '@/lib/bp/interpretation-style';
 import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
 import { getLatestReading, listReadingsForChart } from '@/lib/db/readings-repository';
 import type { ReadingRow } from '@/lib/db/schema';
@@ -43,8 +43,6 @@ export default function HomeTab() {
   const interpretation = latest
     ? classifyBloodPressure(latest.systolic, latest.diastolic)
     : null;
-  const chipColor = interpretation ? getInterpretationColor(interpretation.category) : colors.accent;
-
   return (
     <ScreenContainer>
       <View testID="screen-home">
@@ -69,8 +67,11 @@ export default function HomeTab() {
               {interpretation ? (
                 <View
                   accessibilityLabel={`Status ${interpretation.label}`}
-                  style={[styles.chip, { backgroundColor: `${chipColor}22` }]}>
-                  <Text style={[styles.chipText, { color: colors.textPrimary }]}>
+                  style={[
+                    styles.chip,
+                    { backgroundColor: getInterpretationChipBackground(interpretation.category) },
+                  ]}>
+                  <Text style={styles.chipText}>
                     {interpretation.label}
                   </Text>
                 </View>
@@ -201,6 +202,7 @@ const styles = StyleSheet.create({
   },
   chipText: {
     ...typography.label,
+    color: colors.textPrimary,
   },
   disclaimer: {
     ...typography.body,

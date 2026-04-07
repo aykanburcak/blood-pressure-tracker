@@ -6,7 +6,7 @@ import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { ScreenContainer } from '@/components/ui/ScreenContainer';
 import { readingInputSchema } from '@/lib/bp/reading-schema';
 import { insertReading } from '@/lib/db/readings-repository';
-import { colors, spacing, typography } from '@/lib/theme';
+import { colors, radius, spacing, typography } from '@/lib/theme';
 
 import { useBpDateTimePicker } from './useBpDateTimePicker';
 
@@ -159,15 +159,15 @@ const styles = StyleSheet.create({
   input: {
     ...typography.body,
     color: colors.textPrimary,
-    backgroundColor: colors.secondary,
-    borderRadius: 12,
+    backgroundColor: colors.surfaceContainerLow,
+    borderRadius: radius.md,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
     minHeight: 48,
   },
   dateRow: {
-    backgroundColor: colors.secondary,
-    borderRadius: 12,
+    backgroundColor: colors.surfaceContainerHigh,
+    borderRadius: radius.md,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.md,
     minHeight: 48,

@@ -2,8 +2,8 @@
 
 ## Automated
 
-- [ ] `npx tsc --noEmit`
-- [ ] `npm test -- --runInBand --watchAll=false`
+- [x] `npx tsc --noEmit`
+- [x] `npm test -- --runInBand --watchAll=false` (2026-04-07)
 
 ## Human
 
@@ -12,4 +12,4 @@
 - [ ] **DS-06:** Cards visibly large corner radius.
 - [ ] **DS-07:** WHO chip soft fill, dark label readable on white card.
 
-**Status:** `pending` until `/gsd-execute-phase 7`.
+**Status:** Automated **passed**; device smoke recommended.

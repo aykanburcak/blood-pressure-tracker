@@ -16,6 +16,9 @@ const semantic = {
   outlineVariant: '#C1C6D7',
   primary: '#0058BC',
   primaryContainer: '#0070EB',
+  onPrimary: '#FFFFFF',
+  /** Primary @ ~15% alpha — selected preset chips (Phase 7). */
+  primarySelectionFill: 'rgba(0, 88, 188, 0.15)',
 } as const;
 
 /** Must match `useFonts` keys in `src/app/_layout.tsx`. */

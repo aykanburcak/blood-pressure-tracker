@@ -1,7 +1,7 @@
 # Phase 7: Core components — Context
 
 **Gathered:** 2026-04-07  
-**Status:** Planned — see `07-01-PLAN.md`
+**Status:** Executed — `07-01-PLAN` shipped 2026-04-07
 
 <domain>
 ## Phase Boundary

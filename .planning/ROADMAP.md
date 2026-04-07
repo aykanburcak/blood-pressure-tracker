@@ -36,7 +36,7 @@
 
 ## Next action
 
-Phase **6** done; Phase **7** planned. Run **`/gsd-execute-phase 7`** for buttons, cards, chips (DS-04–DS-07).
+Phases **6–7** done. Plan **Phase 8** (`/gsd-discuss-phase 8` or `/gsd-plan-phase 8`) for tabs, screen polish, PDF (DS-08–DS-10).
 
 ---
 

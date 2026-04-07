@@ -31,8 +31,8 @@ export function PrimaryButton({ label, onPress, disabled, accessibilityLabel, te
 
 const styles = StyleSheet.create({
   btn: {
-    backgroundColor: colors.accent,
-    borderRadius: radius.md,
+    backgroundColor: colors.primary,
+    borderRadius: radius.pill,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.lg,
     alignItems: 'center',
@@ -47,6 +47,6 @@ const styles = StyleSheet.create({
   },
   label: {
     ...typography.label,
-    color: colors.secondary,
+    color: colors.onPrimary,
   },
 });

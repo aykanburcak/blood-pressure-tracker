@@ -19,10 +19,10 @@ v1.0 requirements (CORE, LOG, HIST, INTP, TRND, EXPT, PRIV) — [`.planning/mile
 
 ### Components
 
-- [ ] **DS-04:** Primary CTA (`PrimaryButton` or equivalent) uses Stitch primary colors and pill or large corner radius; optional primary → primary-container gradient documented in code or tokens.
-- [ ] **DS-05:** Secondary / neutral pressables use recessed surface styling (no harsh borders) where the app uses secondary actions.
-- [ ] **DS-06:** `SurfaceCard` and screen backgrounds follow tonal layering (e.g. white cards on `#f9f9fe`-style dominant surface).
-- [ ] **DS-07:** WHO interpretation chips use soft fills consistent with Stitch “soft state” guidance without reducing contrast below readable levels.
+- [x] **DS-04:** Primary CTA (`PrimaryButton` or equivalent) uses Stitch primary colors and pill or large corner radius; optional primary → primary-container gradient documented in code or tokens.
+- [x] **DS-05:** Secondary / neutral pressables use recessed surface styling (no harsh borders) where the app uses secondary actions.
+- [x] **DS-06:** `SurfaceCard` and screen backgrounds follow tonal layering (e.g. white cards on `#f9f9fe`-style dominant surface).
+- [x] **DS-07:** WHO interpretation chips use soft fills consistent with Stitch “soft state” guidance without reducing contrast below readable levels.
 
 ### Shell & screens
 
@@ -52,7 +52,7 @@ Same as prior backlog — reminders, notes, Health Connect, app lock, sync — s
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DS-01 – DS-03 | 6 | Shipped 2026-04-07 (`06-01-PLAN` executed) |
-| DS-04 – DS-07 | 7 | [Plan 07-01](phases/07-core-components/07-01-PLAN.md) — ready to execute |
+| DS-04 – DS-07 | 7 | Shipped 2026-04-07 (`07-01-PLAN` executed) |
 | DS-08 – DS-10 | 8 | Planned |
 
 ---

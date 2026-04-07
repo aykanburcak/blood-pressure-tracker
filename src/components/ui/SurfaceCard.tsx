@@ -16,8 +16,9 @@ export function SurfaceCard({ children, padded = 'md', style }: Props) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.secondary,
-    borderRadius: radius.md,
+    /* Same hex as `secondary` — explicit semantic name for Stitch cards */
+    backgroundColor: colors.surfaceContainerLowest,
+    borderRadius: radius.lg,
     ...shadow.card,
   },
 });

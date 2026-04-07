@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-import { colors, spacing, typography } from '@/lib/theme';
+import { colors, radius, spacing, typography } from '@/lib/theme';
 
 type Props = {
   title: string;
@@ -33,7 +33,7 @@ export function InfoRow({ title, detail, showChevron, onPress, accessibilityLabe
         accessibilityRole="button"
         onPress={onPress}
         testID={testID}
-        style={({ pressed }) => [styles.row, pressed && styles.pressed]}>
+        style={({ pressed }) => [styles.rowPressable, pressed && styles.pressed]}>
         {content}
       </Pressable>
     );
@@ -53,8 +53,16 @@ const styles = StyleSheet.create({
     minHeight: 48,
     justifyContent: 'center',
   },
+  rowPressable: {
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.md,
+    minHeight: 48,
+    justifyContent: 'center',
+    backgroundColor: colors.surfaceContainerHigh,
+    borderRadius: radius.md,
+  },
   pressed: {
-    opacity: 0.85,
+    opacity: 0.9,
   },
   inner: {
     flexDirection: 'row',
