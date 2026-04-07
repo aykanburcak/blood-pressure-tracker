@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: stitch-design-alignment
-status: phase_6_discussed
-stopped_at: Phase 6 discussed — run `/gsd-plan-phase 6`
+status: phase_6_planned
+stopped_at: Phase 6 planned — run `/gsd-execute-phase 6` (or execute 06-01-PLAN.md)
 last_updated: "2026-04-07T00:00:00.000Z"
-last_activity: 2026-04-07 — /gsd-discuss-phase 6; 06-CONTEXT.md + 06-DISCUSSION-LOG.md
+last_activity: 2026-04-07 — /gsd-plan-phase 6; 06-01-PLAN + RESEARCH + UI-SPEC + VALIDATION + VERIFICATION
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 0
+  total_plans: 1
   completed_plans: 0
   percent: 0
 ---
@@ -25,10 +25,10 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.1)
 
 ## Current Position
 
-**Milestone:** v1.1 Stitch design alignment — Phase **6** discussed, not planned yet.  
-**Phase:** **6** — tokens & typography (`06-CONTEXT.md` ready).  
-**Plan:** —  
-**Status:** Ready for `/gsd-plan-phase 6`
+**Milestone:** v1.1 Stitch design alignment — Phase **6** planned.  
+**Phase:** **6** — tokens & typography.  
+**Plan:** [`.planning/phases/06-tokens-and-typography/06-01-PLAN.md`](phases/06-tokens-and-typography/06-01-PLAN.md) (wave 1).  
+**Status:** Ready for `/gsd-execute-phase 6`
 
 ## Accumulated Context
 
@@ -59,4 +59,4 @@ Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 ## Session continuity
 
 Last session: 2026-04-07 — `gsd-new-milestone` v1.1  
-Resume: `/gsd-plan-phase 6`
+Resume: `/gsd-execute-phase 6`

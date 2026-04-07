@@ -34,7 +34,7 @@
 
 ## Next action
 
-`/gsd-discuss-phase 6` or `/gsd-plan-phase 6` to start Phase 6.
+`/gsd-execute-phase 6` to implement Phase 6 ([`06-01-PLAN.md`](phases/06-tokens-and-typography/06-01-PLAN.md)).
 
 ---
 

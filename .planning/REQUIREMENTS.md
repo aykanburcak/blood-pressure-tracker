@@ -51,7 +51,7 @@ Same as prior backlog — reminders, notes, Health Connect, app lock, sync — s
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DS-01 – DS-03 | 6 | Planned |
+| DS-01 – DS-03 | 6 | [Plan 06-01](phases/06-tokens-and-typography/06-01-PLAN.md) — ready to execute |
 | DS-04 – DS-07 | 7 | Planned |
 | DS-08 – DS-10 | 8 | Planned |
 
