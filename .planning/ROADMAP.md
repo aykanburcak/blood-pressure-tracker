@@ -32,8 +32,8 @@
 
 ## Next action
 
-**`/gsd-discuss-phase 9`** (optional) → **`/gsd-plan-phase 9`** → execute Phase 9.
+**`/gsd-execute-phase 9`** — run plan `09-01-PLAN.md` (HOME-01–HOME-06).
 
 ---
 
-*Updated: 2026-04-08 — milestone v1.2 roadmap (Phase 9).*
+*Updated: 2026-04-08 — Phase 9 planned (`09-01-PLAN.md`).*

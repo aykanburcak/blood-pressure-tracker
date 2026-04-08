@@ -2,14 +2,12 @@
 gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: home-pressure-trends-card
-status: phase_9_context_ready
-stopped_at: Phase 9 context gathered — run `/gsd-plan-phase 9`
-last_updated: "2026-04-08T18:00:00.000Z"
-last_activity: 2026-04-08 — /gsd-discuss-phase 9 (synthesis + 09-CONTEXT.md)
+status: executing
+last_updated: "2026-04-08T08:02:25.642Z"
 progress:
   total_phases: 1
   completed_phases: 0
-  total_plans: 0
+  total_plans: 1
   completed_plans: 0
   percent: 0
 ---
@@ -25,9 +23,9 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Current Position
 
-**Phase:** **9** — Home pressure trends card — **context gathered**  
-**Plan:** —  
-**Status:** Ready for **`/gsd-plan-phase 9`**. Resume file: [09-CONTEXT.md](phases/09-home-pressure-trends-card/09-CONTEXT.md).
+**Phase:** **9** — Home pressure trends card — **planned**  
+**Plan:** [09-01-PLAN.md](phases/09-home-pressure-trends-card/09-01-PLAN.md)  
+**Status:** Ready to execute (`/gsd-execute-phase 9`)
 
 ## Accumulated Context
 
@@ -51,4 +49,4 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Session continuity
 
-Resume: `/gsd-plan-phase 9` → execute Phase 9 plan.
+Resume: `/gsd-execute-phase 9` (or run tasks in `09-01-PLAN.md` manually).
