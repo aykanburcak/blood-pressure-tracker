@@ -64,7 +64,8 @@ describe('HistoryTab trends header', () => {
       </NavigationContainer>,
     );
 
-    expect(await screen.findByText('Recent averages')).toBeTruthy();
+    expect(await screen.findByText('Last 7 days')).toBeTruthy();
+    expect(screen.getByText('Last 30 days')).toBeTruthy();
     expect(screen.getByText(/120.*\/.*80/)).toBeTruthy();
     expect(screen.getByText('1 readings')).toBeTruthy();
     expect(getTrendWindowStats).toHaveBeenCalled();

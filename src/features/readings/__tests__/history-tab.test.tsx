@@ -75,6 +75,7 @@ describe('HistoryTab', () => {
       </NavigationContainer>,
     );
 
+    expect(await screen.findByText('Recent readings')).toBeTruthy();
     expect(await screen.findByText('130 / 85')).toBeTruthy();
     expect(screen.getByText('118 / 76')).toBeTruthy();
     expect(listReadings).toHaveBeenCalled();

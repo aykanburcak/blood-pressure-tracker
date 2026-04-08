@@ -15,43 +15,32 @@ function fmtAvg(n: number | null): string {
 
 export function TrendSummaryStrip({ stats }: Props) {
   return (
-    <SurfaceCard style={styles.card}>
-      <Text style={styles.title}>Recent averages</Text>
-      <View style={styles.row}>
-        <View style={styles.col}>
+    <View style={styles.row}>
+      <SurfaceCard style={styles.statCard}>
           <Text style={styles.label}>Last 7 days</Text>
           <Text style={styles.value}>
             {fmtAvg(stats.last7.avgSystolic)} / {fmtAvg(stats.last7.avgDiastolic)} mmHg
           </Text>
           <Text style={styles.count}>{stats.last7.count} readings</Text>
-        </View>
-        <View style={styles.col}>
+      </SurfaceCard>
+      <SurfaceCard style={styles.statCard}>
           <Text style={styles.label}>Last 30 days</Text>
           <Text style={styles.value}>
             {fmtAvg(stats.last30.avgSystolic)} / {fmtAvg(stats.last30.avgDiastolic)} mmHg
           </Text>
           <Text style={styles.count}>{stats.last30.count} readings</Text>
-        </View>
-      </View>
-    </SurfaceCard>
+      </SurfaceCard>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  card: {
-    marginBottom: spacing.md,
-    paddingVertical: spacing.md,
-  },
-  title: {
-    ...typography.label,
-    color: colors.textPrimary,
-    marginBottom: spacing.sm,
-  },
   row: {
     flexDirection: 'row',
-    gap: spacing.lg,
+    gap: spacing.sm,
+    marginBottom: spacing.md,
   },
-  col: {
+  statCard: {
     flex: 1,
     gap: spacing.xs,
   },
@@ -67,7 +56,7 @@ const styles = StyleSheet.create({
   },
   count: {
     ...typography.label,
-    color: colors.textSecondary,
+    color: colors.textPrimary,
     fontWeight: '400',
   },
 });

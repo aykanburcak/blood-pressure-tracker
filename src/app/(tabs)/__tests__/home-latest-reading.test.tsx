@@ -49,11 +49,13 @@ describe('HomeTab pressure trends card', () => {
     })
 
     expect(screen.getByTestId('home-pressure-trends-card')).toBeTruthy()
+    expect(screen.queryByTestId('home-average-card')).toBeNull()
+    expect(screen.queryByTestId('home-frequency-card')).toBeNull()
     expect(screen.getByText('No readings yet')).toBeTruthy()
     expect(screen.getByText(copy.trendPreviewHint)).toBeTruthy()
   })
 
-  it('shows average and interpretation when one reading exists', async () => {
+  it('shows summary cards when one reading exists', async () => {
     mockListReadingsForChart.mockResolvedValue([
       {
         id: 'r1',
@@ -72,15 +74,15 @@ describe('HomeTab pressure trends card', () => {
     )
 
     await waitFor(() => {
-      expect(screen.getByText(/118\s*\/\s*75/)).toBeTruthy()
+      expect(screen.getByTestId('home-average-card')).toBeTruthy()
     })
 
-    expect(screen.getByText('Normal')).toBeTruthy()
-    expect(
-      screen.getByText(
-        'This is not a medical diagnosis. Talk to a clinician about your readings.',
-      ),
-    ).toBeTruthy()
+    expect(screen.getByTestId('home-frequency-card')).toBeTruthy()
+    expect(screen.getByText('Average')).toBeTruthy()
+    expect(screen.getByText('Frequency')).toBeTruthy()
+    expect(screen.getByText('118/75')).toBeTruthy()
+    expect(screen.getByText('1.0')).toBeTruthy()
+    expect(screen.getByText('Normal blood pressure')).toBeTruthy()
     expect(screen.getByText(copy.trendPreviewHint)).toBeTruthy()
     expect(screen.queryByTestId('bp-home-bar-chart')).toBeNull()
   })
@@ -116,7 +118,11 @@ describe('HomeTab pressure trends card', () => {
     })
 
     expect(screen.getByTestId('home-pressure-trends-card')).toBeTruthy()
-    expect(screen.getByText(/118\s*\/\s*77/)).toBeTruthy()
+    expect(screen.getByTestId('home-average-card')).toBeTruthy()
+    expect(screen.getByTestId('home-frequency-card')).toBeTruthy()
+    expect(screen.getByText('118/77')).toBeTruthy()
+    expect(screen.getByText('1.0')).toBeTruthy()
+    expect(screen.getByText('Normal blood pressure')).toBeTruthy()
     expect(screen.queryByText('Blood pressure over time')).toBeNull()
   })
 })

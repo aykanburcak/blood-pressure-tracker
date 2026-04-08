@@ -16,6 +16,18 @@ export type BpChartBandId =
   | 'severeHypo'
   | 'extremeHypo'
 
+export const BP_CHART_BAND_ORDER: readonly BpChartBandId[] = [
+  'crisis',
+  'stage4',
+  'stage3',
+  'stage2',
+  'preHypertension',
+  'normal',
+  'moderateHypo',
+  'severeHypo',
+  'extremeHypo',
+] as const
+
 function inRange(v: number, min: number, max: number): boolean {
   return v >= min && v <= max
 }
@@ -166,8 +178,28 @@ const bandToColorKey: Record<BpChartBandId, keyof typeof colors> = {
   extremeHypo: 'chartBandHypoExtreme',
 }
 
+const bandToLabel: Record<BpChartBandId, string> = {
+  crisis: 'Hypertensive crisis',
+  stage4: 'High blood pressure - stage 4 hypertension',
+  stage3: 'High blood pressure - stage 3 hypertension',
+  stage2: 'High blood pressure - stage 2 hypertension',
+  preHypertension: 'Pre-high blood pressure',
+  normal: 'Normal blood pressure',
+  moderateHypo: 'Low blood pressure - moderate hypotension',
+  severeHypo: 'Too low blood pressure - severe hypotension',
+  extremeHypo: 'Extremely low blood pressure',
+}
+
 export function getBpChartBarColor(systolic: number, diastolic: number): string {
   const band = getBpChartBand(systolic, diastolic)
   const key = bandToColorKey[band]
   return colors[key] as string
+}
+
+export function getBpChartBandColor(band: BpChartBandId): string {
+  return colors[bandToColorKey[band]] as string
+}
+
+export function getBpChartBandLabel(band: BpChartBandId): string {
+  return bandToLabel[band]
 }

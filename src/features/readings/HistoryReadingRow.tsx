@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { classifyBloodPressure } from '@/lib/bp/who-classification';
 import type { ReadingRow } from '@/lib/db/schema';
-import { colors, spacing, typography } from '@/lib/theme';
+import { colors, radius, shadow, spacing, typography } from '@/lib/theme';
 
 type Props = {
   item: ReadingRow;
@@ -38,11 +38,14 @@ export function HistoryReadingRow({ item, onPress }: Props) {
 const styles = StyleSheet.create({
   row: {
     paddingVertical: spacing.md,
-    paddingHorizontal: spacing.sm,
+    paddingHorizontal: spacing.md,
     marginBottom: spacing.sm,
+    backgroundColor: colors.surfaceContainerLowest,
+    borderRadius: radius.lg,
+    ...shadow.card,
   },
   rowPressed: {
-    opacity: 0.85,
+    opacity: 0.92,
   },
   main: {
     gap: spacing.xs,
