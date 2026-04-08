@@ -13,7 +13,7 @@
 |-------|------|------|--------------|----------------------------|
 | **9** | Home pressure trends card | One Home card: avg BP + bar chart + BP-chart bar colors | HOME-01 – HOME-06 | Home shows a single trends card with avg matching chart data; bars colored per band (green = acceptable); sparse/empty states OK; disclaimer still visible; tests or RNTL for color helper if extracted |
 
-### Phase 9 — Home pressure trends card
+### Phase 9: Home pressure trends card
 
 - **Depends on:** — (reads existing Home + chart + theme)  
 - **Delivers:** Refactor `src/app/(tabs)/index.tsx` (and related components, e.g. chart module): merge cards; compute averages over chart readings; Victory/Skia **bar** series; shared `getBpChartBand(systolic, diastolic)` (or equivalent) with documented thresholds from the Blood Pressure Chart; capsule bar styling and sparse x-axis labels aligned to Stitch reference.  
