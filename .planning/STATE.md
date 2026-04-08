@@ -2,10 +2,10 @@
 gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: home-pressure-trends-card
-status: defining_requirements
-stopped_at: Milestone initialized — run `/gsd-discuss-phase 9` or `/gsd-plan-phase 9`
-last_updated: "2026-04-08T12:00:00.000Z"
-last_activity: 2026-04-08 — /gsd-new-milestone v1.2 (planning only; phase folders preserved)
+status: phase_9_context_ready
+stopped_at: Phase 9 context gathered — run `/gsd-plan-phase 9`
+last_updated: "2026-04-08T18:00:00.000Z"
+last_activity: 2026-04-08 — /gsd-discuss-phase 9 (synthesis + 09-CONTEXT.md)
 progress:
   total_phases: 1
   completed_phases: 0
@@ -25,14 +25,15 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Current Position
 
-**Phase:** Not started (roadmap defined)  
+**Phase:** **9** — Home pressure trends card — **context gathered**  
 **Plan:** —  
-**Status:** Milestone v1.2 initialized; implementation starts with **Phase 9** per `.planning/ROADMAP.md`.
+**Status:** Ready for **`/gsd-plan-phase 9`**. Resume file: [09-CONTEXT.md](phases/09-home-pressure-trends-card/09-CONTEXT.md).
 
 ## Accumulated Context
 
 ### GSD note (2026-04-08)
 
+- **Roadmap heading:** GSD `init phase-op` matches `### Phase N: Title` (colon). `### Phase 9 — …` did not resolve; fixed in `.planning/ROADMAP.md`.
 - **`phases clear` was not run** for this milestone: the stock `new-milestone` step would remove **all** of `.planning/phases/*` (including v1.0 archives). Phase folders **01–08** are preserved; **v1.2** work uses **`09-*`**.
 - **Research:** Skipped dedicated parallel research; scope is in-app UI on existing Victory/Skia stack. BP band thresholds captured from stakeholder **Blood Pressure Chart** reference (see REQUIREMENTS.md / phase plan).
 
@@ -50,4 +51,4 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Session continuity
 
-Resume: `/gsd-discuss-phase 9` → `/gsd-plan-phase 9` → execute.
+Resume: `/gsd-plan-phase 9` → execute Phase 9 plan.
