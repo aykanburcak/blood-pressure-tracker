@@ -7,11 +7,16 @@ type Props = {
   children: ReactNode;
   padded?: 'md' | 'lg';
   style?: ViewStyle;
+  testID?: string;
 };
 
-export function SurfaceCard({ children, padded = 'md', style }: Props) {
+export function SurfaceCard({ children, padded = 'md', style, testID }: Props) {
   const pad = padded === 'lg' ? spacing.lg : spacing.md;
-  return <View style={[styles.card, { padding: pad }, style]}>{children}</View>;
+  return (
+    <View style={[styles.card, { padding: pad }, style]} testID={testID}>
+      {children}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

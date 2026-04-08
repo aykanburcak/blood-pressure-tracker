@@ -1,4 +1,4 @@
-import type { ReadingRow } from '@/lib/db/schema';
+import type {ReadingRow} from '@/lib/db/schema'
 
 export type BpChartPoint = {
   measuredAt: number;
@@ -22,4 +22,23 @@ export function buildBpChartSeries(rows: ReadingRow[]): BpChartSeries {
     diastolic: r.diastolic,
   }));
   return { kind: 'ok', data };
+}
+
+/**
+ * Arithmetic mean sys/dia over the same rows used for the Home chart (90d window).
+ */
+export function averageReadingsForChart(
+  rows: ReadingRow[],
+): {avgSystolic: number; avgDiastolic: number} | null {
+  if (rows.length === 0) {
+    return null;
+  }
+  let sumS = 0;
+  let sumD = 0;
+  for (const r of rows) {
+    sumS += r.systolic;
+    sumD += r.diastolic;
+  }
+  const n = rows.length;
+  return {avgSystolic: sumS / n, avgDiastolic: sumD / n};
 }

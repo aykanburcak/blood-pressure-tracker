@@ -1,5 +1,5 @@
-import { INTERPRETATION_DISCLAIMER } from '@/lib/bp/medical-disclaimer';
-import { PRIVACY_DETAIL_SCREEN_TITLE } from '@/features/privacy/privacy-detail-copy';
+import {INTERPRETATION_DISCLAIMER} from '@/lib/bp/medical-disclaimer'
+import {PRIVACY_DETAIL_SCREEN_TITLE} from '@/features/privacy/privacy-detail-copy'
 
 /**
  * Stitch-aligned semantic palette (v1.1 Phase 6). See `.planning/research/STITCH-SOURCE.md`.
@@ -19,7 +19,18 @@ const semantic = {
   onPrimary: '#FFFFFF',
   /** Primary @ ~15% alpha — selected preset chips (Phase 7). */
   primarySelectionFill: 'rgba(0, 88, 188, 0.15)',
-} as const;
+  /** Home BP bar chart — extended chart bands (Phase 9). */
+  chartBandNormal: '#22C55E',
+  chartBandPreHypertension: '#EAB308',
+  chartBandStage1: '#F97316',
+  chartBandStage2: '#EA580C',
+  chartBandStage3: '#C2410C',
+  chartBandStage4: '#9A3412',
+  chartBandCrisis: '#B91C1C',
+  chartBandHypoModerate: '#7DD3FC',
+  chartBandHypoSevere: '#38BDF8',
+  chartBandHypoExtreme: '#0369A1',
+} as const
 
 /** Must match `useFonts` keys in `src/app/_layout.tsx`. */
 const fontFamily = {
@@ -27,7 +38,7 @@ const fontFamily = {
   heading: 'Manrope_600SemiBold',
   body: 'Inter_400Regular',
   label: 'Inter_600SemiBold',
-} as const;
+} as const
 
 export const spacing = {
   xs: 4,
@@ -37,7 +48,7 @@ export const spacing = {
   xl: 32,
   '2xl': 48,
   '3xl': 64,
-} as const;
+} as const
 
 export const typography = {
   body: {
@@ -52,6 +63,12 @@ export const typography = {
     fontWeight: '600' as const,
     lineHeight: 14 * 1.35,
   },
+  note: {
+    fontFamily: fontFamily.label,
+    fontSize: 12,
+    fontWeight: '400' as const,
+    lineHeight: 12 * 1.5,
+  },
   heading: {
     fontFamily: fontFamily.heading,
     fontSize: 20,
@@ -65,7 +82,7 @@ export const typography = {
     lineHeight: 28 * 1.15,
     letterSpacing: -0.5,
   },
-} as const;
+} as const
 
 export const colors = {
   ...semantic,
@@ -87,7 +104,7 @@ export const colors = {
   interpretStage1: '#EA580C',
   interpretStage2: '#C2410C',
   interpretCrisis: '#B91C1C',
-} as const;
+} as const
 
 export const radius = {
   sm: 12,
@@ -95,24 +112,24 @@ export const radius = {
   lg: 24,
   /** Full pill for primary CTAs (Phase 7). */
   pill: 9999,
-} as const;
+} as const
 
 /** Tinted ambient shadow (on-surface hue) — Stitch “soft elevation”, not harsh black. */
 export const shadow = {
   card: {
     shadowColor: '#1A1C1F',
-    shadowOffset: { width: 0, height: 6 },
+    shadowOffset: {width: 0, height: 6},
     shadowOpacity: 0.07,
     shadowRadius: 28,
     elevation: 3,
   },
-} as const;
+} as const
 
 export const shell = {
   tabBarVisualHeight: 56,
   tabBarTopPadding: 16,
   minHitArea: 44,
-} as const;
+} as const
 
 export const copy = {
   primaryCta: 'Continue Offline',
@@ -127,11 +144,14 @@ export const copy = {
   privacySupport:
     'This app helps you log and review readings. It does not provide medical diagnosis or treatment advice.',
   historyEmptyTitle: 'No history yet',
-  historyEmptyBody: 'Saved readings will appear here in reverse chronological order.',
+  historyEmptyBody:
+    'Saved readings will appear here in reverse chronological order.',
   settingsLocalLabel: 'Local storage only',
-  settingsLocalDetail: 'Your data stays on this device unless you choose to export a PDF later.',
+  settingsLocalDetail:
+    'Your data stays on this device unless you choose to export a PDF later.',
   settingsPrivacyLabel: PRIVACY_DETAIL_SCREEN_TITLE,
-  settingsPrivacyDetail: 'How your readings are stored, exported, and backed up',
+  settingsPrivacyDetail:
+    'How your readings are stored, exported, and backed up',
   /** Settings footnote — optional PDF only when the user chooses (UI-SPEC). */
   settingsExportFootnote:
     'You can export readings as a PDF only when you choose to in the app. Nothing is sent automatically.',
@@ -139,6 +159,9 @@ export const copy = {
     'Your readings stay on this device. No sign-in is required to keep using the tracker.',
   trendPreviewHint:
     'After you save readings, you will see trends here. Charts stay on this device.',
+  /** Home combined trends card — section title (use `textTransform: 'uppercase'` in styles). */
+  pressureTrendsSectionTitle: 'Pressure trends',
+  pressureTrendsAvgLabel: 'Avg',
   logReadingCta: 'Add reading',
   settingsExportPdfTitle: 'Export PDF',
   settingsExportPdfDetail: 'Create a report for your doctor',
@@ -154,4 +177,4 @@ export const copy = {
   exportReadingsInRange: (n: number) =>
     `${n} reading${n === 1 ? '' : 's'} in this range`,
   exportDisclaimerShort: INTERPRETATION_DISCLAIMER,
-} as const;
+} as const
