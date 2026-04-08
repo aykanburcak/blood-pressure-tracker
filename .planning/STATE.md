@@ -25,7 +25,7 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 **Phase:** **9** — Home pressure trends card — **executed** (verify UAT)  
 **Plan:** [09-01-PLAN.md](phases/09-home-pressure-trends-card/09-01-PLAN.md)  
-**Status:** Code landed — run **`/gsd-verify-work`** / device check, then milestone close when satisfied.
+**Status:** Branch **`feat/v1.1-stitch-design-alignment`** pushed to **`origin`** (2026-04-08). **`gh` CLI not installed** — open PR manually: paste **`.planning/PR-BODY-phase-9-ship.md`** into GitHub [compare → PR](https://github.com/aykanburcak/blood-pressure-tracker/compare/master...feat/v1.1-stitch-design-alignment). After merge: **`/gsd-complete-milestone`** when UAT satisfied.
 
 ## Accumulated Context
 
@@ -49,4 +49,4 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Session continuity
 
-Resume: `/gsd-execute-phase 9` (or run tasks in `09-01-PLAN.md` manually).
+Ship: PR from compare link + `PR-BODY-phase-9-ship.md`. Install **`gh`** for future `gh pr create`: https://cli.github.com/
