@@ -1,8 +1,14 @@
 # Milestones
 
-## v1.2 — Home pressure trends card (in progress, started 2026-04-08)
+## v1.2 Home pressure trends card (Shipped: 2026-04-08)
 
-**Scope:** Phase **9** — single Home card combining average blood pressure and a **bar** chart; bars colored by **Blood Pressure Chart** bands (green for acceptable/normal). See `.planning/REQUIREMENTS.md` (HOME-*), `.planning/ROADMAP.md`.
+**Phases completed:** 1 phases, 1 plans, 1 tasks
+
+**Archives:** [Roadmap](milestones/v1.2-ROADMAP.md) · [Requirements](milestones/v1.2-REQUIREMENTS.md)
+
+**Key accomplishments:**
+
+- Unified Home into one pressure-trends card with avg sys/dia, capsule range bars per reading, and BP-chart band colors (tests for band logic).
 
 ---
 

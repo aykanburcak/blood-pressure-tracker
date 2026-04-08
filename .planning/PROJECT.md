@@ -18,9 +18,13 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 - **v1.1:** Design system and shell aligned to Stitch **Apple Health BP Tracker** (tokens, typography, components, tab chrome, screen polish, PDF token pass). Requirements DS-01–DS-10 in `.planning/milestones/` snapshot when archived; see executed plans under `.planning/phases/06-*` … `08-*`.
 
-### Active (v1.2 — in progress)
+### Validated (v1.2 — shipped 2026-04-08)
 
-- **v1.2:** Single **Pressure trends** card on Home: combined average blood pressure + bar chart (replace separate latest-reading card + line chart card). Bar colors encode per-reading risk band using the product **Blood Pressure Chart** (greens for acceptable/normal band, blues for hypotension, yellow→red for elevated through crisis). Layout reference: Stitch-style combined card (capsule bars, sparse date ticks). See `.planning/REQUIREMENTS.md` (HOME-*).
+- **v1.2:** Single **Pressure trends** card on Home: average systolic/diastolic for the chart window + **bar** chart (one range bar per reading), bar colors from the **Blood Pressure Chart** bands (green-family for acceptable/normal; worst band when sys/dia disagree). Requirements HOME-01–HOME-06 in [`.planning/milestones/v1.2-REQUIREMENTS.md`](milestones/v1.2-REQUIREMENTS.md); executed plan `09-01-PLAN.md`.
+
+### Active
+
+- *None — run `/gsd-new-milestone` for the next version line.*
 
 ### Out of Scope
 
@@ -35,7 +39,7 @@ Logging and understanding a blood pressure reading should feel instant, private,
 
 Shipped **v1.0** and **v1.1** as local-only Expo SDK 55 app: SQLite readings, Skia/Victory trends, Stitch-aligned UI, expo-print PDF, Settings **Privacy & data**, `allowBackup: false` for Android.
 
-**v1.2** refines the Home trend surface: one card, averages, bar visualization, and extended color semantics from the internal BP chart (without changing WHO wording for clinical labels where those are shown).
+**v1.2** shipped the unified Home trends card (averages + capsule range bars + BP-chart colors). Further product scope awaits the next milestone.
 
 ## Constraints
 
@@ -58,7 +62,7 @@ Shipped **v1.0** and **v1.1** as local-only Expo SDK 55 app: SQLite readings, Sk
 | WHO interpretation + non-diagnostic framing | User context without diagnosis | ✓ In-app + PDF |
 | PDF-only export | Doctor handoff without scope creep | ✓ expo-print + share |
 | `allowBackup: false` | Align manifest with privacy story | ✓ Phase 5 |
-| v1.2 Home = one trends card | Less scroll, clearer “pressure over time” story | In progress |
+| v1.2 Home = one trends card | Less scroll, clearer “pressure over time” story | ✓ Shipped v1.2 |
 
 ## Evolution
 
@@ -68,18 +72,10 @@ This document evolves at phase transitions and milestone boundaries.
 
 ---
 
-## Current Milestone: v1.2 Home pressure trends card
+## Next milestone
 
-**Goal:** Unify the Home “latest reading” and “blood pressure over time” surfaces into one card that highlights **average** blood pressure for the charted window and uses a **bar chart** with **risk-colored** bars per the Blood Pressure Chart (green for acceptable / normal band).
-
-**Target features:**
-
-- Single `SurfaceCard` (or equivalent) containing: section title (e.g. pressure trends), **avg** systolic/diastolic + unit, optional status chip aligned to the dominant or average category, and the chart region.
-- **Bar chart** replacing the current Home line chart for this block; bars use rounded (“capsule”) tops where feasible; x-axis ticks sparse like the reference (e.g. weekly anchors).
-- **Color mapping:** Implement discrete bands matching the provided BP chart (hypotension blues, normal greens, pre-hypertension yellow, stages orange/red, crisis red). Readings whose systolic **and** diastolic fall in the combined “acceptable / normal” bands render **green** bars; otherwise use the worst applicable band for that reading.
-- Preserve empty / sparse-data behavior (copy, skeleton, or hint) inside the unified layout.
-- Keep existing non-diagnostic disclaimer visibility on Home as appropriate after layout merge.
+**v1.2** is complete. Start the next cycle with **`/gsd-new-milestone`** when you have the next product slice defined.
 
 ---
 
-*Last updated: 2026-04-08 — milestone v1.2 started (`/gsd-new-milestone`)*
+*Last updated: 2026-04-08 — v1.2 closed (`/gsd-complete-milestone`)*
