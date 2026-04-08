@@ -25,6 +25,26 @@
 
 Engagement (reminders, notes), Health Connect, app lock, sync — unchanged backlog; promote in a later milestone.
 
+## Appendix: Blood Pressure Chart bands (for HOME-04)
+
+Discrete bands for **bar fill** (both systolic **S** and diastolic **D** must be evaluated; use **most severe** band when they disagree). Eligibility for **green** = reading falls in one of the **Normal blood pressure** rows below (product “acceptable” band).
+
+| Band (visual) | Systolic (mmHg) | Diastolic (mmHg) |
+|----------------|-----------------|------------------|
+| Crisis — red | >210 | >120 |
+| Stage 4 (label per spec) | 180–210 | 110–120 |
+| Stage 3 | 160–179 | 100–109 |
+| Stage 2 | 140–159 | 90–99 |
+| Pre-hypertension — yellow | 130–139 | 85–89 |
+| High normal — light green* | 121–129 | 81–84 |
+| Normal / ideal — green* | 100–120 | 65–80 |
+| Low normal — teal/cyan* | 90–99 | 60–64 |
+| Moderate hypotension — light blue | 70–89 | 40–59 |
+| Severe hypotension — medium blue | 50–69 | 35–39 |
+| Extreme hypotension — dark blue | <50 | <35 |
+
+\*Treat the three “normal blood pressure” rows as **green-family** fills for **HOME-04** (exact hexes in tokens / UI-SPEC). Boundary rules (inclusive/exclusive endpoints) must be defined once in code and covered by unit tests.
+
 ## Out of scope (v1.2)
 
 - Changing **WHO** category **labels** or thresholds used for interpretation **chips** / PDF **clinical** strings (unless an explicit follow-up milestone merges WHO with the extended chart — not in v1.2).
