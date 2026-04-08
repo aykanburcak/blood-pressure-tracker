@@ -1,57 +1,48 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.1
-milestone_name: stitch-design-alignment
-status: phase_8_executed
-stopped_at: Phase 8 code complete — `/gsd-verify-work` or `/gsd-complete-milestone` v1.1
-last_updated: "2026-04-07T20:00:00.000Z"
-last_activity: 2026-04-07 — /gsd-ship: pushed feat/v1.1-stitch-design-alignment (gh CLI missing — open PR via GitHub URL)
+milestone: v1.2
+milestone_name: home-pressure-trends-card
+status: defining_requirements
+stopped_at: Milestone initialized — run `/gsd-discuss-phase 9` or `/gsd-plan-phase 9`
+last_updated: "2026-04-08T12:00:00.000Z"
+last_activity: 2026-04-08 — /gsd-new-milestone v1.2 (planning only; phase folders preserved)
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
-  percent: 100
+  total_phases: 1
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: `.planning/PROJECT.md` (Current Milestone: v1.1)
+See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 **Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.  
-**Current focus:** **v1.1** — design system + components aligned to Stitch **Apple Health BP Tracker**.
+**Current focus:** **v1.2** — combined Home card: average BP + risk-colored bar chart.
 
 ## Current Position
 
-**Milestone:** v1.1 Stitch design alignment — Phases **6–8** shipped (pending UAT / milestone close).  
-**Phase:** **8** — shell & screen polish + PDF — **executed**.  
-**Plan:** [08-01-PLAN.md](phases/08-shell-and-screen-polish/08-01-PLAN.md)  
-**Status:** Branch **`feat/v1.1-stitch-design-alignment`** pushed — open PR (body: `.planning/PR-BODY-v1.1-stitch.md`). Install **`gh`** for CLI `gh pr create`. Then **`/gsd-verify-work`** / merge / **`/gsd-complete-milestone`** when satisfied.
+**Phase:** Not started (roadmap defined)  
+**Plan:** —  
+**Status:** Milestone v1.2 initialized; implementation starts with **Phase 9** per `.planning/ROADMAP.md`.
 
 ## Accumulated Context
 
-### Quick fixes (post–v1.0)
+### GSD note (2026-04-08)
 
-| Date | Change |
-|------|--------|
-| 2026-04-07 | Stack modals: `RootNavigation` under `SafeAreaProvider` + Android `headerStyle.paddingTop` from `useSafeAreaInsets` — New reading / Export / Privacy headers clear status bar |
-| 2026-04-06 | Tab bar: `useSafeAreaInsets` + `SafeAreaProvider` root — bottom inset above Android gesture bar |
-| 2026-04-06 | Home trend card: `listReadingsForChart` + `BpTrendChart` when ≥2 readings; skeleton + `trendPreviewHint` when sparse |
+- **`phases clear` was not run** for this milestone: the stock `new-milestone` step would remove **all** of `.planning/phases/*` (including v1.0 archives). Phase folders **01–08** are preserved; **v1.2** work uses **`09-*`**.
+- **Research:** Skipped dedicated parallel research; scope is in-app UI on existing Victory/Skia stack. BP band thresholds captured from stakeholder **Blood Pressure Chart** reference (see REQUIREMENTS.md / phase plan).
+
+### Prior milestones
+
+- v1.0 shipped 2026-04-06; v1.1 Stitch alignment executed 2026-04-07 (phases 6–8). Formal `/gsd-complete-milestone` archive steps can still be run for v1.1 if not yet done.
 
 ### Design reference
 
-- Stitch MCP + `.planning/research/STITCH-SOURCE.md` for v1.1 implementation checks.
-
-### Decisions
-
-Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
-
-### Pending todos
-
-- Execute Phase 6 → 8 per `.planning/ROADMAP.md`.
-- Play upload: `.planning/RELEASE-CHECKLIST.md` when shipping builds.
+- Stitch combined card mock (screenshot 2) + current app screenshots under workspace `assets/` for implementation fidelity.
 
 ### Blockers
 
@@ -59,5 +50,4 @@ Logged in `PROJECT.md` Key Decisions table (v1.0 outcomes marked ✓).
 
 ## Session continuity
 
-Last session: 2026-04-07 — `gsd-new-milestone` v1.1  
-Resume: `/gsd-verify-work` → `/gsd-complete-milestone` (v1.1)
+Resume: `/gsd-discuss-phase 9` → `/gsd-plan-phase 9` → execute.

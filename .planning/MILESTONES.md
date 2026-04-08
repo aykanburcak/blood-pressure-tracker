@@ -1,8 +1,14 @@
 # Milestones
 
-## v1.1 — Stitch design alignment (in progress, started 2026-04-07)
+## v1.2 — Home pressure trends card (in progress, started 2026-04-08)
 
-**Scope:** Phases 6–8 — align tokens, components, and shell with [Stitch reference](https://stitch.withgoogle.com/projects/7766087000680671419). See `.planning/REQUIREMENTS.md` (DS-01–DS-10), `.planning/research/STITCH-SOURCE.md`, `.planning/ROADMAP.md`.
+**Scope:** Phase **9** — single Home card combining average blood pressure and a **bar** chart; bars colored by **Blood Pressure Chart** bands (green for acceptable/normal). See `.planning/REQUIREMENTS.md` (HOME-*), `.planning/ROADMAP.md`.
+
+---
+
+## v1.1 — Stitch design alignment (executed 2026-04-07)
+
+**Scope:** Phases 6–8 — align tokens, components, and shell with [Stitch reference](https://stitch.withgoogle.com/projects/7766087000680671419). Evidence: `.planning/research/STITCH-SOURCE.md`, executed plans under `.planning/phases/06-*` … `08-*`.
 
 ---
 

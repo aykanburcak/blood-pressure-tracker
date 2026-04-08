@@ -1,60 +1,43 @@
 # Requirements: Blood Pressure Tracker
 
-**Milestone v1.1 — Stitch design alignment**  
+**Milestone v1.2 — Home pressure trends card**  
 **Core value:** Logging and understanding a blood pressure reading should feel instant, private, and visually clear.
 
-**Design reference:** [Stitch — Apple Health BP Tracker](https://stitch.withgoogle.com/projects/7766087000680671419) — summarized in [`.planning/research/STITCH-SOURCE.md`](research/STITCH-SOURCE.md).
+**Visual references:** Combined card layout (avg + bars); internal **Blood Pressure Chart** for bar colors (greens = acceptable/normal band; graded blues / yellow–orange–red for other bands).
 
 ## Shipped baseline
 
-v1.0 requirements (CORE, LOG, HIST, INTP, TRND, EXPT, PRIV) — [`.planning/milestones/v1.0-REQUIREMENTS.md`](milestones/v1.0-REQUIREMENTS.md).
+- **v1.0:** [`.planning/milestones/v1.0-REQUIREMENTS.md`](milestones/v1.0-REQUIREMENTS.md) — CORE, LOG, HIST, INTP, TRND, EXPT, PRIV.
+- **v1.1:** Design system + shell (DS-01–DS-10) — executed in phases 6–8; see `.planning/phases/06-*` … `08-*` and traceability table in milestone snapshot when archived.
 
-## Milestone v1.1 — Active
+## Milestone v1.2 — Active
 
-### Design tokens & typography (DS)
+### Home — combined trends card (HOME)
 
-- [x] **DS-01:** App theme exposes Stitch-aligned semantic colors (surface, surface containers, primary / primary emphasis, on-surface, outline variants) and replaces or maps legacy Phase 1 hex values so screens read as the cool white / blue system.
-- [x] **DS-02:** Typography roles use headline vs body/label scale matching Stitch intent: load **Manrope** for display/headings and **Inter** for body/labels (with documented system fallback if fonts fail to load).
-- [x] **DS-03:** Radius and shadow tokens match the “soft elevation” direction (card radius lg/xl, shadow tinted and low opacity per Stitch notes).
+- [ ] **HOME-01:** On Home, when the app shows trend data, the user sees **one** primary card that combines the former “latest reading” summary area and the “blood pressure over time” chart (no separate stacked card pair for that content).
+- [ ] **HOME-02:** The card headline shows **average** systolic and diastolic (mmHg) for the **same set of readings** represented in the chart (or the same time window), with an “Avg” (or equivalent) label per design reference; units shown clearly.
+- [ ] **HOME-03:** The chart in this card is a **bar chart** (not a dual line chart). Each bar corresponds to a **single saved reading** (or, if bucketing is required for density, requirements in the phase plan must state the aggregation rule; default is one bar per reading in the window). Paired systolic/diastolic values remain derivable from the underlying reading (e.g. tooltip, bar encoding, or legend — specified in plan).
+- [ ] **HOME-04:** Each bar’s fill color reflects that reading’s **risk band** using the product **Blood Pressure Chart** categories (hypotension blues, normal / acceptable **green**, pre-hypertension yellow, stage 1–4 / crisis orange–red). **Green** applies when the reading falls in the designated acceptable/normal bands (systolic and diastolic within the green-eligible ranges from the chart). When systolic and diastolic imply different bands, use the **more severe** band for color.
+- [ ] **HOME-05:** **Sparse / empty states** remain understandable: if there are fewer than two readings (or existing app threshold), the Home surface shows appropriate empty or hint UI **inside** the unified card layout (or a single empty card), not a broken split between two cards.
+- [ ] **HOME-06:** **Non-diagnostic** copy remains present on Home where the product already surfaces it (wording may reflow with layout merge; must not remove the medical-boundary message).
 
-### Components
+## Deferred (not v1.2)
 
-- [x] **DS-04:** Primary CTA (`PrimaryButton` or equivalent) uses Stitch primary colors and pill or large corner radius; optional primary → primary-container gradient documented in code or tokens.
-- [x] **DS-05:** Secondary / neutral pressables use recessed surface styling (no harsh borders) where the app uses secondary actions.
-- [x] **DS-06:** `SurfaceCard` and screen backgrounds follow tonal layering (e.g. white cards on `#f9f9fe`-style dominant surface).
-- [x] **DS-07:** WHO interpretation chips use soft fills consistent with Stitch “soft state” guidance without reducing contrast below readable levels.
+Engagement (reminders, notes), Health Connect, app lock, sync — unchanged backlog; promote in a later milestone.
 
-### Shell & screens
+## Out of scope (v1.2)
 
-- [x] **DS-08:** Tab bar and header chrome are updated to match Stitch (including optional `expo-glass-effect` only if Android behavior is acceptable; otherwise solid tonal bar with same spacing/icon treatment).
-- [x] **DS-09:** Home, History, Settings, add-reading, and edit-reading flows are visually reviewed: remove or replace divider-heavy patterns with spacing/surface shifts where feasible; no change to medical strings or WHO logic.
-
-### Export & consistency
-
-- [x] **DS-10:** Generated PDF report remains readable and professional after token changes (adjust HTML template styles if needed).
-
-## Deferred (not v1.1)
-
-Same as prior backlog — reminders, notes, Health Connect, app lock, sync — see **Candidate backlog** below; promote with a later milestone.
-
-## Candidate backlog (unchanged)
-
-**Engagement:** Reminders; optional notes on readings.  
-**Ecosystem:** Health Connect; biometric lock; optional account/sync.
-
-## Out of scope (v1.1)
-
-- Changing WHO thresholds, labels, or medical disclaimer semantics.
-- New features beyond visual system + component/shell alignment (no new routes or data fields for v1.1 DS milestone).
+- Changing **WHO** category **labels** or thresholds used for interpretation **chips** / PDF **clinical** strings (unless an explicit follow-up milestone merges WHO with the extended chart — not in v1.2).
+- Replacing History screen chart, PDF charts, or export layout (Home-only unless a small shared helper is extracted).
+- New data fields or backend.
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DS-01 – DS-03 | 6 | Shipped 2026-04-07 (`06-01-PLAN` executed) |
-| DS-04 – DS-07 | 7 | Shipped 2026-04-07 (`07-01-PLAN` executed) |
-| DS-08 – DS-10 | 8 | Shipped 2026-04-07 (`08-01-PLAN` executed) |
+| HOME-01 – HOME-06 | 9 | Pending |
 
 ---
 
-*Updated: 2026-04-07 — `/gsd-new-milestone` v1.1 Stitch alignment.*
+*Defined: 2026-04-08 — `/gsd-new-milestone` v1.2*  
+*Last updated: 2026-04-08 — roadmap created (Phase 9)*
