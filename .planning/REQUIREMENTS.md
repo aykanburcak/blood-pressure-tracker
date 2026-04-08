@@ -55,7 +55,7 @@ Discrete bands for **bar fill** (both systolic **S** and diastolic **D** must be
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HOME-01 – HOME-06 | 9 | Planned (`09-01-PLAN.md`) |
+| HOME-01 – HOME-06 | 9 | Shipped in app (`09-01-PLAN` executed 2026-04-08) |
 
 ---
 

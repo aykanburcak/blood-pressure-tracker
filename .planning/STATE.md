@@ -23,9 +23,9 @@ See: `.planning/PROJECT.md` (Current Milestone: v1.2)
 
 ## Current Position
 
-**Phase:** **9** — Home pressure trends card — **planned**  
+**Phase:** **9** — Home pressure trends card — **executed** (verify UAT)  
 **Plan:** [09-01-PLAN.md](phases/09-home-pressure-trends-card/09-01-PLAN.md)  
-**Status:** Ready to execute (`/gsd-execute-phase 9`)
+**Status:** Code landed — run **`/gsd-verify-work`** / device check, then milestone close when satisfied.
 
 ## Accumulated Context
 
