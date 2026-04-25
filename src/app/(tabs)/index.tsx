@@ -78,7 +78,7 @@ export default function HomeTab() {
   return (
     <ScreenContainer>
       <View testID="screen-home">
-        <ScreenTitle>Blood Pressure</ScreenTitle>
+        <ScreenTitle>Blood Pressure Tracker</ScreenTitle>
 
         {hasReadings ? (
           <View style={styles.summaryRow}>
@@ -116,7 +116,10 @@ export default function HomeTab() {
               />
               <Text style={styles.summaryLabel}>Frequency</Text>
               <View style={styles.summaryValueRow}>
-                <Text style={styles.summaryValue} testID="home-frequency-display">
+                <Text
+                  style={styles.summaryValue}
+                  testID="home-frequency-display"
+                >
                   {frequency?.toFixed(1)}
                 </Text>
                 <Text style={styles.summaryUnit}>/day</Text>

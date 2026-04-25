@@ -37,7 +37,7 @@ describe('Phase 1 tab shell', () => {
     expect(within(historyRoot).queryByText(/coming soon/i)).toBeNull();
   });
 
-  it('shows Settings local-only rows and export-boundary footnote', async () => {
+  it('shows Settings local-only rows without export controls', async () => {
     renderRouter('./src/app', { initialUrl: '/(tabs)' });
 
     await userEvent.press(screen.getByTestId('tab-settings'));
@@ -48,16 +48,17 @@ describe('Phase 1 tab shell', () => {
     expect(within(settingsRoot).getByText(copy.settingsLocalDetail)).toBeTruthy();
     expect(within(settingsRoot).getByText(copy.settingsPrivacyLabel)).toBeTruthy();
     expect(within(settingsRoot).getByText(copy.settingsPrivacyDetail)).toBeTruthy();
-    expect(within(settingsRoot).getByText(copy.settingsExportFootnote)).toBeTruthy();
+    expect(within(settingsRoot).queryByText(copy.settingsExportPdfTitle)).toBeNull();
     expect(within(settingsRoot).queryByText(/coming soon/i)).toBeNull();
   });
 
-  it('exposes Home, History, and Settings tab targets', async () => {
+  it('exposes Home, History, Share report, and Settings tab targets', async () => {
     renderRouter('./src/app', { initialUrl: '/(tabs)' });
 
     await waitFor(() => {
       expect(screen.getByTestId('tab-home')).toBeTruthy();
       expect(screen.getByTestId('tab-history')).toBeTruthy();
+      expect(screen.getByTestId('tab-share-report')).toBeTruthy();
       expect(screen.getByTestId('tab-settings')).toBeTruthy();
     });
   });

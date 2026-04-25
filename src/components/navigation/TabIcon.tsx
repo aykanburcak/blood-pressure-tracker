@@ -1,7 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 
-export type TabIconName = 'home' | 'history' | 'settings';
+export type TabIconName = 'home' | 'history' | 'shareReport' | 'settings';
 
 const GLYPHS: Record<
   TabIconName,
@@ -9,6 +9,7 @@ const GLYPHS: Record<
 > = {
   home: { outline: 'home-outline', filled: 'home' },
   history: { outline: 'time-outline', filled: 'time' },
+  shareReport: { outline: 'share-social-outline', filled: 'share-social' },
   settings: { outline: 'settings-outline', filled: 'settings' },
 };
 

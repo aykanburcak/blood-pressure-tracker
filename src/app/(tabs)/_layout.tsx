@@ -42,6 +42,15 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="share-report"
+        options={{
+          title: 'Share report',
+          tabBarAccessibilityLabel: 'Share report',
+          tabBarButtonTestID: 'tab-share-report',
+          tabBarIcon: (props) => <TabIcon name="shareReport" {...props} />,
+        }}
+      />
+      <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',

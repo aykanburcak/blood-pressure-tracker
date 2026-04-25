@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "test": "jest",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "android:build:production": "eas build --profile production --platform android"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.4.2",
