@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.2
 milestone_name: milestone
 status: completed
-last_updated: "2026-04-08T11:29:07.100Z"
-last_activity: 2026-04-08
+last_updated: "2026-04-27T08:34:11.598Z"
+last_activity: 2026-04-27
 progress:
   total_phases: 9
   completed_phases: 4
@@ -28,8 +28,8 @@ See: `.planning/PROJECT.md`
 **Plan:** [09-01-PLAN.md](phases/09-home-pressure-trends-card/09-01-PLAN.md)  
 **Status:** Completed — **v1.2** shipped; roadmap and requirements snapshots live under `milestones/` (see `v1.2-ROADMAP.md` / `v1.2-REQUIREMENTS.md`).
 
-**Last Activity:** 2026-04-08  
-**Last Activity Description:** Closed v1.2 via `/gsd-complete-milestone`; active roadmap cleared until the next milestone.
+**Last Activity:** 2026-04-27  
+**Last Activity Description:** Completed quick task `260427-g2h`: Generate public privacy policy page for Blood Pressure Tracker.
 
 ## Accumulated Context
 
@@ -45,6 +45,12 @@ See: `.planning/PROJECT.md`
 ### Blockers
 
 - None.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260427-g2h | Generate public privacy policy page for Blood Pressure Tracker | 2026-04-27 | Uncommitted | [260427-g2h-generate-public-privacy-policy-page-for-](./quick/260427-g2h-generate-public-privacy-policy-page-for-/) |
 
 ## Session continuity
 
